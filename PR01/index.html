@@ -46,6 +46,20 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">PR01 Git-GitHub</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#crea-un-compte-a-github-si-no-el-tens">Crea un compte a GitHub (Si no el tens!!!).</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#la-forma-daccedir-als-repositoris-remots-de-github-sera-per-ssh-per-tant-has-de-copiar-la-teua-clau-publica-rsa-a-github-per-aixo">La forma d’accedir als repositoris remots de GitHub serà per SSH, per tant has de copiar la teua clau pública RSA a GitHub, per això:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#crea-a-github-un-repositori-amb-el-nom-prova_el_teu_nom-inicialitza-el-repositori-amb-un-fitxer-readme-i-la-descripcio-repositorio-de-prueba-2asix">Crea a GitHub un repositori amb el nom prova_el_teu_nom (inicialitza el repositori amb un fitxer README) i la descripció Repositorio de prueba 2ASIX.</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#installa-git-en-el-teu-ordinador-si-no-el-tens-instalat">Instal·la git en el teu ordinador (si no el tens instalat!!!).</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#configuracio-de-git">Configuració de git.</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#busca-informacio-per-a-crear-un-nou-repositori-anomenat-prova2_el_teu_nom-en-aquesta-ocasio-crea-primer-el-repositori-local-usant-git-init-i-despres-cerca-informacio-per-sincronitzar-lo-i-crear-el-repositori-remot-a-github">Busca informació per a crear un nou repositori anomenat prova2_el_teu_nom. En aquesta ocasió, crea primer el repositori local (usant git init) i després cerca informació per sincronitzar-lo i crear el repositori remot a GitHub.</a>
+    </li>
     </ul>
                 </li>
               </ul>
@@ -93,27 +107,16 @@
             <div class="section" itemprop="articleBody">
               
                 <h2 id="practica-de-git-i-github">Pràctica de Git i GitHub</h2>
-<ol>
-<li>Crea un compte a GitHub (Si no el tens!!!). 
-La forma d’accedir als repositoris remots de GitHub serà per SSH, per tant has de copiar la teua clau pública RSA a GitHub, per això:</li>
-</ol>
+<hr />
+<h4 id="crea-un-compte-a-github-si-no-el-tens">Crea un compte a GitHub (Si no el tens!!!).</h4>
+<h4 id="la-forma-daccedir-als-repositoris-remots-de-github-sera-per-ssh-per-tant-has-de-copiar-la-teua-clau-publica-rsa-a-github-per-aixo">La forma d’accedir als repositoris remots de GitHub serà per SSH, per tant has de copiar la teua clau pública RSA a GitHub, per això:</h4>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/1.png" /></p>
-<ul>
-<li>
-<p>Copia el contingut del teu fitxer ~/.ssh/id_rsa.pub, per això: afegeix una nova clau SSH a
-l’apartat “SSH keys” del teu perfil a GitHub i enganxa el contingut de la teua clau pública.
-<strong>No disposava d’ell, l’he creat al següent pas</strong></p>
-</li>
-<li>
-<p>Si no teniu aquest fitxer, podeu generar una nova clau ssh pública seguint les
-instruccions de l’article Treballant amb claus ssh.</p>
-</li>
-</ul>
+<p><em>Copia el contingut del teu fitxer ~/.ssh/id_rsa.pub, per això: afegeix una nova clau SSH a l’apartat “SSH keys” del teu perfil a GitHub i enganxa el contingut de la teua clau pública.</em></p>
+<p><strong>No disposava d’ell, l’he creat al següent pas</strong></p>
+<p><em>Si no teniu aquest fitxer, podeu generar una nova clau ssh pública seguint les instruccions de l’article Treballant amb claus ssh.</em></p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/2.png" /></p>
-<ul>
-<li>Un cop finalitzat aquest exercici, hauràs de repetir-ho fent ús de tokens.
-<strong>Després copiem la clau pública per a posteriorment apegar-la a GitHub</strong></li>
-</ul>
+<p><em>Un cop finalitzat aquest exercici, hauràs de repetir-ho fent ús de tokens.</em></p>
+<p><strong>Després copiem la clau pública per a posteriorment apegar-la a GitHub</strong></p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/3.png" /></p>
 <p><strong>En aquesta pagina de GitHub anem a apegar la clau pública, anant on fica New SSH Key</strong></p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/4.png" /></p>
@@ -122,24 +125,14 @@ instruccions de l’article Treballant amb claus ssh.</p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/6.png" /></p>
 <p><strong>Per a provar que hi ha connexió, amb la següent comanda hem pogut veure l’últim missatge el qual es bon senyal ja que si que ens diu que hi ha autenticació</strong></p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/7.png" /></p>
-<ol>
-<li>Crea a GitHub un repositori amb el nom prova_el_teu_nom (inicialitza el repositori
-amb un fitxer README) i la descripció Repositorio de prueba 2ASIX.</li>
-</ol>
+<h4 id="crea-a-github-un-repositori-amb-el-nom-prova_el_teu_nom-inicialitza-el-repositori-amb-un-fitxer-readme-i-la-descripcio-repositorio-de-prueba-2asix">Crea a GitHub un repositori amb el nom prova_el_teu_nom (inicialitza el repositori amb un fitxer README) i la descripció Repositorio de prueba 2ASIX.</h4>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/8.png" /></p>
-<ol>
-<li>Instal·la git en el teu ordinador (si no el tens instalat!!!).</li>
-</ol>
+<h5 id="installa-git-en-el-teu-ordinador-si-no-el-tens-instalat">Instal·la git en el teu ordinador (si no el tens instalat!!!).</h5>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/9.png" /></p>
-<ol>
-<li>Configuració de git.
-El primer que hauries de fer quan instal·les Git és establir el teu nom d’usuari i adreça de
-correu electrònic (Assegura’t que les dades són correctes i que has posat el teu nom
-complet).
-Això és important perquè les confirmacions de canvis (commits) a Git utilitzen aquesta
-informació, i és introduïda de manera immutable en els commits que envieu:
-<strong>Per a fer la configuració de git per comandes vaig a fer-ho de la seguent manera:</strong></li>
-</ol>
+<h4 id="configuracio-de-git">Configuració de git.</h4>
+<p><em>El primer que hauries de fer quan instal·les Git és establir el teu nom d’usuari i adreça de correu electrònic (Assegura’t que les dades són correctes i que has posat el teu nom complet).</em>
+<em>Això és important perquè les confirmacions de canvis (commits) a Git utilitzen aquesta informació, i és introduïda de manera immutable en els commits que envieu:</em></p>
+<p><strong>Per a fer la configuració de git per comandes vaig a fer-ho de la seguent manera:</strong></p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/10.png" /></p>
 <p><strong>Per últim, per a sols comprovar que s’ha desat correctament el nom i el correu que hem introduït, ho fem amb les següents comandes:</strong></p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/11.png" /></p>
@@ -163,10 +156,8 @@ informació, i és introduïda de manera immutable en els commits que envieu:
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/22.png" /></p>
 <p><strong>I per últim per a comprovar el seu estat, es fa us de la següent comanda:</strong></p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/23.png" /></p>
-<ol>
-<li>Busca informació per a crear un nou repositori anomenat prova2_el_teu_nom. En aquesta ocasió, crea primer el repositori local (usant git init) i després cerca informació per sincronitzar-lo i crear el repositori remot a GitHub.
-<strong>Primer que res, per a crear-lo a Git i després pujar-lo a GitHub s’ha de crear un directori i després dins d’ell fer un git init</strong></li>
-</ol>
+<h4 id="busca-informacio-per-a-crear-un-nou-repositori-anomenat-prova2_el_teu_nom-en-aquesta-ocasio-crea-primer-el-repositori-local-usant-git-init-i-despres-cerca-informacio-per-sincronitzar-lo-i-crear-el-repositori-remot-a-github">Busca informació per a crear un nou repositori anomenat prova2_el_teu_nom. En aquesta ocasió, crea primer el repositori local (usant git init) i després cerca informació per sincronitzar-lo i crear el repositori remot a GitHub.</h4>
+<p><strong>Primer que res, per a crear-lo a Git i després pujar-lo a GitHub s’ha de crear un directori i després dins d’ell fer un git init</strong></p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/24.png" /></p>
 <p><strong>Ara mateix el repositori està creat però falta crear documents que crearem seguidament per a poder fer un commit. Primer faré el README.md.</strong></p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/25.png" /></p>
