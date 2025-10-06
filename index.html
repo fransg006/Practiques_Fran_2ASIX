@@ -39,10 +39,8 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Benvingut al MkDocs de Fran on es pujarán les practiques del curs</a>
-    <ul class="current">
-    </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="PR01/">Git-GitHub</a>
                 </li>
               </ul>
       </div>
@@ -73,88 +71,6 @@
 <hr />
 <h1 id="unitat-1">UNITAT 1</h1>
 <h2 id="practica-1-git-github">Pràctica 1: Git - GitHub</h2>
-<ol>
-<li>Crea un compte a GitHub (Si no el tens!!!). 
-La forma d’accedir als repositoris remots de GitHub serà per SSH, per tant has de copiar la teua clau pública RSA a GitHub, per això:
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/1.png" /></li>
-<li>
-<p>Copia el contingut del teu fitxer ~/.ssh/id_rsa.pub, per això: afegeix una nova clau SSH a
-l’apartat “SSH keys” del teu perfil a GitHub i enganxa el contingut de la teua clau pública.
-<strong>No disposava d’ell, l’he creat al següent pas</strong></p>
-</li>
-<li>
-<p>Si no teniu aquest fitxer, podeu generar una nova clau ssh pública seguint les
-instruccions de l’article Treballant amb claus ssh.
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/2.png" /></p>
-</li>
-<li>
-<p>Un cop finalitzat aquest exercici, hauràs de repetir-ho fent ús de tokens.
-<strong>Després copiem la clau pública per a posteriorment apegar-la a GitHub</strong>
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/3.png" />
-<strong>En aquesta pagina de GitHub anem a apegar la clau pública, anant on fica New SSH Key</strong>
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/4.png" />
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/5.png" />
-<strong>Una vegada fet açò, ja tenim una clau d’autenticació a GitHub</strong>
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/6.png" />
-<strong>Per a provar que hi ha connexió, amb la següent comanda hem pogut veure l’últim missatge el qual es bon senyal ja que si que ens diu que hi ha autenticació</strong>
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/7.png" /></p>
-</li>
-<li>
-<p>Crea a GitHub un repositori amb el nom prova_el_teu_nom (inicialitza el repositori
-amb un fitxer README) i la descripció Repositorio de prueba 2ASIX.
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/8.png" /></p>
-</li>
-<li>
-<p>Instal·la git en el teu ordinador (si no el tens instalat!!!).
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/9.png" /></p>
-</li>
-<li>
-<p>Configuració de git.
-El primer que hauries de fer quan instal·les Git és establir el teu nom d’usuari i adreça de
-correu electrònic (Assegura’t que les dades són correctes i que has posat el teu nom
-complet).
-Això és important perquè les confirmacions de canvis (commits) a Git utilitzen aquesta
-informació, i és introduïda de manera immutable en els commits que envieu:
-<strong>Per a fer la configuració de git per comandes vaig a fer-ho de la seguent manera:</strong>
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/10.png" />
-<strong>Per últim, per a sols comprovar que s’ha desat correctament el nom i el correu que hem introduït, ho fem amb les següents comandes:</strong>
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/11.png" />
-<strong>Per últim vaig a copiar la URL SSH del repositori per a després clonar-lo de forma local al meu ordinador</strong>
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/12.png" />
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/13.png" />
-<strong>Ara vaig a crear un document de proba</strong>
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/14.png" />
-<strong>Com ja està fet vaig a preparar-lo per a pujar-lo a GitHub</strong>
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/15.png" />
-<strong>Com ja està pujat, vaig a comprovar-ho a GitHub, com es veu a la següent imatge:</strong>
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/16.png" />
-<strong>Per a modificar-lo, una vagada he acabat, per a tornar-lo a pujar editat ho faig amb la següent comanda:</strong>
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/17.png" />
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/18.png" />
-<strong>Seguidament per a canviar-li el nom:</strong>
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/19.png" />
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/20.png" />
-<strong>Per a eliminar el fitxer, ho faig de la següent manera:</strong>
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/21.png" />
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/22.png" />
-<strong>I per últim per a comprovar el seu estat, es fa us de la següent comanda:</strong>
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/23.png" /></p>
-</li>
-<li>
-<p>Busca informació per a crear un nou repositori anomenat prova2_el_teu_nom. En aquesta ocasió, crea primer el repositori local (usant git init) i després cerca informació per sincronitzar-lo i crear el repositori remot a GitHub.
-<strong>Primer que res, per a crear-lo a Git i després pujar-lo a GitHub s’ha de crear un directori i després dins d’ell fer un git init</strong>
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/24.png" />
-<strong>Ara mateix el repositori està creat però falta crear documents que crearem seguidament per a poder fer un commit. Primer faré el README.md.</strong>
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/25.png" />
-<strong>Després des de GitHub he d’anar a New Repository, i simplement ficant el nom que havíem creat abans ja estaria.</strong>
-<strong>Una vegada fet, ens apareix el següent per a connectar-lo al respositori local.</strong>
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/26.png" />
-<strong>Eixos comandaments son els que he d’emprar per tal de que els respositoris estiguen connectats.</strong>
-<strong>Copiant i pegant els comandaments anteriors a Git ja ho fa automàticament.</strong>
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/27.png" />
-<img alt="Descripció de la imatge" src="/IMG/Git-GitHub/28.png" /></p>
-</li>
-</ol>
 <h2 id="practica-2-introduccio-a-markdown">Pràctica 2: Introducció a Markdown</h2>
 <h2 id="practica-3-branques-i-unions">Pràctica 3: Branques i unions</h2>
 <h2 id="practica-4-pull-request">Pràctica 4: Pull request</h2>
@@ -215,5 +131,5 @@ docs/
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2025-10-02 17:23:34.224051+00:00
+Build Date UTC : 2025-10-06 09:52:44.766149+00:00
 -->

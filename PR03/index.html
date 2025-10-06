@@ -4,14 +4,21 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="shortcut icon" href="/img/favicon.ico" />
-    <title>My Docs</title>
-    <link rel="stylesheet" href="/css/theme.css" />
-    <link rel="stylesheet" href="/css/theme_extra.css" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>PR03 - My Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
+      <script>
+        // Current page data
+        var mkdocs_page_name = "PR03";
+        var mkdocs_page_input_path = "PR03.md";
+        var mkdocs_page_url = null;
+      </script>
+    
     <!--[if lt IE 9]>
-      <script src="/js/html5shiv.min.js"></script>
+      <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
       <script>hljs.highlightAll();</script> 
@@ -23,9 +30,9 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="/." class="icon icon-home"> My Docs
+          <a href=".." class="icon icon-home"> My Docs
         </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="//search.html" method="get">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
   </form>
 </div>
@@ -33,7 +40,7 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="/PR01/">Git-GitHub</a>
+                <li class="toctree-l1"><a class="reference internal" href="../PR01/">Git-GitHub</a>
                 </li>
               </ul>
       </div>
@@ -43,13 +50,14 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="/.">My Docs</a>
+          <a href="..">My Docs</a>
         
       </nav>
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="/." class="icon icon-home" aria-label="Docs"></a></li>
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">PR03</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -58,12 +66,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-
-  <h1 id="404-page-not-found">404</h1>
-
-  <p><strong>Page not found</strong></p>
-
-
+                <ol>
+<li>Crea una branca que s’anomene primera al teu repositori local, i executa la instrucció necessària per comprovar que s’ha creat. 
+<img alt="Descripció de la imatge" src="/IMG/Branques-Unions/1.png" /></li>
+<li>Crea un nou fitxer en aquesta branca i fusiona’l amb la principal. S’ha produït un conflicte? Raona la resposta. 
+<img alt="Descripció de la imatge" src="/IMG/Branques-Unions/2.png" />
+<strong>No hi ha cap conflicte ja que sols ha hi hagut modificacions en varios llocs alhora</strong></li>
+<li>Esborra la primera branca
+<img alt="Descripció de la imatge" src="/IMG/Branques-Unions/3.png" /></li>
+<li>
+<p>Crea una branca que s’anomene segona, i modifica un fitxer per produir un conflicte en unir-lo a la branca principal. Lliura el fitxer on s’ha produït el conflicte. 
+<img alt="Descripció de la imatge" src="/IMG/Branques-Unions/4.png" />
+<img alt="Descripció de la imatge" src="/IMG/Branques-Unions/5.png" />
+<img alt="Descripció de la imatge" src="/IMG/Branques-Unions/6.png" /></p>
+</li>
+<li>
+<p>Soluciona el conflicte que has creat al punt anterior i sincronitza la branca segona al remot.
+<strong>No ha hi hagut cap conflicte.</strong></p>
+</li>
+</ol>
+              
             </div>
           </div><footer>
 
@@ -90,11 +112,11 @@
     
   </span>
 </div>
-    <script src="/js/jquery-3.6.0.min.js"></script>
-    <script>var base_url = "/";</script>
-    <script src="/js/theme_extra.js"></script>
-    <script src="/js/theme.js"></script>
-      <script src="/search/main.js"></script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
