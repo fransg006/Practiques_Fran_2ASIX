@@ -1,106 +1,90 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="shortcut icon" href="../img/favicon.ico" />
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>PR04 Pull request - IAW_Fran</title>
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
-    
-      <script>
-        // Current page data
-        var mkdocs_page_name = "PR04 Pull request";
-        var mkdocs_page_input_path = "PR04.md";
-        var mkdocs_page_url = null;
-      </script>
-    
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="../js/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Pr\u00e0ctica Pull Request", url: "#_top", children: [
+              {title: "Documentaci\u00f3 dels passos fonamentals (amb instruccions) per fer el pull request.", url: "#documentacio-dels-passos-fonamentals-amb-instruccions-per-fer-el-pull-request" },
+              {title: "En finalitzar l\u2019exercici (quan tots els alumnes hagen enviat el PR i el professor ho recorde) has d\u2019actualitzar el teu repositori remot i enviar-me la URL per poder comprovar-ho.", url: "#en-finalitzar-lexercici-quan-tots-els-alumnes-hagen-enviat-el-pr-i-el-professor-ho-recorde-has-dactualitzar-el-teu-repositori-remot-i-enviar-me-la-url-per-poder-comprovar-ho" },
+              {title: "Que s\u2019ha de fer:", url: "#que-sha-de-fer" },
+              {title: "Pr\u00e0ctica 02: Pull Request. Com col\u00b7laborar en un projecte de programari lliure? Lliurar la documentaci\u00f3 de les passes fetes i on estiguen les captures:", url: "#practica-02-pull-request-com-collaborar-en-un-projecte-de-programari-lliure-lliurar-la-documentacio-de-les-passes-fetes-i-on-estiguen-les-captures" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> IAW_Fran
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="..">Inici</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../PR01/">PR01 Git-GitHub</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../PR02/">PR02 Introcucció a MarkDown</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../PR03/">PR03 Branques i unions</a>
-                </li>
-              </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">PR04 Pull request</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#documentacio-dels-passos-fonamentals-amb-instruccions-per-fer-el-pull-request">Documentació dels passos fonamentals (amb instruccions) per fer el pull request.</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#en-finalitzar-lexercici-quan-tots-els-alumnes-hagen-enviat-el-pr-i-el-professor-ho-recorde-has-dactualitzar-el-teu-repositori-remot-i-enviar-me-la-url-per-poder-comprovar-ho">En finalitzar l’exercici (quan tots els alumnes hagen enviat el PR i el professor ho recorde) has d’actualitzar el teu repositori remot i enviar-me la URL per poder comprovar-ho.</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#que-sha-de-fer">Que s’ha de fer:</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#practica-02-pull-request-com-collaborar-en-un-projecte-de-programari-lliure-lliurar-la-documentacio-de-les-passes-fetes-i-on-estiguen-les-captures">Pràctica 02: Pull Request. Com col·laborar en un projecte de programari lliure? Lliurar la documentació de les passes fetes i on estiguen les captures:</a>
-    </li>
-    </ul>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../PR05/">PR05 MKdocs + GitHub Pages</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../PR06/">PR06 Desplegament en GitHub Pages</a>
-                </li>
-              </ul>
-      </div>
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../PR05/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../PR05/" class="btn btn-xs btn-link">
+        PR05 MKdocs + GitHub Pages
+      </a>
     </div>
-    </nav>
+    
+    <div class="wm-article-nav">
+      <a href="../PR03/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../PR03/" class="btn btn-xs btn-link">
+        PR03 Branques i unions
+      </a>
+    </div>
+    
+  </div>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">IAW_Fran</a>
-        
-      </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">PR04 Pull request</li>
-    <li class="wy-breadcrumbs-aside">
-    </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
-              
-                <h2 id="practica-pull-request">Pràctica Pull Request</h2>
+    
+
+    <h2 id="practica-pull-request">Pràctica Pull Request</h2>
 <hr />
 <h4 id="documentacio-dels-passos-fonamentals-amb-instruccions-per-fer-el-pull-request">Documentació dels passos fonamentals (amb instruccions) per fer el pull request.</h4>
 <h4 id="en-finalitzar-lexercici-quan-tots-els-alumnes-hagen-enviat-el-pr-i-el-professor-ho-recorde-has-dactualitzar-el-teu-repositori-remot-i-enviar-me-la-url-per-poder-comprovar-ho">En finalitzar l’exercici (quan tots els alumnes hagen enviat el PR i el professor ho recorde) has d’actualitzar el teu repositori remot i enviar-me la URL per poder comprovar-ho.</h4>
@@ -141,51 +125,43 @@
 <p><img alt="Descripció de la imatge" src="../IMG/Pull-Request/11.jpg" /></p>
 <p><strong>Acceptació per part de la professora.</strong></p>
 <p><img alt="Descripció de la imatge" src="../IMG/Pull-Request/12.jpg" /></p>
-              
-            </div>
-          </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../PR03/" class="btn btn-neutral float-left" title="PR03 Branques i unions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../PR05/" class="btn btn-neutral float-right" title="PR05 MKdocs + GitHub Pages">Next <span class="icon icon-circle-arrow-right"></span></a>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../PR05/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../PR05/" class="btn btn-xs btn-link">
+        PR05 MKdocs + GitHub Pages
+      </a>
     </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
+    
+    <div class="wm-article-nav">
+      <a href="../PR03/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../PR03/" class="btn btn-xs btn-link">
+        PR03 Branques i unions
+      </a>
+    </div>
+    
   </div>
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-          
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-    
-      <span><a href="../PR03/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../PR05/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
+    <br>
 </div>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script>var base_url = "..";</script>
-    <script src="../js/theme_extra.js"></script>
-    <script src="../js/theme.js"></script>
-      <script src="../search/main.js"></script>
-    <script>
-        jQuery(function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        });
-    </script>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
 
 </body>
 </html>

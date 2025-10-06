@@ -1,118 +1,94 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="shortcut icon" href="../img/favicon.ico" />
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>PR05 MKdocs + GitHub Pages - IAW_Fran</title>
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
-    
-      <script>
-        // Current page data
-        var mkdocs_page_name = "PR05 MKdocs + GitHub Pages";
-        var mkdocs_page_input_path = "PR05.md";
-        var mkdocs_page_url = null;
-      </script>
-    
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="../js/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Pr\u00e0ctica MkDocs + GitHub Pages", url: "#_top", children: [
+              {title: "Primer instal\u00b7lem Mkdocs al equip", url: "#primer-installem-mkdocs-al-equip" },
+              {title: "Crea un nou projecte de MkDocs al teu ordinador.", url: "#crea-un-nou-projecte-de-mkdocs-al-teu-ordinador" },
+              {title: "Genera la p\u00e0gina web amb MkDocs.", url: "#genera-la-pagina-web-amb-mkdocs" },
+              {title: "Crea un repositori al GitHub per al teu projecte.", url: "#crea-un-repositori-al-github-per-al-teu-projecte" },
+              {title: "Puja la p\u00e0gina web a GitHub Pages.", url: "#puja-la-pagina-web-a-github-pages" },
+              {title: "Comprova que la URL de la teua p\u00e0gina web a GitHub Pages funciona correctament.", url: "#comprova-que-la-url-de-la-teua-pagina-web-a-github-pages-funciona-correctament" },
+              {title: "Com has desplegat la teua p\u00e0gina web a GitHub Pages?", url: "#com-has-desplegat-la-teua-pagina-web-a-github-pages" },
+              {title: "La p\u00e0gina web es visualitza correctament? Incloure la URL a la pagina de GitHub.", url: "#la-pagina-web-es-visualitza-correctament-incloure-la-url-a-la-pagina-de-github" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> IAW_Fran
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="..">Inici</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../PR01/">PR01 Git-GitHub</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../PR02/">PR02 Introcucció a MarkDown</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../PR03/">PR03 Branques i unions</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../PR04/">PR04 Pull request</a>
-                </li>
-              </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">PR05 MKdocs + GitHub Pages</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#primer-installem-mkdocs-al-equip">Primer instal·lem Mkdocs al equip</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#crea-un-nou-projecte-de-mkdocs-al-teu-ordinador">Crea un nou projecte de MkDocs al teu ordinador.</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#escriu-la-documentacio-del-vostre-projecte-en-format-markdown">Escriu la documentació del vostre projecte en format Markdown.</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#genera-la-pagina-web-amb-mkdocs">Genera la pàgina web amb MkDocs.</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#crea-un-repositori-al-github-per-al-teu-projecte">Crea un repositori al GitHub per al teu projecte.</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#puja-la-pagina-web-a-github-pages">Puja la pàgina web a GitHub Pages.</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#comprova-que-la-url-de-la-teua-pagina-web-a-github-pages-funciona-correctament">Comprova que la URL de la teua pàgina web a GitHub Pages funciona correctament.</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#com-has-desplegat-la-teua-pagina-web-a-github-pages">Com has desplegat la teua pàgina web a GitHub Pages?</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#la-pagina-web-es-visualitza-correctament-incloure-la-url-a-la-pagina-de-github">La pàgina web es visualitza correctament? Incloure la URL a la pagina de GitHub.</a>
-    </li>
-    </ul>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../PR06/">PR06 Desplegament en GitHub Pages</a>
-                </li>
-              </ul>
-      </div>
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../PR06/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../PR06/" class="btn btn-xs btn-link">
+        PR06 Desplegament en GitHub Pages
+      </a>
     </div>
-    </nav>
+    
+    <div class="wm-article-nav">
+      <a href="../PR04/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../PR04/" class="btn btn-xs btn-link">
+        PR04 Pull request
+      </a>
+    </div>
+    
+  </div>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">IAW_Fran</a>
-        
-      </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">PR05 MKdocs + GitHub Pages</li>
-    <li class="wy-breadcrumbs-aside">
-    </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
-              
-                <h2 id="practica-mkdocs-github-pages">Pràctica MkDocs + GitHub Pages</h2>
+    
+
+    <h2 id="practica-mkdocs-github-pages">Pràctica MkDocs + GitHub Pages</h2>
 <hr />
 <h5 id="primer-installem-mkdocs-al-equip">Primer instal·lem Mkdocs al equip</h5>
 <p><img alt="Descripció de la imatge" src="../IMG/GitHubPages/1.jpg" /></p>
@@ -155,51 +131,43 @@
 <p><strong>La pàgina es veu correctament.</strong></p>
 <p><strong>La URL al repositori de GitHub es: <a href="https://github.com/fransg006/projecte-Fran-IAW">GitHub</a></strong>
 <strong>La URL a la pagina de GitHub Pages es: <a href="https://fransg006.github.io/projecte-Fran-IAW/">Pages</a></strong></p>
-              
-            </div>
-          </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../PR04/" class="btn btn-neutral float-left" title="PR04 Pull request"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../PR06/" class="btn btn-neutral float-right" title="PR06 Desplegament en GitHub Pages">Next <span class="icon icon-circle-arrow-right"></span></a>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../PR06/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../PR06/" class="btn btn-xs btn-link">
+        PR06 Desplegament en GitHub Pages
+      </a>
     </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
+    
+    <div class="wm-article-nav">
+      <a href="../PR04/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../PR04/" class="btn btn-xs btn-link">
+        PR04 Pull request
+      </a>
+    </div>
+    
   </div>
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-          
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-    
-      <span><a href="../PR04/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../PR06/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
+    <br>
 </div>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script>var base_url = "..";</script>
-    <script src="../js/theme_extra.js"></script>
-    <script src="../js/theme.js"></script>
-      <script src="../search/main.js"></script>
-    <script>
-        jQuery(function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        });
-    </script>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
 
 </body>
 </html>
