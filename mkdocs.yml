@@ -1,17 +1,18 @@
 site_name: IAW_Fran
 theme:
   name: windmill
+
 nav:
  - "Inici": index.md
- - "Unitat 1":
- - "PR01 - Git-GitHub": PR01.md
- - "PR02 - Introducció a MarkDown": PR02.md
- - "PR03 - Branques i unions": PR03.md
- - "PR04 - Pull request": PR04.md
- - "PR05 - MKdocs + GitHub Pages": PR05.md
- - "PR06 - Desplegament en GitHub Pages": PR06.md
+ - "Unitat 1": 
+     - "PR01 - Git-GitHub": PR01-1.md
+     - "PR02 - Introducció a MarkDown": PR02-1.md
+     - "PR03 - Branques i unions": PR03-1.md
+     - "PR04 - Pull request": PR04-1.md
+     - "PR05 - MKdocs + GitHub Pages": PR05-1.md
+     - "PR06 - Desplegament en GitHub Pages": PR06-1.md
  - "Unitat 2": 
- - "PR01":
- - "PR02": 
- - "PR03":
- - "PR04": Phpmyadmin.md
+     - "PR01 - Instal·lar servidor LEMP": PR01-2.md
+     - "PR02 - Servir multiples dominis": PR02-2.md
+     - "PR03 - Certificat SSL/TLS": PR03-2.md
+     - "PR04 - Phpmyadmin": PR04-2.md
