@@ -84,31 +84,31 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     <h1 id="practica-servir-multiples-dominis">Pràctica servir múltiples dominis</h1>
 <h2 id="un-dels-llocs-servira-una-pagina-web-estatica-amb-contingut-html-css">Un dels llocs servirà una Pàgina web estàtica (amb contingut HTML + CSS)</h2>
-<p><strong>Per a crear primer un lloc, copiaré el fitxer de configuració default, amb nom fran1, de la següent manera:</strong></p>
-<p><img alt="Imatge" src="../IMG/MultiplesDominis/1.png" /></p>
-<p><strong>El HTML ha d’estar en un directori per al lloc web, creat a /var/www/</strong></p>
-<p><img alt="Imatge" src="../IMG/MultiplesDominis/2.png" /></p>
-<p><strong>Una vegada creat el directori, l’apegue dins d’ell.</strong></p>
-<p><img alt="Imatge" src="../IMG/MultiplesDominis/3.png" /></p>
-<p><strong>Cuan ja el tinc copiat, podem treballar sobre el fitxer fran1 en /etc/nginx/sites-available per a la pagina web 1. Els canvis realitzats al fitxer son els que es veuen a la següent imatge.</strong></p>
-<p><img alt="Imatge" src="../IMG/MultiplesDominis/4.png" /></p>
+<p><strong>Per a crear primer un lloc, copiaré el fitxer de configuració default, amb nom fran1, de la següent manera:</strong>
+<img alt="Imatge" src="../IMG/MultiplesDominis/1.png" /></p>
+<p><strong>El HTML ha d’estar en un directori per al lloc web, creat a /var/www/</strong>
+<img alt="Imatge" src="../IMG/MultiplesDominis/2.png" /></p>
+<p><strong>Una vegada creat el directori, l’apegue dins d’ell.</strong>
+<img alt="Imatge" src="../IMG/MultiplesDominis/3.png" /></p>
+<p><strong>Cuan ja el tinc copiat, podem treballar sobre el fitxer fran1 en /etc/nginx/sites-available per a la pagina web 1. Els canvis realitzats al fitxer son els que es veuen a la següent imatge.</strong>
+<img alt="Imatge" src="../IMG/MultiplesDominis/4.png" /></p>
 <p><em>He canviat el port del 80 al 8089, el lloc del HTML, en quins fitxers mirar per a la web i el nom del servidor.</em></p>
-<p><strong>Ara per a activar el lloc web fem el següent comandament:</strong></p>
-<p><img alt="Imatge" src="../IMG/MultiplesDominis/5.png" /></p>
-<p><strong>Ara amb la següent adreça, al navegador de la maquina amfitriona, es pot accedir a la web: http://172.20.10.2:8089</strong></p>
-<p><img alt="Imatge" src="../IMG/MultiplesDominis/6.png" /></p>
+<p><strong>Ara per a activar el lloc web fem el següent comandament:</strong>
+<img alt="Imatge" src="../IMG/MultiplesDominis/5.png" /></p>
+<p><strong>Ara amb la següent adreça, al navegador de la maquina amfitriona, es pot accedir a la web: http://172.20.10.2:8089</strong>
+<img alt="Imatge" src="../IMG/MultiplesDominis/6.png" /></p>
 <h2 id="laltre-lloc-servira-altra-pagina-web-estatica-amb-contingut-html-css-javascript">L’altre lloc servirà altra Pàgina web estàtica (amb contingut HTML + CSS + Javascript)</h2>
-<p><strong>Per al fitxer de configuració, he copiat el fitxer copiat de configuració del punt anterior</strong> </p>
-<p><img alt="Imatge" src="../IMG/MultiplesDominis/7.png" /></p>
-<p><strong>També, a /var/www/ he creat el directori fran2, on he ficat el HTML index2.html</strong></p>
-<p><img alt="Imatge" src="../IMG/MultiplesDominis/8.png" />
+<p><strong>Per al fitxer de configuració, he copiat el fitxer copiat de configuració del punt anterior</strong>
+<img alt="Imatge" src="../IMG/MultiplesDominis/7.png" /></p>
+<p><strong>També, a /var/www/ he creat el directori fran2, on he ficat el HTML index2.html</strong>
+<img alt="Imatge" src="../IMG/MultiplesDominis/8.png" />
 <img alt="Imatge" src="../IMG/MultiplesDominis/9.png" /></p>
-<p><strong>He fet els següents canvis a la configuració de fran2 a /etc/nginx/sites-available/fran2:</strong></p>
-<p><img alt="Imatge" src="../IMG/MultiplesDominis/10.png" /></p>
+<p><strong>He fet els següents canvis a la configuració de fran2 a /etc/nginx/sites-available/fran2:</strong>
+<img alt="Imatge" src="../IMG/MultiplesDominis/10.png" /></p>
 <p><em>He canviat el port del 80 al 8090, el lloc del HTML, en quins fitxers mirar per a la web i el nom del servidor.</em></p>
-<p><strong>I per últim he d’habilitar el lloc web, amb la seua respectiva comprovació al navegador de la maquina amfitriona. Per a accedir a la web es fa de la mateixa manera però canviant sols el port: http://172.20.10.2:8090</strong></p>
-<p><img alt="Imatge" src="../IMG/MultiplesDominis/11.png" /></p>
-<p><img alt="Imatge" src="../IMG/MultiplesDominis/12.png" /></p>
+<p><strong>I per últim he d’habilitar el lloc web, amb la seua respectiva comprovació al navegador de la maquina amfitriona. Per a accedir a la web es fa de la mateixa manera però canviant sols el port: http://172.20.10.2:8090</strong>
+<img alt="Imatge" src="../IMG/MultiplesDominis/11.png" />
+<img alt="Imatge" src="../IMG/MultiplesDominis/12.png" /></p>
 
   <br>
     
