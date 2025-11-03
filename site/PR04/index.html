@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>PR04 - Pull request - IAW_Fran</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Pr\u00e0ctica Pull Request", url: "#_top", children: [
+              {title: "Documentaci\u00f3 dels passos fonamentals (amb instruccions) per fer el pull request.", url: "#documentacio-dels-passos-fonamentals-amb-instruccions-per-fer-el-pull-request" },
+              {title: "En finalitzar l\u2019exercici (quan tots els alumnes hagen enviat el PR i el professor ho recorde) has d\u2019actualitzar el teu repositori remot i enviar-me la URL per poder comprovar-ho.", url: "#en-finalitzar-lexercici-quan-tots-els-alumnes-hagen-enviat-el-pr-i-el-professor-ho-recorde-has-dactualitzar-el-teu-repositori-remot-i-enviar-me-la-url-per-poder-comprovar-ho" },
+              {title: "Que s\u2019ha de fer:", url: "#que-sha-de-fer" },
+              {title: "Pr\u00e0ctica 02: Pull Request. Com col\u00b7laborar en un projecte de programari lliure? Lliurar la documentaci\u00f3 de les passes fetes i on estiguen les captures:", url: "#practica-02-pull-request-com-collaborar-en-un-projecte-de-programari-lliure-lliurar-la-documentacio-de-les-passes-fetes-i-on-estiguen-les-captures" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../PR05/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../PR05/" class="btn btn-xs btn-link">
+        PR05 - MKdocs + GitHub Pages
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../PR03/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../PR03/" class="btn btn-xs btn-link">
+        PR03 - Branques i unions
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h2 id="practica-pull-request">Pràctica Pull Request</h2>
+<hr />
+<h4 id="documentacio-dels-passos-fonamentals-amb-instruccions-per-fer-el-pull-request">Documentació dels passos fonamentals (amb instruccions) per fer el pull request.</h4>
+<h4 id="en-finalitzar-lexercici-quan-tots-els-alumnes-hagen-enviat-el-pr-i-el-professor-ho-recorde-has-dactualitzar-el-teu-repositori-remot-i-enviar-me-la-url-per-poder-comprovar-ho">En finalitzar l’exercici (quan tots els alumnes hagen enviat el PR i el professor ho recorde) has d’actualitzar el teu repositori remot i enviar-me la URL per poder comprovar-ho.</h4>
+<hr />
+<h4 id="que-sha-de-fer">Que s’ha de fer:</h4>
+<p><em>• Realitza primer un pull request al repositori per sol·licitar dos canvis.</em></p>
+<p><em>• Has de canviar el fitxer README.md per afegir un enllaç a la llista, on pose les teues inicials i vaja al fitxer que crearàs en el directori files.</em></p>
+<p><em>• Crea un fitxer al directori files, que s’anomene les_teus_inicials.md (en el meu cas s’anomenaria emm.md) i on escrigues a markdown la resposta a la pregunta: Quin mòdul t’agrada més? I per què? (cal utilitzar almenys 5 marques diferents de markdown). Realitza el pull request (amb un missatge de commit significatiu) i espera que sigua acceptat per mi. En acabar l’exercici has de sincronitzar el teu repositori perquè tingues tots els fitxers de tots els teus companys.</em></p>
+<p><em>• Tria un company i fes un Pull Request sobre un repositori seu. El mateix company o un altre ha de fer un Pull Request sobre un repositori teu.</em></p>
+<hr />
+<p><strong>Primer es fa un fork del repositori al cual vols aplicar canvis.</strong>
+<strong>Una vegada tindre el repositori de la professora al teu perfil, s’ha de fer un clone al pc local.</strong>
+<img alt="Descripció de la imatge" src="../IMG/Pull-Request/1.jpg" /></p>
+<p><strong>Una vegada fet el clone, en situem dins del directori clonat i treballem sobre ell.</strong>
+<strong>Dins d’ell es troba el directori files on s’ha de desar una imatge i el README.md on s’ha decrear un enllaç a la imatge amb el teu nom.</strong>
+<img alt="Descripció de la imatge" src="../IMG/Pull-Request/2.jpg" /></p>
+<p><strong>També el fitxer markdown.</strong>
+<img alt="Descripció de la imatge" src="../IMG/Pull-Request/3.jpg" /></p>
+<p><strong>Una vegada realitzat ho pujem al repositori amb el add, commit i push.</strong>
+<img alt="Descripció de la imatge" src="../IMG/Pull-Request/4.jpg" /></p>
+<p><strong>Seguidament fem un contribute amb el repositori de la professora.</strong>
+<img alt="Descripció de la imatge" src="../IMG/Pull-Request/5.jpg" /></p>
+<hr />
+<h4 id="practica-02-pull-request-com-collaborar-en-un-projecte-de-programari-lliure-lliurar-la-documentacio-de-les-passes-fetes-i-on-estiguen-les-captures">Pràctica 02: Pull Request. Com col·laborar en un projecte de programari lliure? Lliurar la documentació de les passes fetes i on estiguen les captures:</h4>
+<p><em>Acceptació del PR que ha fet el teu company sobre el teu repositori.</em></p>
+<p><strong>He fet el fork al repositori de Iker.</strong>
+<img alt="Descripció de la imatge" src="../IMG/Pull-Request/6.jpg" /></p>
+<p><strong>Pull request rebut de Iker.</strong>
+<img alt="Descripció de la imatge" src="../IMG/Pull-Request/7.jpg" /></p>
+<p><strong>L’he acceptat.</strong>
+<img alt="Descripció de la imatge" src="../IMG/Pull-Request/8.jpg" /></p>
+<p><strong>Ja apareix el document creat per Iker al meu repositori.</strong>
+<img alt="Descripció de la imatge" src="../IMG/Pull-Request/9.jpg" /></p>
+<p><strong>I el meu document sobre el repositori de Iker.</strong>
+<img alt="Descripció de la imatge" src="../IMG/Pull-Request/10.jpg" /></p>
+<p><em>Realització del PR sobre el repositori del professor.</em></p>
+<p><strong>Es tracta del PR que he fet sobre el repositori de la professora.</strong>
+<img alt="Descripció de la imatge" src="../IMG/Pull-Request/11.jpg" /></p>
+<p><strong>Acceptació per part de la professora.</strong>
+<img alt="Descripció de la imatge" src="../IMG/Pull-Request/12.jpg" /></p>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../PR05/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../PR05/" class="btn btn-xs btn-link">
+        PR05 - MKdocs + GitHub Pages
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../PR03/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../PR03/" class="btn btn-xs btn-link">
+        PR03 - Branques i unions
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

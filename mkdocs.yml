@@ -1,1 +1,11 @@
-site_name: My Docs
+site_name: IAW_Fran
+theme:
+  name: windmill
+nav:
+ - "Inici": index.md
+ - "PR01 - Git-GitHub": PR01.md
+ - "PR02 - Introducció a MarkDown": PR02.md
+ - "PR03 - Branques i unions": PR03.md
+ - "PR04 - Pull request": PR04.md
+ - "PR05 - MKdocs + GitHub Pages": PR05.md
+ - "PR06 - Desplegament en GitHub Pages": PR06.md
