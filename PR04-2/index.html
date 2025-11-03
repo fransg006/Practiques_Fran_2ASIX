@@ -33,8 +33,6 @@
         
         var pageToc = [
           {title: "Pr\u00e0ctica phpmyadmin", url: "#_top", children: [
-          ]},
-          {title: "Tasques a fer", url: "#tasques-a-fer", children: [
               {title: "Instal\u00b7laci\u00f3 de PhpMyAdmin", url: "#installacio-de-phpmyadmin" },
               {title: "Permetre l\u2019Acc\u00e9s per Contrasenya del root de MySQL", url: "#permetre-lacces-per-contrasenya-del-root-de-mysql" },
               {title: "Configuraci\u00f3 de l\u2019Acc\u00e9s per Contrasenya per a un Usuari Dedicat de MySQL", url: "#configuracio-de-lacces-per-contrasenya-per-a-un-usuari-dedicat-de-mysql" },
@@ -84,59 +82,78 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 • Protegir PhpMyAdmin contra accessos no autoritzats.
 • Automatitzar la instal·lació i configuració de phpMyAdmin mitjançant scripts de Bash. </p>
 </blockquote>
-<h2 id="tasques-a-fer">Tasques a fer</h2>
 <h3 id="installacio-de-phpmyadmin">Instal·lació de PhpMyAdmin</h3>
-<h5 id="installa-phpmyadmin-juntament-amb-les-extensions-php-necessaries-php-mbstring-php-zip-php-gd-php-json-php-curl">Instal·la phpMyAdmin juntament amb les extensions PHP necessàries (php-mbstring, php-zip, php-gd, php-json, php-curl).</h5>
+<ul>
+<li>Instal·la phpMyAdmin juntament amb les extensions PHP necessàries (php-mbstring, php-zip, php-gd, php-json, php-curl).</li>
+</ul>
 <p><img alt="Imatge" src="../IMG/Phpmyadmin/1.png" /></p>
-<h5 id="configura-phpmyadmin-perque-funcione-amb-nginx">Configura phpMyAdmin perquè funcione amb nginx.</h5>
-<p>Al fitxer default de la ruta que es veu a la seguent captura he ficat les seguents linies de configuració.</p>
+<ul>
+<li>Configura phpMyAdmin perquè funcione amb nginx. </li>
+</ul>
+<p><strong>Al fitxer default de la ruta que es veu a la seguent captura he ficat les seguents linies de configuració.</strong></p>
 <p><img alt="Imatge" src="../IMG/Phpmyadmin/13.png" /></p>
-<p>Una vegada configurat correctament, ficant al navegador la IP del servidor i /phpmyadmin, veurem la seguent pantalla que si ens identifiquem, podrem accedir dins.</p>
+<p><strong>Una vegada configurat correctament, ficant al navegador la IP del servidor i /phpmyadmin, veurem la seguent pantalla que si ens identifiquem, podrem accedir dins.</strong></p>
 <p><img alt="Imatge" src="../IMG/Phpmyadmin/3.png" />
 <img alt="Imatge" src="../IMG/Phpmyadmin/4.png" /></p>
 <h3 id="permetre-lacces-per-contrasenya-del-root-de-mysql">Permetre l’Accés per Contrasenya del root de MySQL</h3>
-<h5 id="canvia-el-metode-dautenticacio-de-lusuari-root-de-mysql-dauth_socket-a-caching_sha2_password-o-mysql_native_password">Canvia el mètode d’autenticació de l’usuari root de MySQL d’auth_socket a caching_sha2_password o mysql_native_password.</h5>
-<p>Pel que es pot veure, el mètode d'autenticació al que volem canviar ja es troba aplicat, per tant, no es necessari canviar-ho.
-<img alt="Imatge" src="../IMG/Phpmyadmin/5.png" /></p>
-<p>En cas de que no estiguera canviat i a la columna plugin es trobara el mode <em>auth_socket</em>, s'hauria d'emprar este comandament:</p>
+<ul>
+<li>Canvia el mètode d’autenticació de l’usuari root de MySQL d’auth_socket a caching_sha2_password o mysql_native_password.</li>
+</ul>
+<p><strong>Pel que es pot veure, el mètode d'autenticació al que volem canviar ja es troba aplicat, per tant, no es necessari canviar-ho.</strong></p>
+<p><img alt="Imatge" src="../IMG/Phpmyadmin/5.png" /></p>
+<p><strong>En cas de que no estiguera canviat i a la columna plugin es trobara el mode <em>auth_socket</em>, s'hauria d'emprar este comandament:</strong></p>
 <blockquote>
 <p><em>ALTER USER 'root'@'localhost' IDENTIFIED WITH 'caching_sha2_password' BY 'contrasenya';</em></p>
 </blockquote>
-<p>Seguidament he canviat la contrassenya de root per a que siga 8448.
+<p><strong>Seguidament he canviat la contrassenya de root per a que siga 8448.</strong>
 <img alt="Imatge" src="../IMG/Phpmyadmin/6.png" /></p>
-<h5 id="verifica-els-metodes-dautenticacio-utilitzats-per-cadascun-dels-usuaris">Verifica els mètodes d’autenticació utilitzats per cadascun dels usuaris.</h5>
-<p>El mètodes es poden veure a la seguent captura que es la mateixa que es veu dalt per a comprovar quin metode tenien els usuaris degut que al tractar de fer el comandament citat, ens ixia un error.
-<img alt="Imatge" src="../IMG/Phpmyadmin/5.png" /></p>
+<ul>
+<li>Verifica els mètodes d’autenticació utilitzats per cadascun dels usuaris. </li>
+</ul>
+<p><strong>El mètodes es poden veure a la seguent captura que es la mateixa que es veu dalt per a comprovar quin metode tenien els usuaris degut que al tractar de fer el comandament citat, ens ixia un error.</strong></p>
+<p><img alt="Imatge" src="../IMG/Phpmyadmin/5.png" /></p>
 <h3 id="configuracio-de-lacces-per-contrasenya-per-a-un-usuari-dedicat-de-mysql">Configuració de l’Accés per Contrasenya per a un Usuari Dedicat de MySQL</h3>
-<h5 id="crea-un-nou-usuari-de-mysql-amb-una-contrasenya-segura">Crea un nou usuari de MySQL amb una contrasenya segura.</h5>
+<ul>
+<li>Crea un nou usuari de MySQL amb una contrasenya segura.</li>
+</ul>
 <p><img alt="Imatge" src="../IMG/Phpmyadmin/7.png" /></p>
-<h5 id="dona-li-al-usuari-els-privilegis-apropiats-per-gestionar-les-bases-de-dades-a-traves-de-phpmyadmin">Dona-li al usuari els privilegis apropiats per gestionar les bases de dades a través de phpMyAdmin.</h5>
+<ul>
+<li>Dona-li al usuari els privilegis apropiats per gestionar les bases de dades a través de phpMyAdmin. </li>
+</ul>
 <p><img alt="Imatge" src="../IMG/Phpmyadmin/8.png" /></p>
 <h3 id="assegura-la-instancia-de-phpmyadmin">Assegura la Instància de phpMyAdmin</h3>
-<h5 id="crea-un-fitxer-htpasswd-per-emmagatzemar-les-credencials-dusuari-i-contrasenya">Crea un fitxer .htpasswd per emmagatzemar les credencials d’usuari i contrasenya.</h5>
-<p>Per al usuari franHT la contra es 8448</p>
+<ul>
+<li>
+<p>Crea un fitxer .htpasswd per emmagatzemar les credencials d’usuari i contrasenya. </p>
+<p><code>Per al usuari franHT la contrasenya es 8448</code></p>
+</li>
+</ul>
 <p><img alt="Imatge" src="../IMG/Phpmyadmin/9.png" /></p>
-<p>Si s’ha d’afegir més usuaris, l’opció -c del comandament anterior no s’ha de ficar per tal de no sobreescriure el fitxer</p>
-<h5 id="modifica-la-configuracio-del-lloc-per-aplicar-lacces-per-usuari-i-contrassenya">Modifica la configuració del lloc per aplicar l’accés per usuari i contrassenya.</h5>
-<p>Al fitxer de configuració, he afegit les 2 linies <strong>auth_basic</strong> y <strong>auth_basic_user_file</strong> que es veuen al fitxer de configuració a la seguent imatge.
+<p><strong>Si s’ha d’afegir més usuaris, l’opció -c del comandament anterior no s’ha de ficar per tal de no sobreescriure el fitxer</strong></p>
+<ul>
+<li>Modifica la configuració del lloc per aplicar l’accés per usuari i contrassenya.</li>
+</ul>
+<p><strong>Al fitxer de configuració, he afegit les 2 linies </strong>auth_basic<strong> y </strong>auth_basic_user_file<strong> que es veuen al fitxer de configuració a la seguent imatge.</strong>
 <img alt="Imatge" src="../IMG/Phpmyadmin/10.png" /></p>
-<h5 id="reinicieu-nginx-per-aplicar-els-canvis">Reinicieu nginx per aplicar els canvis.</h5>
+<ul>
+<li>Reinicieu nginx per aplicar els canvis. </li>
+</ul>
 <p><img alt="Imatge" src="../IMG/Phpmyadmin/11.png" /></p>
-<p>Ara una vegada reiniciat el servici veguem que ens demana credencials
+<p><strong>Ara una vegada reiniciat el servici veguem que ens demana credencials.</strong>
 <img alt="Imatge" src="../IMG/Phpmyadmin/12.png" /></p>
-<p>Una vegada les fiquem podem accedir de nou al servidor, si ens tornem a identificar amb les claus del PHP.
-Es a dir, que després de ficar les credencials valides on es veu a la captura superior, ens apareix la pantalla que ens ixia primera abans per a accedir a la base de dades.
-<img alt="Imatge" src="../IMG/Phpmyadmin/3.png" /></p>
+<p><strong>Una vegada les fiquem podem accedir de nou al servidor, si ens tornem a identificar amb les claus del PHP.</strong></p>
+<p><strong>Es a dir, que després de ficar les credencials valides on es veu a la captura superior, ens apareix la pantalla que ens ixia primera abans per a accedir a la base de dades.</strong></p>
+<p><img alt="Imatge" src="../IMG/Phpmyadmin/3.png" /></p>
 <hr />
 <h3 id="repositori-de-github-github-pages">Repositori de GitHub + GitHub Pages</h3>
-<p>He creat el repositori de GitHub que es veu a la seguent imatge amb les carpetes i fitxers propis de mkdocs.
-Dins de docs es troben els fitxers markdown i les imatges.
-<a href="https://github.com/fransg006/phpmyadminFran.git">Enllaç a GitHub</a>
+<p><strong>He creat el repositori de GitHub que es veu a la seguent imatge amb les carpetes i fitxers propis de mkdocs.</strong></p>
+<p><strong>Dins de docs es troben els fitxers markdown i les imatges.</strong></p>
+<p><a href="https://github.com/fransg006/phpmyadminFran.git">Enllaç a GitHub</a>
 <img alt="Imatge" src="../IMG/Phpmyadmin/14.png" /></p>
-<p>Després per a pujar els canvis a GitHub Pages i així tindre un lloc web, he fet el seguent, i es pot veure al seguent enllaç 
+<p><strong>Després per a pujar els canvis a GitHub Pages i així tindre un lloc web, he fet el seguent, i es pot veure al seguent enllaç.</strong></p>
+<p><a href="https://fransg006.github.io/phpmyadminFran/">Enllaç a GitHub Pages</a>
 <img alt="Imatge" src="../IMG/Phpmyadmin/15.png" />
-<img alt="Imatge" src="../IMG/Phpmyadmin/16.png" />
-<a href="https://fransg006.github.io/phpmyadminFran/">Enllaç a GitHub Pages</a></p>
+<img alt="Imatge" src="../IMG/Phpmyadmin/16.png" /></p>
 <hr />
 
   <br>
