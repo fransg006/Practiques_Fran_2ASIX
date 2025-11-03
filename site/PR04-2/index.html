@@ -90,17 +90,17 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li>Configura phpMyAdmin perquè funcione amb nginx. </li>
 </ul>
-<p><strong>Al fitxer default de la ruta que es veu a la seguent captura he ficat les seguents linies de configuració.</strong></p>
-<p><img alt="Imatge" src="../IMG/Phpmyadmin/13.png" /></p>
-<p><strong>Una vegada configurat correctament, ficant al navegador la IP del servidor i /phpmyadmin, veurem la seguent pantalla que si ens identifiquem, podrem accedir dins.</strong></p>
-<p><img alt="Imatge" src="../IMG/Phpmyadmin/3.png" />
+<p><strong>Al fitxer default de la ruta que es veu a la seguent captura he ficat les seguents linies de configuració.</strong>
+<img alt="Imatge" src="../IMG/Phpmyadmin/13.png" /></p>
+<p><strong>Una vegada configurat correctament, ficant al navegador la IP del servidor i /phpmyadmin, veurem la seguent pantalla que si ens identifiquem, podrem accedir dins.</strong>
+<img alt="Imatge" src="../IMG/Phpmyadmin/3.png" />
 <img alt="Imatge" src="../IMG/Phpmyadmin/4.png" /></p>
 <h3 id="permetre-lacces-per-contrasenya-del-root-de-mysql">Permetre l’Accés per Contrasenya del root de MySQL</h3>
 <ul>
 <li>Canvia el mètode d’autenticació de l’usuari root de MySQL d’auth_socket a caching_sha2_password o mysql_native_password.</li>
 </ul>
-<p><strong>Pel que es pot veure, el mètode d'autenticació al que volem canviar ja es troba aplicat, per tant, no es necessari canviar-ho.</strong></p>
-<p><img alt="Imatge" src="../IMG/Phpmyadmin/5.png" /></p>
+<p><strong>Pel que es pot veure, el mètode d'autenticació al que volem canviar ja es troba aplicat, per tant, no es necessari canviar-ho.</strong>
+<img alt="Imatge" src="../IMG/Phpmyadmin/5.png" /></p>
 <p><strong>En cas de que no estiguera canviat i a la columna plugin es trobara el mode <em>auth_socket</em>, s'hauria d'emprar este comandament:</strong></p>
 <blockquote>
 <p><em>ALTER USER 'root'@'localhost' IDENTIFIED WITH 'caching_sha2_password' BY 'contrasenya';</em></p>
@@ -110,8 +110,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li>Verifica els mètodes d’autenticació utilitzats per cadascun dels usuaris. </li>
 </ul>
-<p><strong>El mètodes es poden veure a la seguent captura que es la mateixa que es veu dalt per a comprovar quin metode tenien els usuaris degut que al tractar de fer el comandament citat, ens ixia un error.</strong></p>
-<p><img alt="Imatge" src="../IMG/Phpmyadmin/5.png" /></p>
+<p><strong>El mètodes es poden veure a la seguent captura que es la mateixa que es veu dalt per a comprovar quin metode tenien els usuaris degut que al tractar de fer el comandament citat, ens ixia un error.</strong>
+<img alt="Imatge" src="../IMG/Phpmyadmin/5.png" /></p>
 <h3 id="configuracio-de-lacces-per-contrasenya-per-a-un-usuari-dedicat-de-mysql">Configuració de l’Accés per Contrasenya per a un Usuari Dedicat de MySQL</h3>
 <ul>
 <li>Crea un nou usuari de MySQL amb una contrasenya segura.</li>
@@ -142,16 +142,16 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p><strong>Ara una vegada reiniciat el servici veguem que ens demana credencials.</strong>
 <img alt="Imatge" src="../IMG/Phpmyadmin/12.png" /></p>
 <p><strong>Una vegada les fiquem podem accedir de nou al servidor, si ens tornem a identificar amb les claus del PHP.</strong></p>
-<p><strong>Es a dir, que després de ficar les credencials valides on es veu a la captura superior, ens apareix la pantalla que ens ixia primera abans per a accedir a la base de dades.</strong></p>
-<p><img alt="Imatge" src="../IMG/Phpmyadmin/3.png" /></p>
+<p><strong>Es a dir, que després de ficar les credencials valides on es veu a la captura superior, ens apareix la pantalla que ens ixia primera abans per a accedir a la base de dades.</strong>
+<img alt="Imatge" src="../IMG/Phpmyadmin/3.png" /></p>
 <hr />
 <h3 id="repositori-de-github-github-pages">Repositori de GitHub + GitHub Pages</h3>
 <p><strong>He creat el repositori de GitHub que es veu a la seguent imatge amb les carpetes i fitxers propis de mkdocs.</strong></p>
-<p><strong>Dins de docs es troben els fitxers markdown i les imatges.</strong></p>
-<p><a href="https://github.com/fransg006/phpmyadminFran.git">Enllaç a GitHub</a>
+<p><strong>Dins de docs es troben els fitxers markdown i les imatges.</strong>
+<a href="https://github.com/fransg006/phpmyadminFran.git">Enllaç a GitHub</a>
 <img alt="Imatge" src="../IMG/Phpmyadmin/14.png" /></p>
-<p><strong>Després per a pujar els canvis a GitHub Pages i així tindre un lloc web, he fet el seguent, i es pot veure al seguent enllaç.</strong></p>
-<p><a href="https://fransg006.github.io/phpmyadminFran/">Enllaç a GitHub Pages</a>
+<p><strong>Després per a pujar els canvis a GitHub Pages i així tindre un lloc web, he fet el seguent, i es pot veure al seguent enllaç.</strong>
+<a href="https://fransg006.github.io/phpmyadminFran/">Enllaç a GitHub Pages</a>
 <img alt="Imatge" src="../IMG/Phpmyadmin/15.png" />
 <img alt="Imatge" src="../IMG/Phpmyadmin/16.png" /></p>
 <hr />
