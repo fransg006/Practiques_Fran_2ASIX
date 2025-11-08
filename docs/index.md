@@ -17,3 +17,4 @@
 * Servir multiples dominis
 * Creació d'un certificat SSL/TLS
 * Configuració de phpmyadmin
+* Creació de formularis amb HTML i PHP
