@@ -1,0 +1,91 @@
+## Pràctica de Formularis
+
+---
+
+### Formulari A
+#### Crear un formulari que permeta introduir les dades d’una persona (nom, cognom, edat, adreça, telèfon, correu electrònic) i mostrar-les a la mateixa pàgina una vegada se polse el botó d’enviar. A més, cal validar que els camps no estiguen buits.
+
+Aquest es el formulari:
+
+![Imatge](IMG/Formularis/1.png)
+
+Amb el seguent HTML i PHP:
+
+![Imatge](IMG/Formularis/2.png)
+![Imatge](IMG/Formularis/3.png)
+
+ 
+El funcionament es el següent, i ficarem les dades que es veuen a continuació i el resultat:
+
+![Imatge](IMG/Formularis/4.png)
+![Imatge](IMG/Formularis/5.png)
+
+ 
+#### Modificar el formulari perquè es puga seleccionar el gènere de la persona (masculí, femení, altre) i mostrar-lo a la pàgina.
+He afegit algunes modificacions més el que demana al enunciat:
+Al HTML:
+
+![Imatge](IMG/Formularis/6.png)
+
+Al PHP:
+
+![Imatge](IMG/Formularis/7.png)
+
+Es veu de la següent manera:
+ 
+![Imatge](IMG/Formularis/8.png)
+
+Si fiquem les dades, veiem el resultat (Ens fixem sols en el que hem afegit nou, que es l’elecció de gènere)
+
+![Imatge](IMG/Formularis/9.png)
+
+> • **Ampliació del formulari per enviar mitjançant POST**
+
+#### Modificar el formulari perquè s’envie la informació mitjançant el mètode POST a una altra pàgina anomenada processar.php. En aquesta pàgina, mostrar les dades ingressades al formulari, igual que anteriorment i les seues modificacions.
+
+Les modificacions canvien, i es veuen al PHP, canviant la URL de .html al .php que tenim configurat.
+
+#### Modificar el formulari perquè es puga seleccionar els idiomes que parla la persona (espanyol, anglès, francès, alemany, italià) i mostrar-los a la pàgina. En donar-li al botó d’enviar, cal mostrar un missatge de benvinguda en aquest idioma. Pot haver-hi diversos idiomes, i si no heu seleccionat cap, mostrar un missatge que indique que no s’ha seleccionat cap idioma.
+
+Al HTML he afegit estes línies d’idioma per a que es compleixca l’enunciat:
+
+![Imatge](IMG/Formularis/10.png)
+
+Al PHP he afegit les següents línies d’idioma:
+ 
+![Imatge](IMG/Formularis/11.png)
+
+Al formulari s’observa el seguent, he escollit Francés per exemple:
+
+![Imatge](IMG/Formularis/12.png)
+
+I al enviar el formulari el seguent:
+ 
+![Imatge](IMG/Formularis/13.png) 
+
+> • **Enviament mitjançant GET**
+
+#### Prova el formulari amb diferents dades i canvia el mètode d’enviament de POST a GET. 
+
+He fet estos canvis al HTML (canviar el mètode de POST a GET):
+
+![Imatge](IMG/Formularis/14.png)
+
+He fet estos canvis al PHP:
+
+![Imatge](IMG/Formularis/15.png)
+![Imatge](IMG/Formularis/16.png)
+ 
+He ficat estes dades al formulari:
+
+![Imatge](IMG/Formularis/17.png)
+
+I els canvis s’observen a la pròpia URL:
+
+![Imatge](IMG/Formularis/18.png)
+
+#### Quines diferències observes?
+Que els missatges que escrius es mostren directament a la URL
+ 
+### Formulari B
+Crea un formulari que permeta enviar un fitxer de text. El fitxer ha de ser guardat al servidor i mostrar un missatge indicant que s’ha guardat correctament. A més, caldrà mostrar el contingut del fitxer a la pàgina.
