@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>PR05 - Formularis - IAW_Fran</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Pr\u00e0ctica de Formularis", url: "#_top", children: [
+              {title: "Formulari A", url: "#formulari-a" },
+              {title: "Formulari B", url: "#formulari-b" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav">
+      <a href="../PR04-2/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../PR04-2/" class="btn btn-xs btn-link">
+        PR04 - Phpmyadmin
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h2 id="practica-de-formularis">Pràctica de Formularis</h2>
+<hr />
+<h3 id="formulari-a">Formulari A</h3>
+<h4 id="crear-un-formulari-que-permeta-introduir-les-dades-duna-persona-nom-cognom-edat-adreca-telefon-correu-electronic-i-mostrar-les-a-la-mateixa-pagina-una-vegada-se-polse-el-boto-denviar-a-mes-cal-validar-que-els-camps-no-estiguen-buits">Crear un formulari que permeta introduir les dades d’una persona (nom, cognom, edat, adreça, telèfon, correu electrònic) i mostrar-les a la mateixa pàgina una vegada se polse el botó d’enviar. A més, cal validar que els camps no estiguen buits.</h4>
+<p>Aquest es el formulari:</p>
+<p><img alt="Imatge" src="../IMG/Formularis/1.png" /></p>
+<p>Amb el seguent HTML i PHP:</p>
+<p><img alt="Imatge" src="../IMG/Formularis/2.png" />
+<img alt="Imatge" src="../IMG/Formularis/3.png" /></p>
+<p>El funcionament es el següent, i ficarem les dades que es veuen a continuació i el resultat:</p>
+<p><img alt="Imatge" src="../IMG/Formularis/4.png" />
+<img alt="Imatge" src="../IMG/Formularis/5.png" /></p>
+<h4 id="modificar-el-formulari-perque-es-puga-seleccionar-el-genere-de-la-persona-masculi-femeni-altre-i-mostrar-lo-a-la-pagina">Modificar el formulari perquè es puga seleccionar el gènere de la persona (masculí, femení, altre) i mostrar-lo a la pàgina.</h4>
+<p>He afegit algunes modificacions més el que demana al enunciat:
+Al HTML:</p>
+<p><img alt="Imatge" src="../IMG/Formularis/6.png" /></p>
+<p>Al PHP:</p>
+<p><img alt="Imatge" src="../IMG/Formularis/7.png" /></p>
+<p>Es veu de la següent manera:</p>
+<p><img alt="Imatge" src="../IMG/Formularis/8.png" /></p>
+<p>Si fiquem les dades, veiem el resultat (Ens fixem sols en el que hem afegit nou, que es l’elecció de gènere)</p>
+<p><img alt="Imatge" src="../IMG/Formularis/9.png" /></p>
+<blockquote>
+<p>• <strong>Ampliació del formulari per enviar mitjançant POST</strong></p>
+</blockquote>
+<h4 id="modificar-el-formulari-perque-senvie-la-informacio-mitjancant-el-metode-post-a-una-altra-pagina-anomenada-processarphp-en-aquesta-pagina-mostrar-les-dades-ingressades-al-formulari-igual-que-anteriorment-i-les-seues-modificacions">Modificar el formulari perquè s’envie la informació mitjançant el mètode POST a una altra pàgina anomenada processar.php. En aquesta pàgina, mostrar les dades ingressades al formulari, igual que anteriorment i les seues modificacions.</h4>
+<p>Les modificacions canvien, i es veuen al PHP, canviant la URL de .html al .php que tenim configurat.</p>
+<h4 id="modificar-el-formulari-perque-es-puga-seleccionar-els-idiomes-que-parla-la-persona-espanyol-angles-frances-alemany-italia-i-mostrar-los-a-la-pagina-en-donar-li-al-boto-denviar-cal-mostrar-un-missatge-de-benvinguda-en-aquest-idioma-pot-haver-hi-diversos-idiomes-i-si-no-heu-seleccionat-cap-mostrar-un-missatge-que-indique-que-no-sha-seleccionat-cap-idioma">Modificar el formulari perquè es puga seleccionar els idiomes que parla la persona (espanyol, anglès, francès, alemany, italià) i mostrar-los a la pàgina. En donar-li al botó d’enviar, cal mostrar un missatge de benvinguda en aquest idioma. Pot haver-hi diversos idiomes, i si no heu seleccionat cap, mostrar un missatge que indique que no s’ha seleccionat cap idioma.</h4>
+<p>Al HTML he afegit estes línies d’idioma per a que es compleixca l’enunciat:</p>
+<p><img alt="Imatge" src="../IMG/Formularis/10.png" /></p>
+<p>Al PHP he afegit les següents línies d’idioma:</p>
+<p><img alt="Imatge" src="../IMG/Formularis/11.png" /></p>
+<p>Al formulari s’observa el seguent, he escollit Francés per exemple:</p>
+<p><img alt="Imatge" src="../IMG/Formularis/12.png" /></p>
+<p>I al enviar el formulari el seguent:</p>
+<p><img alt="Imatge" src="../IMG/Formularis/13.png" /> </p>
+<blockquote>
+<p>• <strong>Enviament mitjançant GET</strong></p>
+</blockquote>
+<h4 id="prova-el-formulari-amb-diferents-dades-i-canvia-el-metode-denviament-de-post-a-get">Prova el formulari amb diferents dades i canvia el mètode d’enviament de POST a GET.</h4>
+<p>He fet estos canvis al HTML (canviar el mètode de POST a GET):</p>
+<p><img alt="Imatge" src="../IMG/Formularis/14.png" /></p>
+<p>He fet estos canvis al PHP:</p>
+<p><img alt="Imatge" src="../IMG/Formularis/15.png" />
+<img alt="Imatge" src="../IMG/Formularis/16.png" /></p>
+<p>He ficat estes dades al formulari:</p>
+<p><img alt="Imatge" src="../IMG/Formularis/17.png" /></p>
+<p>I els canvis s’observen a la pròpia URL:</p>
+<p><img alt="Imatge" src="../IMG/Formularis/18.png" /></p>
+<h4 id="quines-diferencies-observes">Quines diferències observes?</h4>
+<p>Que els missatges que escrius es mostren directament a la URL
+ </p>
+<h3 id="formulari-b">Formulari B</h3>
+<p>Crea un formulari que permeta enviar un fitxer de text. El fitxer ha de ser guardat al servidor i mostrar un missatge indicant que s’ha guardat correctament. A més, caldrà mostrar el contingut del fitxer a la pàgina.</p>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav">
+      <a href="../PR04-2/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../PR04-2/" class="btn btn-xs btn-link">
+        PR04 - Phpmyadmin
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>
