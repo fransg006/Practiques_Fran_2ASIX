@@ -125,7 +125,33 @@ Al HTML:</p>
 <p>Que els missatges que escrius es mostren directament a la URL
  </p>
 <h3 id="formulari-b">Formulari B</h3>
-<p>Crea un formulari que permeta enviar un fitxer de text. El fitxer ha de ser guardat al servidor i mostrar un missatge indicant que s’ha guardat correctament. A més, caldrà mostrar el contingut del fitxer a la pàgina.</p>
+<h4 id="crea-un-formulari-que-permeta-enviar-un-fitxer-de-text-el-fitxer-ha-de-ser-guardat-al-servidor-i-mostrar-un-missatge-indicant-que-sha-guardat-correctament-a-mes-caldra-mostrar-el-contingut-del-fitxer-a-la-pagina">Crea un formulari que permeta enviar un fitxer de text. El fitxer ha de ser guardat al servidor i mostrar un missatge indicant que s’ha guardat correctament. A més, caldrà mostrar el contingut del fitxer a la pàgina.</h4>
+<p>Primer he copiat els fitxers del formulari A per a agafar-los de base.</p>
+<p><img alt="Imatge" src="../IMG/Formularis/19.png" /></p>
+<p>Al accedir al HTML he fet aquest formulari:</p>
+<p><img alt="Imatge" src="../IMG/Formularis/20.png" /></p>
+<p>Al navegador podem veure que si fem clic al botó de <em>Seleccionar archivo</em> podem afegir un fitxer per a pujar-lo.</p>
+<p><img alt="Imatge" src="../IMG/Formularis/21.png" /></p>
+<p>Ara anem al PHP, el cual he deixat de la seguent manera per a que agafe els fitxers que pujem i els emmagatzeme al directori indicat:</p>
+<p><img alt="Imatge" src="../IMG/Formularis/22.png" /></p>
+<p>He creat el seguent fitxer amb aquest contingut en Escriptori del meu Windows host.</p>
+<p><img alt="Imatge" src="../IMG/Formularis/23.png" /></p>
+<p>Després he creat dins de /var/www/html/ la carpeta que es diu al PHP, la cual es on es desaran els fitxers que es fiquen al HTML:</p>
+<p><img alt="Imatge" src="../IMG/Formularis/25.png" /></p>
+<p>Després de reiniciar el servici d'apache, provem de la seguent manera:</p>
+<ol>
+<li>Pujem el fitxer des del navegador.</li>
+</ol>
+<p><img alt="Imatge" src="../IMG/Formularis/24.png" />
+<em>(En el cas de que done error, poden ser els permisos sobre la carpeta a la que volem guardar el fitxer)</em></p>
+<ol>
+<li>Veiem que s'ha guardat correctament pel missatge, i veiem el contingut del fitxer.</li>
+</ol>
+<p><img alt="Imatge" src="../IMG/Formularis/26.png" /></p>
+<ol>
+<li>Comprovem al directori asignat al PHP si s'ha enviat.</li>
+</ol>
+<p><img alt="Imatge" src="../IMG/Formularis/27.png" /></p>
 
   <br>
     
