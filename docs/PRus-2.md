@@ -23,13 +23,13 @@ En esta pantalla la identificación será con las credenciales **fran-8448**.
 
 ![Imagen](IMG/UsPhpmyadmin/2.png)
 
-1. Cree un nuevo usuario de MySQL/MariaDB con la siguiente configuración
-- nombre de usuario: iaw_agenda_1
-- servidor: localhost
-- contraseña: iaw_agenda_1
-- base de datos para el usuario: base de datos con el mismo nombre(iaw_agenda_1)
-- sin privilegios globales
-- sin límite de recursos
+**1. Cree un nuevo usuario de MySQL/MariaDB con la siguiente configuración**
+>- nombre de usuario: iaw_agenda_1
+>- servidor: localhost
+>- contraseña: iaw_agenda_1
+>- base de datos para el usuario: base de datos con el mismo nombre(iaw_agenda_1)
+>- sin privilegios globales
+>- sin límite de recursos
 
 Primero, para crear dicha cuenta de usuario, nos tenemos que identificar como root, para que nos de permisos de configuración.
 Una vez identificados como root-8448, vamos a Cuentas de usuario, y creamos uno con las caracteristicas requeridas.
@@ -38,14 +38,14 @@ Una vez identificados como root-8448, vamos a Cuentas de usuario, y creamos uno 
 
 De esta manera creamos el usuario y la base de datos que se muestra en el siguiente punto.
 
-2. Una vez creado el usuario, entre en phpMyAdmin como usuario iaw_agenda_1 y compruebe que se ha creado la base de datos iaw_agenda_1.
+**2. Una vez creado el usuario, entre en phpMyAdmin como usuario iaw_agenda_1 y compruebe que se ha creado la base de datos iaw_agenda_1.**
 
 De esta manera podemos ver el comando SQL y a su vez la base de datos creada.
 
 ![Imagen](IMG/UsPhpmyadmin/4.png)
 
 
-3. Como usuario iaw_agenda_1, compruebe que no puede borrar la base de datos, ni crear otra base de datos (por ejemplo, la base de datos iaw_agenda_1_db1).
+**3. Como usuario iaw_agenda_1, compruebe que no puede borrar la base de datos, ni crear otra base de datos (por ejemplo, la base de datos iaw_agenda_1_db1).**
 
 Primero me he logueado con el usuario creado iaw_agenda_1.
 
@@ -59,12 +59,12 @@ Ahora he probado a eliminar la base de datos que hemos creado de forma automatic
 
 
 #### phpMyAdmin (2) 2 - Instalar una aplicación como usuario iaw_agenda_1
-1. Descargue la aplicación Agenda (17/01/23) (esta aplicación corresponde al ejercicio Bases de datos (2 B) 2 del curso Programación web en PHP).
+**1. Descargue la aplicación Agenda (17/01/23) (esta aplicación corresponde al ejercicio Bases de datos (2 B) 2 del curso Programación web en PHP).**
 
 ![Imagen](IMG/UsPhpmyadmin/7.png)
 
 
-2. Descomprima la aplicación en la carpeta adecuada y renombre la carpeta como agenda-1.
+**2. Descomprima la aplicación en la carpeta adecuada y renombre la carpeta como agenda-1.**
 
 Primero en mi maquina anfitrion, he creado un servidor temporal de python en mi maquina para poder descargar la carpeta en el Ubuntu Server.
 
@@ -83,7 +83,7 @@ Una vez ya tenemos la carpeta descomprimida, procedemos a situar dicha carpeta e
 ![Imagen](IMG/UsPhpmyadmin/12.png)
 
 
-3. Modifique el archivo de configuración config.php de la aplicación Agenda para que esta utilice la cuenta del usuario iaw_agenda_1 en MySQL/MariaDB.
+**3. Modifique el archivo de configuración config.php de la aplicación Agenda para que esta utilice la cuenta del usuario iaw_agenda_1 en MySQL/MariaDB.**
 
 Para este paso, nos situamos dentro del directorio donde se encuentra el fichero config.php de la carpeta que hemos movido.
 
