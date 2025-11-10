@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>PRus 2 - IAW_Fran</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Pr\u00e0ctica d\u0027\u00fas de phpmyadmin", url: "#_top", children: [
+          ]},
+          {title: "phpMyAdmin - Ejercicios (2) - Enunciados", url: "#phpmyadmin-ejercicios-2-enunciados", children: [
+              {title: "phpMyAdmin (2) 1 - Crear un usuario iaw_agenda_1 con una base de datos \u00fanica", url: "#phpmyadmin-2-1-crear-un-usuario-iaw_agenda_1-con-una-base-de-datos-unica" },
+              {title: "phpMyAdmin (2) 2 - Instalar una aplicaci\u00f3n como usuario iaw_agenda_1", url: "#phpmyadmin-2-2-instalar-una-aplicacion-como-usuario-iaw_agenda_1" },
+              {title: "phpMyAdmin (2) 3 - Crear un usuario iaw_agenda_2 que pueda administrar varias bases de datos", url: "#phpmyadmin-2-3-crear-un-usuario-iaw_agenda_2-que-pueda-administrar-varias-bases-de-datos" },
+              {title: "phpMyAdmin (2) 4 - Instalar dos aplicaciones como usuario iaw_agenda_2", url: "#phpmyadmin-2-4-instalar-dos-aplicaciones-como-usuario-iaw_agenda_2" },
+              {title: "phpMyAdmin (2) 5 - Crear un usuario iaw_agenda_3 con una base de datos \u00fanica", url: "#phpmyadmin-2-5-crear-un-usuario-iaw_agenda_3-con-una-base-de-datos-unica" },
+              {title: "phpMyAdmin (2) 6 - Instalar dos aplicaciones como usuario iaw_agenda_3", url: "#phpmyadmin-2-6-instalar-dos-aplicaciones-como-usuario-iaw_agenda_3" },
+              {title: "phpMyAdmin (2) 7 - Mejora de las aplicaciones del usuario iaw_agenda_3", url: "#phpmyadmin-2-7-mejora-de-las-aplicaciones-del-usuario-iaw_agenda_3" },
+          ]},
+          {title: "phpMyAdmin - Ejercicios (3) - Enunciados", url: "#phpmyadmin-ejercicios-3-enunciados", children: [
+              {title: "phpMyAdmin (3) 1 - Completar instalaci\u00f3n", url: "#phpmyadmin-3-1-completar-instalacion" },
+              {title: "phpMyAdmin (3) 2 - Instalar tema", url: "#phpmyadmin-3-2-instalar-tema" },
+              {title: "phpMyAdmin (3) 3 - Permitir borrar bases de datos a los usuarios", url: "#phpmyadmin-3-3-permitir-borrar-bases-de-datos-a-los-usuarios" },
+              {title: "phpMyAdmin (3) 4 - Realizar copias de seguridad de las bases de datos del usuario iaw_agenda_2", url: "#phpmyadmin-3-4-realizar-copias-de-seguridad-de-las-bases-de-datos-del-usuario-iaw_agenda_2" },
+              {title: "phpMyAdmin (3) 5 (optativo) - Generar PDFs de la estructura de las bases de datos", url: "#phpmyadmin-3-5-optativo-generar-pdfs-de-la-estructura-de-las-bases-de-datos" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+
+    <h2 id="practica-dus-de-phpmyadmin">Pràctica d'ús de phpmyadmin</h2>
+<h2 id="phpmyadmin-ejercicios-2-enunciados">phpMyAdmin - Ejercicios (2) - Enunciados</h2>
+<hr />
+<p>En esta lección se proponen ejercicios para practicar el uso de phpMyAdmin instalando pequeñas aplicaciones. Se pueden consultar las soluciones de estos ejercicios de phpMyAdmin, aunque se recomienda intentar realizarlos primero sin recurrir a estas soluciones.</p>
+<p>/// Administración de bases de datos on phpMyAdmin</p>
+<blockquote>
+<p>Las aplicaciones web que se abordan en este curso utilizan la base de datos MySQL/MariaDB. Por motivos de seguridad, en servidores reales no se recomienda que las aplicaciones se conecten a MySQL/MariaDB como usuario root. Para cada aplicación, es más recomendable crear un usuario en MySQL/MariaDB que administre la aplicación. Ese procedimiento es el que se utilizará en estos apuntes. Para crear esos usuarios y, en general, administrar MySQL/MariaDB, se utilizará la aplicación phpMyAdmin.</p>
+<p>En esta lección se proponen ejercicios en los que se instalará varias veces una pequeña aplicación de agenda. En los ejercicios se plantean tres situaciones distintas:</p>
+<p>· Instalar y configurar manualmente la aplicación como usuario que sólo puede crear una base de datos.
+· Instalar y configurar manualmente dos aplicaciones como usuario que puede crear varias bases de datos.
+· Instalar y configurar manualmente dos aplicaciones como usuario que sólo puede crear una base de datos (es necesario además modificar la aplicación)</p>
+</blockquote>
+<h4 id="phpmyadmin-2-1-crear-un-usuario-iaw_agenda_1-con-una-base-de-datos-unica">phpMyAdmin (2) 1 - Crear un usuario iaw_agenda_1 con una base de datos única</h4>
+<p>Primero para acceder dentro de phpmyadmin, tenemos que pasar por dos identificaciones configuradas en la practica 4.
+La primera, que es la que se ve en la siguiente captura, las credenciales son <strong>franHT-8448</strong>.
+Ficar imatge IMG1
+En esta pantalla la identificación será con las credenciales <strong>fran-8448</strong>.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/2.png" /></p>
+<p><strong>1. Cree un nuevo usuario de MySQL/MariaDB con la siguiente configuración</strong></p>
+<blockquote>
+<ul>
+<li>nombre de usuario: iaw_agenda_1</li>
+<li>servidor: localhost</li>
+<li>contraseña: iaw_agenda_1</li>
+<li>base de datos para el usuario: base de datos con el mismo nombre(iaw_agenda_1)</li>
+<li>sin privilegios globales</li>
+<li>sin límite de recursos</li>
+</ul>
+</blockquote>
+<p>Primero, para crear dicha cuenta de usuario, nos tenemos que identificar como root, para que nos de permisos de configuración.
+Una vez identificados como root-8448, vamos a Cuentas de usuario, y creamos uno con las caracteristicas requeridas.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/3.png" /></p>
+<p>De esta manera creamos el usuario y la base de datos que se muestra en el siguiente punto.</p>
+<p><strong>2. Una vez creado el usuario, entre en phpMyAdmin como usuario iaw_agenda_1 y compruebe que se ha creado la base de datos iaw_agenda_1.</strong></p>
+<p>De esta manera podemos ver el comando SQL y a su vez la base de datos creada.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/4.png" /></p>
+<p><strong>3. Como usuario iaw_agenda_1, compruebe que no puede borrar la base de datos, ni crear otra base de datos (por ejemplo, la base de datos iaw_agenda_1_db1).</strong></p>
+<p>Primero me he logueado con el usuario creado iaw_agenda_1.</p>
+<p>Una vez logueado con dicho usuario, he probado a crear una, y de hecho nos dice en el cuadro rojo inferior que no tenemos permisos para realizar esta operación.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/5.png" /></p>
+<p>Ahora he probado a eliminar la base de datos que hemos creado de forma automatica con el mismo nombre que el usuario a la misma vez que lo creamos, y nos sale lo mismo, que no podemos eliminar.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/6.png" /></p>
+<h4 id="phpmyadmin-2-2-instalar-una-aplicacion-como-usuario-iaw_agenda_1">phpMyAdmin (2) 2 - Instalar una aplicación como usuario iaw_agenda_1</h4>
+<p><strong>1. Descargue la aplicación Agenda (17/01/23) (esta aplicación corresponde al ejercicio Bases de datos (2 B) 2 del curso Programación web en PHP).</strong></p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/7.png" /></p>
+<p><strong>2. Descomprima la aplicación en la carpeta adecuada y renombre la carpeta como agenda-1.</strong></p>
+<p>Primero en mi maquina anfitrion, he creado un servidor temporal de python en mi maquina para poder descargar la carpeta en el Ubuntu Server.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/9.png" /></p>
+<p>Después desde el Ubuntu Server he usado este comando para descargar la carpeta comprimida.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/10.png" /></p>
+<p>Seguidamente, procedo a descomprimir dicha carpeta.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/11.png" /></p>
+<p>Una vez ya tenemos la carpeta descomprimida, procedemos a situar dicha carpeta en el directorio de configuración correspondiente.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/12.png" /></p>
+<p><strong>3. Modifique el archivo de configuración config.php de la aplicación Agenda para que esta utilice la cuenta del usuario iaw_agenda_1 en MySQL/MariaDB.</strong></p>
+<p>Para este paso, nos situamos dentro del directorio donde se encuentra el fichero config.php de la carpeta que hemos movido.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/13.png" /></p>
+<p>Una vez dentro ponemos dicha configuración como pide el enunciado, como se ve en la siguiente imagen.
+En este caso lo que modificamos son las 4 ultimas lineas que salen en la captura.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/14.png" /></p>
+<p>El siguiente paso será crear un fichero de configuración /etc/nginx/sites-available, en este caso llamado igual que la carpeta agenda-1.
+Lo vamos a copiar del default que ya tenemos por defecto para usarlo de plantilla.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/15.png" /></p>
+<p>Una vez copiado el fichero, vamos a configurarlo para el sitio.</p>
+<p><img alt="Imagen" src="IMG/UsPhpmyadmin/16.png" /></p>
+<ol>
+<li>Ejecute la aplicación en el navegador, eligiendo primero la opción "Borrar todo" para crear la tabla en la base de datos, y compruebe que funciona creando varios registros.</li>
+</ol>
+<p>Ahora desde el navegador, vamos a http://IPservidor/agenda-1</p>
+<ol>
+<li>Compruebe el contenido de la tabla en phpMyAdmin como usuario iaw_agenda_1.</li>
+</ol>
+<h4 id="phpmyadmin-2-3-crear-un-usuario-iaw_agenda_2-que-pueda-administrar-varias-bases-de-datos">phpMyAdmin (2) 3 - Crear un usuario iaw_agenda_2 que pueda administrar varias bases de datos</h4>
+<ol>
+<li>Cree un nuevo usuario de MySQL/MariaDB con la siguiente configuración</li>
+<li>nombre de usuario: iaw_agenda_2</li>
+<li>servidor: localhost</li>
+<li>contraseña: iaw_agenda_2</li>
+<li>base de datos para el usuario: Otorgar todos los privilegios al nombre que contiene comodín (username_%)</li>
+<li>sin privilegios globales</li>
+<li>
+<p>sin límite de recursos</p>
+</li>
+<li>
+<p>Una vez creado el usuario, entre en phpMyAdmin como usuario iaw_agenda_2 y compruebe que no se ha creado ninguna base de datos.</p>
+</li>
+<li>
+<p>Compruebe que el usuario iaw_agenda_2 no puede crear una base de datos cuyo nombre no empiece por iaw_agenda_2_, por ejemplo una base de datos que se llame agenda_2.</p>
+</li>
+</ol>
+<h4 id="phpmyadmin-2-4-instalar-dos-aplicaciones-como-usuario-iaw_agenda_2">phpMyAdmin (2) 4 - Instalar dos aplicaciones como usuario iaw_agenda_2</h4>
+<ol>
+<li>
+<p>Descargue la aplicación Agenda (17/01/23) (esta aplicación corresponde al ejercicio Bases de datos (2 B) 2 del curso Programación web en PHP).</p>
+</li>
+<li>
+<p>Descomprima la aplicación dos veces en dos carpetas y renombre las carpetas como agenda-2a y agenda-2b.</p>
+</li>
+<li>
+<p>Modifique los archivos de configuración config.php de ambas aplicaciones para que estas utilicen la cuenta del usuario iaw_agenda_2 en MySQL/MariaDB (pero bases de datos distintas).
+<strong>Nota</strong>: Hay que tener en cuenta que el nombre de las bases de datos debe comenzar por el nombre del usuario y un guion bajo (en este caso, iaw_agenda_2_agenda_2a y iaw_agenda_2_agenda_2b, por ejemplo)</p>
+</li>
+</ol>
+<p>Para distinguir después una aplicación de otra fácilmente, puede cambiar el color básico de la aplicación en el archivo de configuración.</p>
+<ol>
+<li>
+<p>Ejecute las aplicaciones en el navegador, eligiendo primero la opción "Borrar todo" para crear la tabla en la base de datos, y compruebe que funcionan creando varios registros.</p>
+</li>
+<li>
+<p>Compruebe los contenidos de las tablas en phpMyAdmin como usuario iaw_agenda_2.</p>
+</li>
+</ol>
+<h4 id="phpmyadmin-2-5-crear-un-usuario-iaw_agenda_3-con-una-base-de-datos-unica">phpMyAdmin (2) 5 - Crear un usuario iaw_agenda_3 con una base de datos única</h4>
+<ol>
+<li>Cree un nuevo usuario de MySQL/MariaDB con la siguiente configuración</li>
+<li>nombre de usuario: iaw_agenda_3</li>
+<li>servidor: localhost</li>
+<li>contraseña: iaw_agenda_3</li>
+<li>base de datos con el mismo nombre (iaw_agenda_3)</li>
+<li>sin privilegios globales</li>
+<li>
+<p>sin límite de recursos</p>
+</li>
+<li>
+<p>Una vez creado el usuario, entre en phpMyAdmin como usuario iaw_agenda_3 y compruebe que se ha creado la base de datos iaw_agenda_3.</p>
+</li>
+</ol>
+<h4 id="phpmyadmin-2-6-instalar-dos-aplicaciones-como-usuario-iaw_agenda_3">phpMyAdmin (2) 6 - Instalar dos aplicaciones como usuario iaw_agenda_3</h4>
+<ol>
+<li>
+<p>Descargue la aplicación Agenda (17/01/23) (esta aplicación corresponde al ejercicio Bases de datos (2 B) 2 del curso Programación web en PHP).</p>
+</li>
+<li>
+<p>Descomprima la aplicación en dos carpetas y renombre las carpetas como agenda-3a y agenda-3b.</p>
+</li>
+<li>
+<p>Modifique los archivos de configuración config.php para que las aplicaciones utilicen la cuenta del usuario iaw_agenda_3 en MySQL/MariaDB y la misma base de datos iaw_agenda_3, pero cada una guarde sus registros en tablas distintas.</p>
+</li>
+<li>
+<p>Ejecute las aplicaciones en el navegador y compruebe que funcionan creando varios registros. El problema es que al borrar todo desde una aplicación se borra también la tabla de la otra aplicación.</p>
+</li>
+<li>
+<p>Confirme el problema anterior comprobando los contenidos de las tablas en phpMyAdmin como usuario iaw_agenda_3</p>
+</li>
+</ol>
+<h4 id="phpmyadmin-2-7-mejora-de-las-aplicaciones-del-usuario-iaw_agenda_3">phpMyAdmin (2) 7 - Mejora de las aplicaciones del usuario iaw_agenda_3</h4>
+<p><strong>Usuario con un base de datos única</strong></p>
+<ol>
+<li>
+<p>El problema de las aplicaciones del ejercicio 6 es que si se elige la opción "Borrar todo" en una de las aplicaciones se pierde toda la información de la otra aplicación, ya que al "Borrar todo" se borra la base de datos completa. Corrija este problema.</p>
+<blockquote>
+<blockquote>
+<p>Ayuda (haga clic aquí si no se le ocurre cómo hacerlo)</p>
+</blockquote>
+</blockquote>
+</li>
+<li>
+<p>Ejecute las aplicaciones en el navegador y compruebe que funcionan creando varios registros. Compruebe especialmente que al borrar todo desde una aplicación no se borran los registros de la otra.</p>
+</li>
+<li>
+<p>Compruebe los contenidos de las tablas en phpMyAdmin como usuario iaw_agenda_3.</p>
+</li>
+</ol>
+<p><strong>Usuario con varias bases de datos</strong></p>
+<ol>
+<li>
+<p>Si el usuario iaw_agenda_3 fuera del tipo de los que pueden tener muchas bases de datos, la solución del apartado anterior no sería suficiente, ya que las aplicaciones necesitan que exista la base de datos y las aplicaciones no las crean. Corrija este problema.</p>
+<blockquote>
+<blockquote>
+<p>Ayuda (haga clic aquí si no se le ocurre cómo hacerlo)</p>
+</blockquote>
+</blockquote>
+</li>
+<li>
+<p>Borre el usuario usuario iaw_agenda_3 y créelo de nuevo, pero ahora del tipo de los que pueden crear varias bases de datos. Ejecute las aplicaciones en el navegador y compruebe que funcionan creando varios registros. Compruebe especialmente que al borrar todo desde una aplicación no se borran los registros de la otra.</p>
+</li>
+<li>
+<p>Compruebe los contenidos de las tablas en phpMyAdmin como usuario iaw_agenda_3.</p>
+</li>
+</ol>
+<hr />
+<h2 id="phpmyadmin-ejercicios-3-enunciados">phpMyAdmin - Ejercicios (3) - Enunciados</h2>
+<h4 id="phpmyadmin-3-1-completar-instalacion">phpMyAdmin (3) 1 - Completar instalación</h4>
+<ol>
+<li>
+<p>Para mantener la identificación de los usuarios en la base de datos, phpMyAdmin guarda una cookie en el cliente. Esta cookie está encriptada mediante el algoritmo AES, que requiere una cadenas sal aleatoria de 32 caracteres.</p>
+</li>
+<li>
+<p>Elimine el aviso inicial que muestra phpMyAdmin.</p>
+</li>
+</ol>
+<p>Aunque phpMyAdmin utiliza el algoritmo AES, la variable de configuración se llama blowfish_secret debido a que anteriormente phpMyAdmin utilizaba el algoritmo Blowfish. El manual de phpMyAdmin aconseja utilizar una cadena aleatoria de 32 caracteres, que puede generar utilizando algún generador Blowfish de los disponibles en Internet y modificándola para mayor seguridad.</p>
+<ol>
+<li>Compruebe que ya no se muestra el aviso.</li>
+</ol>
+<h4 id="phpmyadmin-3-2-instalar-tema">phpMyAdmin (3) 2 - Instalar tema</h4>
+<ol>
+<li>
+<p>Aplique el tema Metro:</p>
+</li>
+<li>
+<p>Descargue el tema darkwolf de la página de temas de phpMyAdmin y descomprímalo en la carpeta adecuada.</p>
+</li>
+</ol>
+<p>Si el tema darkwolf ya no está disponible en la web del programa, puede descargarlo desde la página de Descarga de aplicaciones.</p>
+<ol>
+<li>
+<p>Aplique el tema darkwolf:</p>
+</li>
+<li>
+<p>Vuelva al tema predeterminado pmahomme.</p>
+</li>
+</ol>
+<h4 id="phpmyadmin-3-3-permitir-borrar-bases-de-datos-a-los-usuarios">phpMyAdmin (3) 3 - Permitir borrar bases de datos a los usuarios</h4>
+<ol>
+<li>
+<p>Como usuario root, compruebe que con phpMyAdmin podría borrar bases de datos (no borre ninguna ahora).
+XAMPP. Borrar bases de datos</p>
+</li>
+<li>
+<p>Como usuario iaw_agenda_1 o iaw_agenda_2, compruebe que con phpMyAdmin no puede borrar sus bases de datos.
+XAMPP. Borrar bases de datos</p>
+</li>
+<li>
+<p>El motivo es que con la configuración inicial, los usuarios no pueden borrar bases de datos. Pero estableciendo una variable de configuración en el archivo de configuración de phpMyAdmin, el usuario podrá borrar bases de datos.</p>
+</li>
+</ol>
+<p>La variable de configuración se documenta en el manual de phpMyAdmin.</p>
+<blockquote>
+<blockquote>
+<p>Ayuda (haga clic aquí si no encuentra el nombre de la variable en la página del manual enlazada)</p>
+</blockquote>
+</blockquote>
+<ol>
+<li>
+<p>Como usuario iaw_agenda_1 o iaw_agenda_2, compruebe que ya puede borrar sus bases de datos.
+XAMPP. Borrar bases de datos</p>
+</li>
+<li>
+<p>Deje el archivo de configuración de manera que los usuarios puedan borrar sus bases de datos, para poder hacer el ejercicio siguiente.</p>
+</li>
+</ol>
+<h4 id="phpmyadmin-3-4-realizar-copias-de-seguridad-de-las-bases-de-datos-del-usuario-iaw_agenda_2">phpMyAdmin (3) 4 - Realizar copias de seguridad de las bases de datos del usuario iaw_agenda_2</h4>
+<ol>
+<li>
+<p>Compruebe que hay registros guardados en las tablas personas en ambas bases de datos.</p>
+</li>
+<li>
+<p>Copia de seguridad rápida</p>
+</li>
+<li>
+<p>Realice una copia de seguridad rápida de del usuario iaw_agenda_2</p>
+</li>
+<li>Borre las bases de datos o las tablas de ambas aplicaciones.</li>
+<li>Restaure las copias de seguridad realizadas.</li>
+<li>
+<p>Compruebe que los registros de las tablas se han recuperado correctamente.</p>
+</li>
+<li>
+<p>Copia de seguridad personalizada completa</p>
+</li>
+<li>Realice una copia de seguridad personalizada de las bases de datos del usuario iaw_agenda_2 (incluyendo el borrado de las bases de datos y sus elementos).</li>
+<li>Borre las bases de datos o las tablas de ambas aplicaciones.</li>
+<li>Restaure las copias de seguridad realizadas.</li>
+<li>
+<p>Compruebe que los registros de las tablas se han recuperado correctamente.</p>
+</li>
+<li>
+<p>Copia de seguridad personalizada parcial</p>
+</li>
+<li>Realice una copia de seguridad personalizada de una de las bases de datos del usuario iaw_agenda_2 (incluyendo el borrado de las bases de datos y sus elementos).</li>
+<li>Borre la base de datos o la tabla elegida.</li>
+<li>Restaure la copias de seguridad realizada.</li>
+<li>Compruebe que los registros de la tabla se han recuperado correctamente.</li>
+</ol>
+<h4 id="phpmyadmin-3-5-optativo-generar-pdfs-de-la-estructura-de-las-bases-de-datos">phpMyAdmin (3) 5 (optativo) - Generar PDFs de la estructura de las bases de datos</h4>
+<p>phpMyAdmin incluye un diseñador que muestra de forma gráfica la estructura de la base de datos y que también permite exportarla en formato PDF.</p>
+<ol>
+<li>
+<p>Muestre la estructura de la base de datos iaw_agenda_1.
+phpMyAdmin. Generador</p>
+</li>
+<li>
+<p>Exporte el pdf con la estructura de la base de datos iaw_agenda_1.
+phpMyAdmin. Generador</p>
+</li>
+</ol>
+
+  <br>
+    
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>
