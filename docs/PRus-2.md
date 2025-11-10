@@ -18,7 +18,9 @@ En esta lección se proponen ejercicios para practicar el uso de phpMyAdmin inst
 #### phpMyAdmin (2) 1 - Crear un usuario iaw_agenda_1 con una base de datos única
 Primero para acceder dentro de phpmyadmin, tenemos que pasar por dos identificaciones configuradas en la practica 4.
 La primera, que es la que se ve en la siguiente captura, las credenciales son **franHT-8448**.
-Ficar imatge IMG1
+
+![Imagen](IMG/UsPhpmyadmin/1.png)
+
 En esta pantalla la identificación será con las credenciales **fran-8448**.
 
 ![Imagen](IMG/UsPhpmyadmin/2.png)
