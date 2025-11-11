@@ -5,13 +5,16 @@
 
 En esta lección se proponen ejercicios para practicar el uso de phpMyAdmin instalando pequeñas aplicaciones. Se pueden consultar las soluciones de estos ejercicios de phpMyAdmin, aunque se recomienda intentar realizarlos primero sin recurrir a estas soluciones.
 
-/// Administración de bases de datos on phpMyAdmin
-> Las aplicaciones web que se abordan en este curso utilizan la base de datos MySQL/MariaDB. Por motivos de seguridad, en servidores reales no se recomienda que las aplicaciones se conecten a MySQL/MariaDB como usuario root. Para cada aplicación, es más recomendable crear un usuario en MySQL/MariaDB que administre la aplicación. Ese procedimiento es el que se utilizará en estos apuntes. Para crear esos usuarios y, en general, administrar MySQL/MariaDB, se utilizará la aplicación phpMyAdmin.
+**Administración de bases de datos on phpMyAdmin**
 
-> En esta lección se proponen ejercicios en los que se instalará varias veces una pequeña aplicación de agenda. En los ejercicios se plantean tres situaciones distintas:
+Las aplicaciones web que se abordan en este curso utilizan la base de datos MySQL/MariaDB. Por motivos de seguridad, en servidores reales no se recomienda que las aplicaciones se conecten a MySQL/MariaDB como usuario root. Para cada aplicación, es más recomendable crear un usuario en MySQL/MariaDB que administre la aplicación. Ese procedimiento es el que se utilizará en estos apuntes. Para crear esos usuarios y, en general, administrar MySQL/MariaDB, se utilizará la aplicación phpMyAdmin.
+
+En esta lección se proponen ejercicios en los que se instalará varias veces una pequeña aplicación de agenda. En los ejercicios se plantean tres situaciones distintas:
 
 > · Instalar y configurar manualmente la aplicación como usuario que sólo puede crear una base de datos.
+
 > · Instalar y configurar manualmente dos aplicaciones como usuario que puede crear varias bases de datos.
+
 > · Instalar y configurar manualmente dos aplicaciones como usuario que sólo puede crear una base de datos (es necesario además modificar la aplicación)
 
 
@@ -92,7 +95,7 @@ Para este paso, nos situamos dentro del directorio donde se encuentra el fichero
 ![Imagen](IMG/UsPhpmyadmin/13.png)
 
 Una vez dentro ponemos dicha configuración como pide el enunciado, como se ve en la siguiente imagen.
-En este caso lo que modificamos son las 4 ultimas lineas que salen en la captura.
+En este caso lo que modificamos son las 4 ultimas lineas que salen en la captura, y en la primera linea donde elegimos el tipo de base de datos, ponemos MYSQL ya que es el tipo que usamos.
 
 ![Imagen](IMG/UsPhpmyadmin/14.png)
 
@@ -120,7 +123,10 @@ Elegimos la opción de borrar todo que se muestra en pantalla y aceptamos.
 
 ![Imagen](IMG/UsPhpmyadmin/19.png)
 
-***Sale error en la base de datos***
+Después de borrar todo, podemos ver que nos sale lo siguiente:
+
+![Imagen](IMG/UsPhpmyadmin/20.png)
+
 
 **5. Compruebe el contenido de la tabla en phpMyAdmin como usuario iaw_agenda_1.**
 
