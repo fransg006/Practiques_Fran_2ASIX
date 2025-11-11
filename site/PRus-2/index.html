@@ -150,14 +150,17 @@ En este caso lo que modificamos son las 4 ultimas lineas que salen en la captura
 Lo vamos a copiar del default que ya tenemos por defecto para usarlo de plantilla.</p>
 <p><img alt="Imagen" src="../IMG/UsPhpmyadmin/15.png" /></p>
 <p>Una vez copiado el fichero, vamos a configurarlo para el sitio.</p>
-<p><img alt="Imagen" src="IMG/UsPhpmyadmin/16.png" /></p>
-<ol>
-<li>Ejecute la aplicación en el navegador, eligiendo primero la opción "Borrar todo" para crear la tabla en la base de datos, y compruebe que funciona creando varios registros.</li>
-</ol>
-<p>Ahora desde el navegador, vamos a http://IPservidor/agenda-1</p>
-<ol>
-<li>Compruebe el contenido de la tabla en phpMyAdmin como usuario iaw_agenda_1.</li>
-</ol>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/16.png" /></p>
+<p>Después, para que nginx no coja el <em>default</em> por defecto, en /etc/nginx/sites-enabled, he borrado el default.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/17.png" /></p>
+<p><strong>4. Ejecute la aplicación en el navegador, eligiendo primero la opción "Borrar todo" para crear la tabla en la base de datos, y compruebe que funciona creando varios registros.</strong></p>
+<p>Ahora desde el navegador, vamos a http://IPservidor/agenda-1
+<em>(La IP varía depende en que red me encuentre conectado en el momento)</em></p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/18.png" /></p>
+<p>Elegimos la opción de borrar todo que se muestra en pantalla y aceptamos.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/19.png" /></p>
+<p><strong><em>Sale error en la base de datos</em></strong></p>
+<p><strong>5. Compruebe el contenido de la tabla en phpMyAdmin como usuario iaw_agenda_1.</strong></p>
 <h4 id="phpmyadmin-2-3-crear-un-usuario-iaw_agenda_2-que-pueda-administrar-varias-bases-de-datos">phpMyAdmin (2) 3 - Crear un usuario iaw_agenda_2 que pueda administrar varias bases de datos</h4>
 <ol>
 <li>Cree un nuevo usuario de MySQL/MariaDB con la siguiente configuración</li>
