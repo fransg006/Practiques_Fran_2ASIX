@@ -90,13 +90,13 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h2 id="phpmyadmin-ejercicios-2-enunciados">phpMyAdmin - Ejercicios (2) - Enunciados</h2>
 <hr />
 <p>En esta lección se proponen ejercicios para practicar el uso de phpMyAdmin instalando pequeñas aplicaciones. Se pueden consultar las soluciones de estos ejercicios de phpMyAdmin, aunque se recomienda intentar realizarlos primero sin recurrir a estas soluciones.</p>
-<p>/// Administración de bases de datos on phpMyAdmin</p>
-<blockquote>
+<p><strong>Administración de bases de datos on phpMyAdmin</strong></p>
 <p>Las aplicaciones web que se abordan en este curso utilizan la base de datos MySQL/MariaDB. Por motivos de seguridad, en servidores reales no se recomienda que las aplicaciones se conecten a MySQL/MariaDB como usuario root. Para cada aplicación, es más recomendable crear un usuario en MySQL/MariaDB que administre la aplicación. Ese procedimiento es el que se utilizará en estos apuntes. Para crear esos usuarios y, en general, administrar MySQL/MariaDB, se utilizará la aplicación phpMyAdmin.</p>
 <p>En esta lección se proponen ejercicios en los que se instalará varias veces una pequeña aplicación de agenda. En los ejercicios se plantean tres situaciones distintas:</p>
-<p>· Instalar y configurar manualmente la aplicación como usuario que sólo puede crear una base de datos.
-· Instalar y configurar manualmente dos aplicaciones como usuario que puede crear varias bases de datos.
-· Instalar y configurar manualmente dos aplicaciones como usuario que sólo puede crear una base de datos (es necesario además modificar la aplicación)</p>
+<blockquote>
+<p>· Instalar y configurar manualmente la aplicación como usuario que sólo puede crear una base de datos.</p>
+<p>· Instalar y configurar manualmente dos aplicaciones como usuario que puede crear varias bases de datos.</p>
+<p>· Instalar y configurar manualmente dos aplicaciones como usuario que sólo puede crear una base de datos (es necesario además modificar la aplicación)</p>
 </blockquote>
 <h4 id="phpmyadmin-2-1-crear-un-usuario-iaw_agenda_1-con-una-base-de-datos-unica">phpMyAdmin (2) 1 - Crear un usuario iaw_agenda_1 con una base de datos única</h4>
 <p>Primero para acceder dentro de phpmyadmin, tenemos que pasar por dos identificaciones configuradas en la practica 4.
@@ -144,7 +144,7 @@ Una vez identificados como root-8448, vamos a Cuentas de usuario, y creamos uno 
 <p>Para este paso, nos situamos dentro del directorio donde se encuentra el fichero config.php de la carpeta que hemos movido.</p>
 <p><img alt="Imagen" src="../IMG/UsPhpmyadmin/13.png" /></p>
 <p>Una vez dentro ponemos dicha configuración como pide el enunciado, como se ve en la siguiente imagen.
-En este caso lo que modificamos son las 4 ultimas lineas que salen en la captura.</p>
+En este caso lo que modificamos son las 4 ultimas lineas que salen en la captura, y en la primera linea donde elegimos el tipo de base de datos, ponemos MYSQL ya que es el tipo que usamos.</p>
 <p><img alt="Imagen" src="../IMG/UsPhpmyadmin/14.png" /></p>
 <p>El siguiente paso será crear un fichero de configuración /etc/nginx/sites-available, en este caso llamado igual que la carpeta agenda-1.
 Lo vamos a copiar del default que ya tenemos por defecto para usarlo de plantilla.</p>
@@ -159,7 +159,8 @@ Lo vamos a copiar del default que ya tenemos por defecto para usarlo de plantill
 <p><img alt="Imagen" src="../IMG/UsPhpmyadmin/18.png" /></p>
 <p>Elegimos la opción de borrar todo que se muestra en pantalla y aceptamos.</p>
 <p><img alt="Imagen" src="../IMG/UsPhpmyadmin/19.png" /></p>
-<p><strong><em>Sale error en la base de datos</em></strong></p>
+<p>Después de borrar todo, podemos ver que nos sale lo siguiente:</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/20.png" /></p>
 <p><strong>5. Compruebe el contenido de la tabla en phpMyAdmin como usuario iaw_agenda_1.</strong></p>
 <h4 id="phpmyadmin-2-3-crear-un-usuario-iaw_agenda_2-que-pueda-administrar-varias-bases-de-datos">phpMyAdmin (2) 3 - Crear un usuario iaw_agenda_2 que pueda administrar varias bases de datos</h4>
 <p><strong>1. Cree un nuevo usuario de MySQL/MariaDB con la siguiente configuración</strong>
