@@ -230,8 +230,15 @@ Esta imagen es en el CSS de agenda-2a.</p>
 <p><img alt="Imagen" src="../IMG/UsPhpmyadmin/39.png" /></p>
 <p>Y se ve asi.</p>
 <p><img alt="Imagen" src="../IMG/UsPhpmyadmin/40.png" /></p>
-<p><strong>4. Ejecute las aplicaciones en el navegador, eligiendo primero la opción "Borrar todo" para crear la tabla en la base de datos, y compruebe que funcionan creando varios registros.</strong></p>
-<p><strong>5. Compruebe los contenidos de las tablas en phpMyAdmin como usuario iaw_agenda_2.</strong></p>
+<p><strong>4. Ejecute las aplicaciones en el navegador, eligiendo primero la opción "Borrar todo" para crear la tabla en la base de datos, y compruebe que funcionan creando varios registros.</strong>
+El borrado de las bases de datos con el <em>Borrar todo</em> se ve en las siguientes 2 capturas de las 2 aplicaciones web.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/41.png" /></p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/42.png" /></p>
+<p><strong>5. Compruebe los contenidos de las tablas en phpMyAdmin como usuario iaw_agenda_2.</strong>
+Accedemos al phpmyadmin con dicho usuario.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/43.png" /></p>
+<p>Una vez dentro, vemos el contenido de las tablas. En este caso podemos ver en la siguiente imagen que las tablas se encuentran vacias.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/44.png" /></p>
 <hr />
 <h4 id="phpmyadmin-2-5-crear-un-usuario-iaw_agenda_3-con-una-base-de-datos-unica">phpMyAdmin (2) 5 - Crear un usuario iaw_agenda_3 con una base de datos única</h4>
 <p><strong>1. Cree un nuevo usuario de MySQL/MariaDB con la siguiente configuración</strong>
@@ -241,20 +248,73 @@ Esta imagen es en el CSS de agenda-2a.</p>
 - base de datos con el mismo nombre (iaw_agenda_3)
 - sin privilegios globales
 - sin límite de recursos</p>
+<p>Volvemos a loguearnos como root en el phpmyadmin para poder crear usuarios.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/45.png" /></p>
+<p>Una vez dentro creamos el usuario según lo pedido.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/46.png" /></p>
 <p><strong>2. Una vez creado el usuario, entre en phpMyAdmin como usuario iaw_agenda_3 y compruebe que se ha creado la base de datos iaw_agenda_3.</strong></p>
+<p>Nos logueamos como iaw_agenda_3.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/47.png" /></p>
+<p>Vemos la base de datos creada.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/48.png" /></p>
 <hr />
 <h4 id="phpmyadmin-2-6-instalar-dos-aplicaciones-como-usuario-iaw_agenda_3">phpMyAdmin (2) 6 - Instalar dos aplicaciones como usuario iaw_agenda_3</h4>
-<p><strong>1. Descargue la aplicación Agenda (17/01/23) (esta aplicación corresponde al ejercicio Bases de datos (2 B) 2 del curso Programación web en PHP).</strong></p>
-<p><strong>2. Descomprima la aplicación en dos carpetas y renombre las carpetas como agenda-3a y agenda-3b.</strong></p>
-<p><strong>3. Modifique los archivos de configuración config.php para que las aplicaciones utilicen la cuenta del usuario iaw_agenda_3 en MySQL/MariaDB y la misma base de datos iaw_agenda_3, pero cada una guarde sus registros en tablas distintas.</strong></p>
-<p><strong>4. Ejecute las aplicaciones en el navegador y compruebe que funcionan creando varios registros. El problema es que al borrar todo desde una aplicación se borra también la tabla de la otra aplicación.</strong></p>
+<p><strong>1. Descargue la aplicación Agenda (17/01/23) (esta aplicación corresponde al ejercicio Bases de datos (2 B) 2 del curso Programación web en PHP).</strong>
+La aplicación fue descargada en los primeros pasos.</p>
+<p><strong>2. Descomprima la aplicación en dos carpetas y renombre las carpetas como agenda-3a y agenda-3b.</strong>
+Procedemos a descomprimir la carpeta, creando 2.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/49.png" /></p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/50.png" /></p>
+<p>Seguidamente las movemos al directorio /var/www/.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/51.png" /></p>
+<p><strong>3. Modifique los archivos de configuración config.php para que las aplicaciones utilicen la cuenta del usuario iaw_agenda_3 en MySQL/MariaDB y la misma base de datos iaw_agenda_3, pero cada una guarde sus registros en tablas distintas.</strong>
+En las 2 siguientes imagenes se muestran los ficheros config.php en <em>/var/www/agenda-3X/config.php</em>.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/52.png" /></p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/53.png" /></p>
+<p>Ahora he duplicado el fichero que se encuentra en /etc/nginx/sites-available/ de agenda-1 para cada una de las apps, para 3a y 3b, con sus respectivas configuraciones en las siguientes imagenes.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/54.png" /></p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/55.png" /></p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/56.png" /></p>
+<p>Después hay que llevar estos ficheros al sites-enabled para habilitarlos.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/57.png" /></p>
+<p><strong>4. Ejecute las aplicaciones en el navegador y compruebe que funcionan creando varios registros. El problema es que al borrar todo desde una aplicación se borra también la tabla de la otra aplicación.</strong>
+Ahora desde el navegador, poniendo la IP del servidor y el puerto que hemos configurado de cada sitio, vemos lo siguiente.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/58.png" /></p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/59.png" /></p>
+<p>Ponemos <em>Borrar todo</em> en ambos sitios.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/60.png" /></p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/61.png" /></p>
+<p>Ahora vamos a crear algún registro en agenda-3a por ejemplo</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/62.png" /></p>
+<p>Después guardamos y vemos que se han guardado los cambios.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/63.png" /></p>
 <p><strong>5. Confirme el problema anterior comprobando los contenidos de las tablas en phpMyAdmin como usuario iaw_agenda_3</strong></p>
+<p>Ahora nos logueamos con el usuario iaw_agenda_3.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/64.png" /></p>
+<p>Podemos ver el registro creado en agenda-3a en la base de datos en la ultima linea que se ve en la siguiente imagen.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/65.png" /></p>
 <hr />
 <h4 id="phpmyadmin-2-7-mejora-de-las-aplicaciones-del-usuario-iaw_agenda_3">phpMyAdmin (2) 7 - Mejora de las aplicaciones del usuario iaw_agenda_3</h4>
 <p><strong>Usuario con un base de datos única</strong></p>
-<p><strong>1. El problema de las aplicaciones del ejercicio 6 es que si se elige la opción "Borrar todo" en una de las aplicaciones se pierde toda la información de la otra aplicación, ya que al "Borrar todo" se borra la base de datos completa. Corrija este problema.</strong></p>
-<p><strong>2. Ejecute las aplicaciones en el navegador y compruebe que funcionan creando varios registros. Compruebe especialmente que al borrar todo desde una aplicación no se borran los registros de la otra.</strong></p>
-<p><strong>3. Compruebe los contenidos de las tablas en phpMyAdmin como usuario iaw_agenda_3.</strong></p>
+<p><strong>1. El problema de las aplicaciones del ejercicio 6 es que si se elige la opción "Borrar todo" en una de las aplicaciones se pierde toda la información de la otra aplicación, ya que al "Borrar todo" se borra la base de datos completa. Corrija este problema.</strong>
+La solución a este problema es borrar todo lo que marca la linea roja de la siguiente imagen:</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/66.png" /></p>
+<p>Debe de quedar de esta manera en ambas bibliotecas.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/67.png" /></p>
+<p>Una vez borrado en los 2, no debemos de tener mas este problema.
+Para comprobarlo, voy a pulsar <em>Borrar todo</em> en la de agenda-3b para ver si se borra el registro de agenda-3a.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/68.png" /></p>
+<p>Después de probarlo, podemos ver que el registro sigue sin haberlo perdido.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/69.png" /></p>
+<p><strong>2. Ejecute las aplicaciones en el navegador y compruebe que funcionan creando varios registros. Compruebe especialmente que al borrar todo desde una aplicación no se borran los registros de la otra.</strong>
+Para esta prueba voy a crear 2 registros en agenda-3a.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/70.png" /></p>
+<p>Ahora desde agenda-3b voy a probar a borrarlo todo.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/71.png" /></p>
+<p>Después de intentarlo, vemos que los registros siguen estando.</p>
+<p><img alt="Imagen" src="../IMG/UsPhpmyadmin/72.png" /></p>
+<p><strong>3. Compruebe los contenidos de las tablas en phpMyAdmin como usuario iaw_agenda_3.</strong>
+Los contenidos siguen estando, como se ve en la imagen del punto de arriba.</p>
 <p><strong>Usuario con varias bases de datos</strong></p>
 <p><strong>1. Si el usuario iaw_agenda_3 fuera del tipo de los que pueden tener muchas bases de datos, la solución del apartado anterior no sería suficiente, ya que las aplicaciones necesitan que exista la base de datos y las aplicaciones no las crean. Corrija este problema.</strong></p>
 <p><strong>2. Borre el usuario usuario iaw_agenda_3 y créelo de nuevo, pero ahora del tipo de los que pueden crear varias bases de datos. Ejecute las aplicaciones en el navegador y compruebe que funcionan creando varios registros. Compruebe especialmente que al borrar todo desde una aplicación no se borran los registros de la otra.</strong></p>
