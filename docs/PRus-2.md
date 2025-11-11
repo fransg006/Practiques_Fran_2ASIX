@@ -105,14 +105,24 @@ Una vez copiado el fichero, vamos a configurarlo para el sitio.
 
 ![Imagen](IMG/UsPhpmyadmin/16.png)
 
+Después, para que nginx no coja el *default* por defecto, en /etc/nginx/sites-enabled, he borrado el default.
 
+![Imagen](IMG/UsPhpmyadmin/17.png)
 
-4. Ejecute la aplicación en el navegador, eligiendo primero la opción "Borrar todo" para crear la tabla en la base de datos, y compruebe que funciona creando varios registros.
+**4. Ejecute la aplicación en el navegador, eligiendo primero la opción "Borrar todo" para crear la tabla en la base de datos, y compruebe que funciona creando varios registros.**
 
 Ahora desde el navegador, vamos a http://IPservidor/agenda-1
+*(La IP varía depende en que red me encuentre conectado en el momento)*
 
+![Imagen](IMG/UsPhpmyadmin/18.png)
 
-5. Compruebe el contenido de la tabla en phpMyAdmin como usuario iaw_agenda_1.
+Elegimos la opción de borrar todo que se muestra en pantalla y aceptamos.
+
+![Imagen](IMG/UsPhpmyadmin/19.png)
+
+***Sale error en la base de datos***
+
+**5. Compruebe el contenido de la tabla en phpMyAdmin como usuario iaw_agenda_1.**
 
 
 
