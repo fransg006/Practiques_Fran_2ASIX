@@ -117,7 +117,7 @@ Después, para que nginx no coja el *default* por defecto, en /etc/nginx/sites-e
 
 **4. Ejecute la aplicación en el navegador, eligiendo primero la opción "Borrar todo" para crear la tabla en la base de datos, y compruebe que funciona creando varios registros.**
 
-Ahora desde el navegador, vamos a http://IPservidor/agenda-1
+Ahora desde el navegador, vamos a http://IPservidor/30000
 *(La IP varía depende en que red me encuentre conectado en el momento)*
 
 ![Imagen](IMG/UsPhpmyadmin/18.png)
@@ -418,6 +418,8 @@ Los contenidos siguen estando, como se ve en la imagen del punto de arriba.
 
 **1. Para mantener la identificación de los usuarios en la base de datos, phpMyAdmin guarda una cookie en el cliente. Esta cookie está encriptada mediante el algoritmo AES, que requiere una cadenas sal aleatoria de 32 caracteres.**
 
+
+
 **2. Elimine el aviso inicial que muestra phpMyAdmin.**
 
 Aunque phpMyAdmin utiliza el algoritmo AES, la variable de configuración se llama blowfish_secret debido a que anteriormente phpMyAdmin utilizaba el algoritmo Blowfish. El manual de phpMyAdmin aconseja utilizar una cadena aleatoria de 32 caracteres, que puede generar utilizando algún generador Blowfish de los disponibles en Internet y modificándola para mayor seguridad.
@@ -429,21 +431,50 @@ Aunque phpMyAdmin utiliza el algoritmo AES, la variable de configuración se lla
 #### phpMyAdmin (3) 2 - Instalar tema
 **1. Aplique el tema Metro:**
 
+![Imagen](IMG/UsPhpmyadmin/73.png)
+
 **2. Descargue el tema darkwolf de la página de temas de phpMyAdmin y descomprímalo en la carpeta adecuada.**
 
 *Si el tema darkwolf ya no está disponible en la web del programa, puede descargarlo desde la página de Descarga de aplicaciones.*
 
+Primero en la pagina de temas de phpmyadmin descargo el tema en formato .zip
+![Imagen](IMG/UsPhpmyadmin/74.png)
+![Imagen](IMG/UsPhpmyadmin/75.png)
+
+Después lo comparto comprimido con el servidor a través del servidor de pyhton3.
+![Imagen](IMG/UsPhpmyadmin/76.png)
+![Imagen](IMG/UsPhpmyadmin/77.png)
+
+El siguiente paso es descomprimirlo, lo llamaré Darkwolf.
+
+![Imagen](IMG/UsPhpmyadmin/78.png)
+![Imagen](IMG/UsPhpmyadmin/79.png)
+
+Ahora lo moveré al directorio siguiente para que se muestre en el menú de phpmyadmin para aplicarlo de la misma manera que el Metro.
+![Imagen](IMG/UsPhpmyadmin/80.png)
+
+
 **3. Aplique el tema darkwolf:**
+Para que el tema aparezca, refrescamos la pagina y vemos que sale en el listado. Lo aplicamos.
+![Imagen](IMG/UsPhpmyadmin/81.png)
 
 **4. Vuelva al tema predeterminado pmahomme.**
+![Imagen](IMG/UsPhpmyadmin/82.png)
 
 ---
 
 #### phpMyAdmin (3) 3 - Permitir borrar bases de datos a los usuarios
 
 **1. Como usuario root, compruebe que con phpMyAdmin podría borrar bases de datos (no borre ninguna ahora).**
+Si nos situamos aqui, en operaciones, y vemos abajo del todo de la siguiente imagen que si que sale la opción de borrar la base de datos estando como root.
+![Imagen](IMG/UsPhpmyadmin/83.png)
 
 **2. Como usuario iaw_agenda_1 o iaw_agenda_2, compruebe que con phpMyAdmin no puede borrar sus bases de datos.**
+Nos logueamos como iaw_agenda_1 y vemos que no sale la opción.
+![Imagen](IMG/UsPhpmyadmin/84.png)
+
+Lo mismo con iaw_agenda_2.
+![Imagen](IMG/UsPhpmyadmin/85.png)
 
 
 **3. El motivo es que con la configuración inicial, los usuarios no pueden borrar bases de datos. Pero estableciendo una variable de configuración en el archivo de configuración de phpMyAdmin, el usuario podrá borrar bases de datos.**
@@ -460,13 +491,36 @@ XAMPP. Borrar bases de datos**
 #### phpMyAdmin (3) 4 - Realizar copias de seguridad de las bases de datos del usuario iaw_agenda_2
 
 **1. Compruebe que hay registros guardados en las tablas personas en ambas bases de datos.**
- 
+He creado un registro en cada tabla para que haya contenido en cada una de ellas.
+
 **2. Copia de seguridad rápida**
 
-- Realice una copia de seguridad rápida de del usuario iaw_agenda_2
+- Realice una copia de seguridad rápida del usuario iaw_agenda_2
 - Borre las bases de datos o las tablas de ambas aplicaciones.
 - Restaure las copias de seguridad realizadas.
-- Compruebe que los registros de las tablas se han recuperado correctamente.
+- Compruebe que los registros de las tablas se han r
+
+Primero nos conectamos a phpmyadmin con el usuario iaw_agenda_2.
+Después vamos a *Exportar* y ponemos las siguientes opciones.
+![Imagen](IMG/UsPhpmyadmin/86.png)
+![Imagen](IMG/UsPhpmyadmin/87.png)
+
+Exportamos y vemos el fichero descargado.
+![Imagen](IMG/UsPhpmyadmin/88.png)
+
+Ahora vamos a borrar las bases de datos desde el usuario root, de la siguiente manera en ambas.
+![Imagen](IMG/UsPhpmyadmin/89.png)
+
+Si nos logueamos de nuevo con iaw_agenda_2, vemos que las bases de datos ya no aparecen.
+![Imagen](IMG/UsPhpmyadmin/90.png)
+
+Ahora como root, vamos a restaurar con el fichero que hemos creado al exportar antes, en *Importar*:
+![Imagen](IMG/UsPhpmyadmin/91.png)
+![Imagen](IMG/UsPhpmyadmin/92.png)
+
+Una vez importado de nuevo, desde root como se ve en la imagen superior, y al igual que desde iaw_agenda_2, vemos de nuevo las bases de datos, con sus correspondientes datos que hemos introducido antes.
+![Imagen](IMG/UsPhpmyadmin/93.png)
+
 
 **3. Copia de seguridad personalizada completa**
 - Realice una copia de seguridad personalizada de las bases de datos del usuario iaw_agenda_2 (incluyendo el borrado de las bases de datos y sus elementos).
@@ -474,11 +528,33 @@ XAMPP. Borrar bases de datos**
 - Restaure las copias de seguridad realizadas.
 - Compruebe que los registros de las tablas se han recuperado correctamente.
 
+Para realizar este tipo de copia, elegimos la opción de *personalizada*, en la siguiente imagen.
+![Imagen](IMG/UsPhpmyadmin/94.png)
+
+En la siguiente imagen, para que sea una copia completa, es decir, de todo, marcamos *estructura i dades*.
+![Imagen](IMG/UsPhpmyadmin/95.png)
+
+Ahora borramos las bases de datos como root de la misma forma que en el punto anterior.
+Restauramos la copia igual que antes con *Importar*.
+Vemos de nuevo que los registros de dichas tablas siguen estando.
+![Imagen](IMG/UsPhpmyadmin/96.png)
+
+
 **4. Copia de seguridad personalizada parcial**
 - Realice una copia de seguridad personalizada de una de las bases de datos del usuario iaw_agenda_2 (incluyendo el borrado de las bases de datos y sus elementos).
 - Borre la base de datos o la tabla elegida.
 - Restaure la copias de seguridad realizada.
 - Compruebe que los registros de la tabla se han recuperado correctamente.
+  
+Realizamos el mismo procedimiento que en el punto anterior, pero esta vez elegimos la opción de *solo estructura*.
+![Imagen](IMG/UsPhpmyadmin/97.png)
+
+
+Una vez creado el fichero .sql, borramos las bases de datos de nuevo, y volvemos a importar el fichero.
+![Imagen](IMG/UsPhpmyadmin/98.png)
+
+Vemos que al importar el fichero de nuevo, la estructura la mantiene, pero los datos no.
+![Imagen](IMG/UsPhpmyadmin/99.png)
 
 ---
 
@@ -487,5 +563,6 @@ phpMyAdmin incluye un diseñador que muestra de forma gráfica la estructura de 
 
 **1. Muestre la estructura de la base de datos iaw_agenda_1.**
 
+![Imagen](IMG/UsPhpmyadmin/97.png)
 
 **2. Exporte el pdf con la estructura de la base de datos iaw_agenda_1.**
