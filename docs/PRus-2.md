@@ -1,5 +1,5 @@
 ## Pràctica d'ús de phpmyadmin
-## phpMyAdmin - Ejercicios (2) - Enunciados
+### Ejercicios 2 - Enunciados
 
 ---
 
@@ -19,7 +19,7 @@ En esta lección se proponen ejercicios en los que se instalará varias veces un
 
 ---
 
-#### phpMyAdmin (2) 1 - Crear un usuario iaw_agenda_1 con una base de datos única
+#### 2.1 - Crear un usuario iaw_agenda_1 con una base de datos única
 Primero para acceder dentro de phpmyadmin, tenemos que pasar por dos identificaciones configuradas en la practica 4.
 La primera, que es la que se ve en la siguiente captura, las credenciales son **franHT-8448**.
 
@@ -65,7 +65,7 @@ Ahora he probado a eliminar la base de datos que hemos creado de forma automatic
 
 ---
 
-#### phpMyAdmin (2) 2 - Instalar una aplicación como usuario iaw_agenda_1
+#### 2.2 - Instalar una aplicación como usuario iaw_agenda_1
 
 **1. Descargue la aplicación Agenda (17/01/23) (esta aplicación corresponde al ejercicio Bases de datos (2 B) 2 del curso Programación web en PHP).**
 
@@ -143,7 +143,7 @@ Y comprobamos que el contenido de la tabla en phpmyadmin está vacio.
 
 ---
 
-#### phpMyAdmin (2) 3 - Crear un usuario iaw_agenda_2 que pueda administrar varias bases de datos
+#### 2.3 - Crear un usuario iaw_agenda_2 que pueda administrar varias bases de datos
 **1. Cree un nuevo usuario de MySQL/MariaDB con la siguiente configuración**
 - nombre de usuario: iaw_agenda_2
 - servidor: localhost
@@ -181,7 +181,7 @@ Probamos a crear una base de datos con el nombre agenda_2 y vemos que nos sale l
 
 ---
 
-#### phpMyAdmin (2) 4 - Instalar dos aplicaciones como usuario iaw_agenda_2
+#### 2.4 - Instalar dos aplicaciones como usuario iaw_agenda_2
 **1. Descargue la aplicación Agenda (17/01/23) (esta aplicación corresponde al ejercicio Bases de datos (2 B) 2 del curso Programación web en PHP).**
 
 Como en el servidor ya tenia la carpeta comprimida descargada del principio de la actividad, pasamos al siguiente punto.
@@ -265,7 +265,7 @@ Una vez dentro, vemos el contenido de las tablas. En este caso podemos ver en la
 
 ---
 
-#### phpMyAdmin (2) 5 - Crear un usuario iaw_agenda_3 con una base de datos única
+#### 2.5 - Crear un usuario iaw_agenda_3 con una base de datos única
 **1. Cree un nuevo usuario de MySQL/MariaDB con la siguiente configuración**
 - nombre de usuario: iaw_agenda_3
 - servidor: localhost
@@ -295,7 +295,7 @@ Vemos la base de datos creada.
 
 ---
 
-#### phpMyAdmin (2) 6 - Instalar dos aplicaciones como usuario iaw_agenda_3
+#### 2.6 - Instalar dos aplicaciones como usuario iaw_agenda_3
 **1. Descargue la aplicación Agenda (17/01/23) (esta aplicación corresponde al ejercicio Bases de datos (2 B) 2 del curso Programación web en PHP).**
 La aplicación fue descargada en los primeros pasos.
 
@@ -363,8 +363,9 @@ Podemos ver el registro creado en agenda-3a en la base de datos en la ultima lin
 
 ---
 
-#### phpMyAdmin (2) 7 - Mejora de las aplicaciones del usuario iaw_agenda_3
-**Usuario con un base de datos única**
+#### 2.7 - Mejora de las aplicaciones del usuario iaw_agenda_3
+
+> **Usuario con un base de datos única**
 
 **1. El problema de las aplicaciones del ejercicio 6 es que si se elige la opción "Borrar todo" en una de las aplicaciones se pierde toda la información de la otra aplicación, ya que al "Borrar todo" se borra la base de datos completa. Corrija este problema.**
 La solución a este problema es borrar todo lo que marca la linea roja de la siguiente imagen:
@@ -400,7 +401,7 @@ Después de intentarlo, vemos que los registros siguen estando.
 **3. Compruebe los contenidos de las tablas en phpMyAdmin como usuario iaw_agenda_3.**
 Los contenidos siguen estando, como se ve en la imagen del punto de arriba.
 
-**Usuario con varias bases de datos**
+> **Usuario con varias bases de datos (SIN HACER)**
 
 **1. Si el usuario iaw_agenda_3 fuera del tipo de los que pueden tener muchas bases de datos, la solución del apartado anterior no sería suficiente, ya que las aplicaciones necesitan que exista la base de datos y las aplicaciones no las crean. Corrija este problema.**
 
@@ -412,9 +413,9 @@ Los contenidos siguen estando, como se ve en la imagen del punto de arriba.
 ---
 ---
 
-## phpMyAdmin - Ejercicios (3) - Enunciados
+## Ejercicios 3 - Enunciados
 
-#### phpMyAdmin (3) 1 - Completar instalación
+#### 3.1 - Completar instalación (SIN HACER)
 
 **1. Para mantener la identificación de los usuarios en la base de datos, phpMyAdmin guarda una cookie en el cliente. Esta cookie está encriptada mediante el algoritmo AES, que requiere una cadenas sal aleatoria de 32 caracteres.**
 
@@ -428,7 +429,7 @@ Aunque phpMyAdmin utiliza el algoritmo AES, la variable de configuración se lla
 
 ---
 
-#### phpMyAdmin (3) 2 - Instalar tema
+#### 3.2 - Instalar tema
 **1. Aplique el tema Metro:**
 
 ![Imagen](IMG/UsPhpmyadmin/73.png)
@@ -463,7 +464,7 @@ Para que el tema aparezca, refrescamos la pagina y vemos que sale en el listado.
 
 ---
 
-#### phpMyAdmin (3) 3 - Permitir borrar bases de datos a los usuarios
+#### 3.3 - Permitir borrar bases de datos a los usuarios
 
 **1. Como usuario root, compruebe que con phpMyAdmin podría borrar bases de datos (no borre ninguna ahora).**
 Si nos situamos aqui, en operaciones, y vemos abajo del todo de la siguiente imagen que si que sale la opción de borrar la base de datos estando como root.
@@ -488,7 +489,7 @@ XAMPP. Borrar bases de datos**
 
 ---
 
-#### phpMyAdmin (3) 4 - Realizar copias de seguridad de las bases de datos del usuario iaw_agenda_2
+#### 3.4 - Realizar copias de seguridad de las bases de datos del usuario iaw_agenda_2
 
 **1. Compruebe que hay registros guardados en las tablas personas en ambas bases de datos.**
 He creado un registro en cada tabla para que haya contenido en cada una de ellas.
@@ -558,11 +559,15 @@ Vemos que al importar el fichero de nuevo, la estructura la mantiene, pero los d
 
 ---
 
-#### phpMyAdmin (3) 5 (optativo) - Generar PDFs de la estructura de las bases de datos
+#### 3.5 (optativo) - Generar PDFs de la estructura de las bases de datos
 phpMyAdmin incluye un diseñador que muestra de forma gráfica la estructura de la base de datos y que también permite exportarla en formato PDF.
 
 **1. Muestre la estructura de la base de datos iaw_agenda_1.**
 
-![Imagen](IMG/UsPhpmyadmin/97.png)
+![Imagen](IMG/UsPhpmyadmin/100.png)
 
 **2. Exporte el pdf con la estructura de la base de datos iaw_agenda_1.**
+
+![Imagen](IMG/UsPhpmyadmin/101.png)
+
+En aquest enllaç, es pot accedir al document .pdf de la estructura de la base de dades: [PDF](/docs/Estructura-BaseDeDades1.pdf)
