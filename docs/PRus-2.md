@@ -410,16 +410,15 @@ Los contenidos siguen estando, como se ve en la imagen del punto de arriba.
 
 **3. Compruebe los contenidos de las tablas en phpMyAdmin como usuario iaw_agenda_3.**
 
----
+
 ---
 
-## Ejercicios 3 - Enunciados
+
+### Ejercicios 3 - Enunciados
 
 #### 3.1 - Completar instalación (SIN HACER)
 
 **1. Para mantener la identificación de los usuarios en la base de datos, phpMyAdmin guarda una cookie en el cliente. Esta cookie está encriptada mediante el algoritmo AES, que requiere una cadenas sal aleatoria de 32 caracteres.**
-
-
 
 **2. Elimine el aviso inicial que muestra phpMyAdmin.**
 
@@ -570,4 +569,4 @@ phpMyAdmin incluye un diseñador que muestra de forma gráfica la estructura de 
 
 ![Imagen](IMG/UsPhpmyadmin/101.png)
 
-En aquest enllaç, es pot accedir al document .pdf de la estructura de la base de dades: [PDF](/docs/Estructura-BaseDeDades1.pdf)
+En aquest enllaç, es pot accedir al document .pdf de la estructura de la base de dades: [PDF](Estructura-BaseDeDades1.pdf)
