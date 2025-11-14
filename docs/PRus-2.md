@@ -410,7 +410,7 @@ Los contenidos siguen estando, como se ve en la imagen del punto de arriba.
 
 **3. Compruebe los contenidos de las tablas en phpMyAdmin como usuario iaw_agenda_3.**
 
----
+> ------------------
 
 ### Ejercicios 3 - Enunciados
 
