@@ -410,10 +410,7 @@ Los contenidos siguen estando, como se ve en la imagen del punto de arriba.
 
 **3. Compruebe los contenidos de las tablas en phpMyAdmin como usuario iaw_agenda_3.**
 
-
 ---
----
-
 
 ### Ejercicios 3 - Enunciados
 
@@ -570,4 +567,4 @@ phpMyAdmin incluye un diseñador que muestra de forma gráfica la estructura de 
 
 ![Imagen](IMG/UsPhpmyadmin/101.png)
 
-En aquest enllaç, es pot accedir al document .pdf de la estructura de la base de dades: [PDF](/site/Estructura-BaseDeDades1.pdf)
+En aquest enllaç, es pot accedir al document .pdf de la estructura de la base de dades: [PDF](Estructura-BaseDeDades1.pdf)
