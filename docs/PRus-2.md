@@ -20,6 +20,7 @@ En esta lección se proponen ejercicios en los que se instalará varias veces un
 ---
 
 #### 2.1 - Crear un usuario iaw_agenda_1 con una base de datos única
+
 Primero para acceder dentro de phpmyadmin, tenemos que pasar por dos identificaciones configuradas en la practica 4.
 La primera, que es la que se ve en la siguiente captura, las credenciales son **franHT-8448**.
 
@@ -30,6 +31,7 @@ En esta pantalla la identificación será con las credenciales **fran-8448**.
 ![Imagen](IMG/UsPhpmyadmin/2.png)
 
 **1. Cree un nuevo usuario de MySQL/MariaDB con la siguiente configuración**
+
 >- nombre de usuario: iaw_agenda_1
 >- servidor: localhost
 >- contraseña: iaw_agenda_1
@@ -144,7 +146,9 @@ Y comprobamos que el contenido de la tabla en phpmyadmin está vacio.
 ---
 
 #### 2.3 - Crear un usuario iaw_agenda_2 que pueda administrar varias bases de datos
+
 **1. Cree un nuevo usuario de MySQL/MariaDB con la siguiente configuración**
+
 - nombre de usuario: iaw_agenda_2
 - servidor: localhost
 - contraseña: iaw_agenda_2
