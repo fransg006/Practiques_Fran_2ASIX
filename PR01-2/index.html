@@ -33,12 +33,6 @@
         
         var pageToc = [
           {title: "Practica d\u0027instal\u00b7laci\u00f3 d\u0027un servidor LEMP", url: "#_top", children: [
-              {title: "Instal\u00b7laci\u00f3 del servidor de base de dades", url: "#installacio-del-servidor-de-base-de-dades" },
-              {title: "Instal\u00b7laci\u00f3 de Nginx i PHP", url: "#installacio-de-nginx-i-php" },
-              {title: "Verificaci\u00f3 del funcionament de nginx", url: "#verificacio-del-funcionament-de-nginx" },
-              {title: "Verificaci\u00f3 del funcionament de PHP", url: "#verificacio-del-funcionament-de-php" },
-              {title: "Acc\u00e9s amb nom (resoluci\u00f3 de noms)", url: "#acces-amb-nom-resolucio-de-noms" },
-              {title: "Revisi\u00f3 de registres (logs)", url: "#revisio-de-registres-logs" },
           ]},
         ];
 
@@ -87,39 +81,40 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     <h2 id="practica-dinstallacio-dun-servidor-lemp">Practica d'instal·lació d'un servidor LEMP</h2>
-<h4 id="installacio-del-servidor-de-base-de-dades">Instal·lació del servidor de base de dades</h4>
-<p><strong>Primer instal·larem MariaDB, executarem la configuració inicial, i crearem una base de dades nova amb un usuari nou.</strong>
-<img alt="Imatge" src="../IMG/InstServLEMP/1.png" />
+<hr />
+<p><strong>Instal·lació del servidor de base de dades</strong>
+Primer instal·larem MariaDB, executarem la configuració inicial, i crearem una base de dades nova amb un usuari nou.</p>
+<p><img alt="Imatge" src="../IMG/InstServLEMP/1.png" />
 <img alt="Imatge" src="../IMG/InstServLEMP/2.png" /></p>
-<p><strong>Per a accedir dins de MariaDB i poder crear la base de dades i crear l’usuari, ho farem amb la següent comanda</strong>
-<strong>Ficarem també la contrasenya creada en el procés de la configuració inicial.</strong>
+<p>Per a accedir dins de MariaDB i poder crear la base de dades i crear l’usuari, ho farem amb la següent comanda
+Ficarem també la contrasenya creada en el procés de la configuració inicial.
 <img alt="Imatge" src="../IMG/InstServLEMP/3.png" />
 <img alt="Imatge" src="../IMG/InstServLEMP/4.png" /></p>
-<h4 id="installacio-de-nginx-i-php">Instal·lació de Nginx i PHP</h4>
-<p><strong>Amb este comandament instal·lem els dos servicis.</strong>
+<p><strong>Instal·lació de Nginx i PHP</strong>
+Amb ete comandament instal·lem els dos servicis.
 <img alt="Imatge" src="../IMG/InstServLEMP/5.png" /></p>
-<h4 id="verificacio-del-funcionament-de-nginx">Verificació del funcionament de nginx</h4>
-<p><strong>Al server, el servici apareix actiu.</strong>
+<p><strong>Verificació del funcionament de nginx</strong>
+Al server, el servici apareix actiu.
 <img alt="Imatge" src="../IMG/InstServLEMP/6.png" /></p>
-<p><strong>Fins ací, apareix la pagina per defecte d’apache cuan accedim pel navegador amb l’adreça IP del servidor.</strong></p>
+<p>Fins ací, apareix la pagina per defecte d’apache cuan accedim pel navegador amb l’adreça IP del servidor.</p>
 <p><img alt="Imatge" src="../IMG/InstServLEMP/7.png" /></p>
-<p><strong>El següent fitxer que apareix en rosa, es el que hem de ficar al fitxer de configuració default.</strong>
-<img alt="Imatge" src="../IMG/InstServLEMP/8.png" />
+<p>El següent fitxer que apareix en rosa, es el que hem de ficar al fitxer de configuració default.</p>
+<p><img alt="Imatge" src="../IMG/InstServLEMP/8.png" />
 <img alt="Imatge" src="../IMG/InstServLEMP/9.png" /></p>
-<p><strong>Després de fer esta configuració amb la vista del fitxer en rosa de la captura superior.</strong></p>
-<p><strong>També, al directori /var/www/html, pasem a crear el fitxer info.php amb el text de la linea que apareix:</strong></p>
+<p>Després de fer esta configuració amb la vista del fitxer en rosa de la captura superior.</p>
+<p>També, al directori /var/www/html, pasem a crear el fitxer info.php amb el text de la linea que apareix:</p>
 <p><img alt="Imatge" src="../IMG/InstServLEMP/10.png" /></p>
-<h4 id="verificacio-del-funcionament-de-php">Verificació del funcionament de PHP</h4>
-<p><strong>Es pot veure que al servidor el servici apareix com a actiu.</strong>
+<p><strong>Verificació del funcionament de PHP</strong>
+Es pot veure que al servidor el servici apareix com a actiu.
 <img alt="Imatge" src="../IMG/InstServLEMP/11.png" /></p>
-<p><strong>Al navegador de la maquina amfitriona es pot veure el PHP.</strong>
+<p>Al navegador de la maquina amfitriona es pot veure el PHP.
 <img alt="Imatge" src="../IMG/InstServLEMP/12.png" /></p>
-<h4 id="acces-amb-nom-resolucio-de-noms">Accés amb nom (resolució de noms)</h4>
-<p><strong>A Windows, la maquina amfitriona, ens situem a C:\Windows\System32\drivers\etc\hosts, i afegim la IP del servidor i el nom que volem que faça la resolució de noms, es a dir, en lloc de ficar l’adreça IP del servidor, ficaríem eixe nom com es veu en la captura d’avall.</strong>
+<p><strong>Accés amb nom (resolució de noms)</strong></p>
+<p>A Windows, la maquina amfitriona, ens situem a C:\Windows\System32\drivers\etc\hosts, i afegim la IP del servidor i el nom que volem que faça la resolució de noms, es a dir, en lloc de ficar l’adreça IP del servidor, ficaríem eixe nom com es veu en la captura d’avall.
 <img alt="Imatge" src="../IMG/InstServLEMP/13.png" />
 <img alt="Imatge" src="../IMG/InstServLEMP/14.png" /></p>
-<h4 id="revisio-de-registres-logs">Revisió de registres (logs)</h4>
-<p><strong>Podem veure que no apareix cap error.</strong>
+<p><strong>Revisió de registres (logs)</strong>
+Podem veure que no apareix cap error.
 <img alt="Imatge" src="../IMG/InstServLEMP/15.png" /></p>
 
   <br>
