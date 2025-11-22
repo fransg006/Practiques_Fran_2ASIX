@@ -19,3 +19,4 @@
 * Configuració de phpmyadmin
 * Creació de formularis amb HTML i PHP
 * Crear agendes en phpmyadmin
+* Login i registre d'usuaris

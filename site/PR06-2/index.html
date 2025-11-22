@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>PR06 - Login i registre - IAW_Fran</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Pr\u00e0ctica de login i resgistre d\u0027usuaris", url: "#_top", children: [
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav">
+      <a href="../PRus-2/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../PRus-2/" class="btn btn-xs btn-link">
+        PRE - Us de phpmyadmin
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h2 id="practica-de-login-i-resgistre-dusuaris">Pràctica de login i resgistre d'usuaris</h2>
+<hr />
+<p><strong>Funcionalitats a implementar</strong></p>
+<blockquote>
+<p>• Formulari de Registre</p>
+</blockquote>
+<ul>
+<li>Validar que els camps d’entrada no estiguen buits.</li>
+<li>Assegurar-se que la contrasenya i la confirmació coincideixin abans de guardar-les.</li>
+<li>Guardar el nom d’usuari i la contrasenya (en format hash) a la base de dades.</li>
+</ul>
+<blockquote>
+<p>• Formulari de Login</p>
+</blockquote>
+<ul>
+<li>Validar les dades introduides, que siguen correctes.</li>
+<li>Verificar que l’usuari i la contrasenya coincideixin amb les dades guardades en la base de
+dades.</li>
+<li>Si el login és correcte, s’iniciarà una sessió amb el nom de l’usuari.</li>
+<li>Mostrar un missatge, si el login falla, degut a usuari o password incorrectes.</li>
+</ul>
+<blockquote>
+<p>• Gestió de Sessions</p>
+</blockquote>
+<ul>
+<li>Utilitzar $_SESSION per mantenir l’estat de l’usuari una vegada loguejat.</li>
+<li>Assegurar-se que la sessió es tanque correctament al fer logout.</li>
+</ul>
+<blockquote>
+<p>• Seguretat</p>
+</blockquote>
+<ul>
+<li>Utilitza password_hash per a guardar les contrasenyes de forma segura.</li>
+<li>Utilitza password_verify per a comparar les contrasenyes al fer login.</li>
+<li>Valida totes les dades d’entrada per evitar injeccions SQL o atacs XSS.</li>
+</ul>
+<hr />
+<p>A MariaDB vaig a crear la base de dades amb les dades requerides.
+Primer crearé la base de dades:</p>
+<p><img alt="Imatge" src="../IMG/LoginRegistre/1.png" /></p>
+<p>Després usarem dita base de dades i crearem una taula d'aquesta manera amb les caracteristiques que es veuen a continuació</p>
+<p><img alt="Imatge" src="../IMG/LoginRegistre/2.png" /></p>
+<p>Ara al mateix lloc on ens trobem anem a crear un usuari per tal d'administrar aquesta base de dades.</p>
+<p><img alt="Imatge" src="../IMG/LoginRegistre/3.png" /></p>
+<p>El seguent pas, es accedir a phpmyadmin amb l'usuari creat.</p>
+<p><img alt="Imatge" src="../IMG/LoginRegistre/4.png" /></p>
+<p>I una vegada dins podem veure la base de dades creada amb la taula corresponent alhora.</p>
+<p><img alt="Imatge" src="../IMG/LoginRegistre/5.png" /></p>
+<p>Els fitxers que s'han implementat son els seguents:</p>
+<pre><code>bd.php
+</code></pre>
+<p><img alt="Imatge" src="../IMG/LoginRegistre/6.png" /></p>
+<pre><code>registre.php
+</code></pre>
+<p><img alt="Imatge" src="../IMG/LoginRegistre/7.png" /></p>
+<pre><code>login.php
+</code></pre>
+<p><img alt="Imatge" src="../IMG/LoginRegistre/8.png" /></p>
+<pre><code>home.php
+</code></pre>
+<p><img alt="Imatge" src="../IMG/LoginRegistre/9.png" /></p>
+<pre><code>logout.php
+</code></pre>
+<p><img alt="Imatge" src="../IMG/LoginRegistre/10.png" /></p>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav">
+      <a href="../PRus-2/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../PRus-2/" class="btn btn-xs btn-link">
+        PRE - Us de phpmyadmin
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>
