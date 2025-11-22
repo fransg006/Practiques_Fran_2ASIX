@@ -34,10 +34,7 @@
         var pageToc = [
           {title: "Pr\u00e0ctica de Git i GitHub", url: "#_top", children: [
               {title: "Crea un compte a GitHub (Si no el tens!!!).", url: "#crea-un-compte-a-github-si-no-el-tens" },
-              {title: "La forma d\u2019accedir als repositoris remots de GitHub ser\u00e0 per SSH, per tant has de copiar la teua clau p\u00fablica RSA a GitHub, per aix\u00f2:", url: "#la-forma-daccedir-als-repositoris-remots-de-github-sera-per-ssh-per-tant-has-de-copiar-la-teua-clau-publica-rsa-a-github-per-aixo" },
-              {title: "Crea a GitHub un repositori amb el nom prova_el_teu_nom (inicialitza el repositori amb un fitxer README) i la descripci\u00f3 Repositorio de prueba 2ASIX.", url: "#crea-a-github-un-repositori-amb-el-nom-prova_el_teu_nom-inicialitza-el-repositori-amb-un-fitxer-readme-i-la-descripcio-repositorio-de-prueba-2asix" },
               {title: "Configuraci\u00f3 de git.", url: "#configuracio-de-git" },
-              {title: "Busca informaci\u00f3 per a crear un nou repositori anomenat prova2_el_teu_nom. En aquesta ocasi\u00f3, crea primer el repositori local (usant git init) i despr\u00e9s cerca informaci\u00f3 per sincronitzar-lo i crear el repositori remot a GitHub.", url: "#busca-informacio-per-a-crear-un-nou-repositori-anomenat-prova2_el_teu_nom-en-aquesta-ocasio-crea-primer-el-repositori-local-usant-git-init-i-despres-cerca-informacio-per-sincronitzar-lo-i-crear-el-repositori-remot-a-github" },
           ]},
         ];
 
@@ -88,63 +85,69 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     <h2 id="practica-de-git-i-github">Pràctica de Git i GitHub</h2>
 <hr />
 <h4 id="crea-un-compte-a-github-si-no-el-tens">Crea un compte a GitHub (Si no el tens!!!).</h4>
-<h4 id="la-forma-daccedir-als-repositoris-remots-de-github-sera-per-ssh-per-tant-has-de-copiar-la-teua-clau-publica-rsa-a-github-per-aixo">La forma d’accedir als repositoris remots de GitHub serà per SSH, per tant has de copiar la teua clau pública RSA a GitHub, per això:</h4>
+<p><strong>La forma d’accedir als repositoris remots de GitHub serà per SSH, per tant has de copiar la teua clau pública RSA a GitHub, per això:</strong></p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/1.png" /></p>
+<blockquote>
 <p><em>Copia el contingut del teu fitxer ~/.ssh/id_rsa.pub, per això: afegeix una nova clau SSH a l’apartat “SSH keys” del teu perfil a GitHub i enganxa el contingut de la teua clau pública.</em></p>
-<p><strong>No disposava d’ell, l’he creat al següent pas</strong></p>
+</blockquote>
+<p>No disposava d’ell, l’he creat al següent pas</p>
+<blockquote>
 <p><em>Si no teniu aquest fitxer, podeu generar una nova clau ssh pública seguint les instruccions de l’article Treballant amb claus ssh.</em></p>
+</blockquote>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/2.png" /></p>
+<blockquote>
 <p><em>Un cop finalitzat aquest exercici, hauràs de repetir-ho fent ús de tokens.</em></p>
-<p><strong>Després copiem la clau pública per a posteriorment apegar-la a GitHub</strong></p>
+</blockquote>
+<p>Després copiem la clau pública per a posteriorment apegar-la a GitHub</p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/3.png" /></p>
-<p><strong>En aquesta pagina de GitHub anem a apegar la clau pública, anant on fica New SSH Key</strong></p>
+<p>En aquesta pagina de GitHub anem a apegar la clau pública, anant on fica New SSH Key</p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/4.png" /></p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/5.png" /></p>
-<p><strong>Una vegada fet açò, ja tenim una clau d’autenticació a GitHub</strong></p>
+<p>Una vegada fet açò, ja tenim una clau d’autenticació a GitHub</p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/6.png" /></p>
-<p><strong>Per a provar que hi ha connexió, amb la següent comanda hem pogut veure l’últim missatge el qual es bon senyal ja que si que ens diu que hi ha autenticació</strong></p>
+<p>Per a provar que hi ha connexió, amb la següent comanda hem pogut veure l’últim missatge el qual es bon senyal ja que si que ens diu que hi ha autenticació</p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/7.png" /></p>
-<h4 id="crea-a-github-un-repositori-amb-el-nom-prova_el_teu_nom-inicialitza-el-repositori-amb-un-fitxer-readme-i-la-descripcio-repositorio-de-prueba-2asix">Crea a GitHub un repositori amb el nom prova_el_teu_nom (inicialitza el repositori amb un fitxer README) i la descripció Repositorio de prueba 2ASIX.</h4>
+<p><strong>Crea a GitHub un repositori amb el nom prova_el_teu_nom (inicialitza el repositori amb un fitxer README) i la descripció Repositorio de prueba 2ASIX.</strong></p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/8.png" /></p>
-<h5 id="installa-git-en-el-teu-ordinador-si-no-el-tens-instalat">Instal·la git en el teu ordinador (si no el tens instalat!!!).</h5>
+<p><strong>Instal·la git en el teu ordinador (si no el tens instalat!!!).</strong></p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/9.png" /></p>
 <h4 id="configuracio-de-git">Configuració de git.</h4>
 <p><em>El primer que hauries de fer quan instal·les Git és establir el teu nom d’usuari i adreça de correu electrònic (Assegura’t que les dades són correctes i que has posat el teu nom complet).</em>
 <em>Això és important perquè les confirmacions de canvis (commits) a Git utilitzen aquesta informació, i és introduïda de manera immutable en els commits que envieu:</em></p>
-<p><strong>Per a fer la configuració de git per comandes vaig a fer-ho de la seguent manera:</strong></p>
+<p>Per a fer la configuració de git per comandes vaig a fer-ho de la seguent manera:</p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/10.png" /></p>
-<p><strong>Per últim, per a sols comprovar que s’ha desat correctament el nom i el correu que hem introduït, ho fem amb les següents comandes:</strong></p>
+<p>Per a sols comprovar que s’ha desat correctament el nom i el correu que hem introduït, ho fem amb les següents comandes:</p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/11.png" /></p>
-<p><strong>Per últim vaig a copiar la URL SSH del repositori per a després clonar-lo de forma local al meu ordinador</strong></p>
+<p>Per últim vaig a copiar la URL SSH del repositori per a després clonar-lo de forma local al meu ordinador</p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/12.png" /></p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/13.png" /></p>
-<p><strong>Ara vaig a crear un document de proba</strong></p>
+<p>Ara vaig a crear un document de prova</p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/14.png" /></p>
-<p><strong>Com ja està fet vaig a preparar-lo per a pujar-lo a GitHub</strong></p>
+<p>**Com ja està fet vaig a preparar-lo per a pujar-lo a GitHub</p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/15.png" /></p>
-<p><strong>Com ja està pujat, vaig a comprovar-ho a GitHub, com es veu a la següent imatge:</strong></p>
+<p>Com ja està pujat, vaig a comprovar-ho a GitHub, com es veu a la següent imatge:</p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/16.png" /></p>
-<p><strong>Per a modificar-lo, una vagada he acabat, per a tornar-lo a pujar editat ho faig amb la següent comanda:</strong></p>
+<p>Per a modificar-lo, una vagada he acabat, per a tornar-lo a pujar editat ho faig amb la següent comanda:</p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/17.png" /></p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/18.png" /></p>
-<p><strong>Seguidament per a canviar-li el nom:</strong></p>
+<p>Seguidament per a canviar-li el nom:</p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/19.png" /></p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/20.png" /></p>
-<p><strong>Per a eliminar el fitxer, ho faig de la següent manera:</strong></p>
+<p>Per a eliminar el fitxer, ho faig de la següent manera:</p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/21.png" /></p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/22.png" /></p>
-<p><strong>I per últim per a comprovar el seu estat, es fa us de la següent comanda:</strong></p>
+<p>I per últim per a comprovar el seu estat, es fa us de la següent comanda:</p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/23.png" /></p>
-<h4 id="busca-informacio-per-a-crear-un-nou-repositori-anomenat-prova2_el_teu_nom-en-aquesta-ocasio-crea-primer-el-repositori-local-usant-git-init-i-despres-cerca-informacio-per-sincronitzar-lo-i-crear-el-repositori-remot-a-github">Busca informació per a crear un nou repositori anomenat prova2_el_teu_nom. En aquesta ocasió, crea primer el repositori local (usant git init) i després cerca informació per sincronitzar-lo i crear el repositori remot a GitHub.</h4>
-<p><strong>Primer que res, per a crear-lo a Git i després pujar-lo a GitHub s’ha de crear un directori i després dins d’ell fer un git init</strong></p>
+<p><strong>Busca informació per a crear un nou repositori anomenat prova2_el_teu_nom. En aquesta ocasió, crea primer el repositori local (usant git init) i després cerca informació per sincronitzar-lo i crear el repositori remot a GitHub.</strong></p>
+<p>Primer que res, per a crear-lo a Git i després pujar-lo a GitHub s’ha de crear un directori i després dins d’ell fer un git init</p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/24.png" /></p>
-<p><strong>Ara mateix el repositori està creat però falta crear documents que crearem seguidament per a poder fer un commit. Primer faré el README.md.</strong></p>
+<p>Ara mateix el repositori està creat però falta crear documents que crearem seguidament per a poder fer un commit. Primer faré el README.md.</p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/25.png" /></p>
-<p><strong>Després des de GitHub he d’anar a New Repository, i simplement ficant el nom que havíem creat abans ja estaria.</strong>
-<strong>Una vegada fet, ens apareix el següent per a connectar-lo al respositori local.</strong></p>
+<p>Després des de GitHub he d’anar a New Repository, i simplement ficant el nom que havíem creat abans ja estaria.
+Una vegada fet, ens apareix el següent per a connectar-lo al respositori local.</p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/26.png" /></p>
-<p><strong>Eixos comandaments son els que he d’emprar per tal de que els respositoris estiguen connectats.</strong>
-<strong>Copiant i pegant els comandaments anteriors a Git ja ho fa automàticament.</strong></p>
+<p>Eixos comandaments son els que he d’emprar per tal de que els respositoris estiguen connectats.
+Copiant i pegant els comandaments anteriors a Git ja ho fa automàticament.</p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/27.png" /></p>
 <p><img alt="Descripció de la imatge" src="../IMG/Git-GitHub/28.png" /></p>
 

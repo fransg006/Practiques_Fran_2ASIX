@@ -1,4 +1,5 @@
 site_name: IAW_Fran
+site_favicon: docs/favicon.png
 theme:
   name: windmill
 
