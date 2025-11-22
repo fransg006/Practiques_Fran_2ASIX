@@ -33,14 +33,6 @@
         
         var pageToc = [
           {title: "Pr\u00e0ctica MkDocs + GitHub Pages", url: "#_top", children: [
-              {title: "Primer instal\u00b7lem Mkdocs al equip", url: "#primer-installem-mkdocs-al-equip" },
-              {title: "Crea un nou projecte de MkDocs al teu ordinador.", url: "#crea-un-nou-projecte-de-mkdocs-al-teu-ordinador" },
-              {title: "Genera la p\u00e0gina web amb MkDocs.", url: "#genera-la-pagina-web-amb-mkdocs" },
-              {title: "Crea un repositori al GitHub per al teu projecte.", url: "#crea-un-repositori-al-github-per-al-teu-projecte" },
-              {title: "Puja la p\u00e0gina web a GitHub Pages.", url: "#puja-la-pagina-web-a-github-pages" },
-              {title: "Comprova que la URL de la teua p\u00e0gina web a GitHub Pages funciona correctament.", url: "#comprova-que-la-url-de-la-teua-pagina-web-a-github-pages-funciona-correctament" },
-              {title: "Com has desplegat la teua p\u00e0gina web a GitHub Pages?", url: "#com-has-desplegat-la-teua-pagina-web-a-github-pages" },
-              {title: "La p\u00e0gina web es visualitza correctament? Incloure la URL a la pagina de GitHub.", url: "#la-pagina-web-es-visualitza-correctament-incloure-la-url-a-la-pagina-de-github" },
           ]},
         ];
 
@@ -90,47 +82,49 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     <h2 id="practica-mkdocs-github-pages">Pràctica MkDocs + GitHub Pages</h2>
 <hr />
-<h4 id="primer-installem-mkdocs-al-equip">Primer instal·lem Mkdocs al equip</h4>
+<p><strong>Primer instal·lem Mkdocs al equip</strong></p>
 <p><img alt="Descripció de la imatge" src="../IMG/GitHubPages/1.jpg" /></p>
 <hr />
-<h4 id="crea-un-nou-projecte-de-mkdocs-al-teu-ordinador">Crea un nou projecte de MkDocs al teu ordinador.</h4>
-<p><strong>El primer pas per a crear el projecte es un mkdocs new, i després ens situem dins del directori que s’ha creat.</strong>
-<strong>Es pot observar que dins del projecte, per defecte ja tenim el directori docs, que dins hi ha un fitxer index.md i el mkdocs.yml.</strong></p>
+<p><strong>Crea un nou projecte de MkDocs al teu ordinador.</strong></p>
+<p>El primer pas per a crear el projecte es un mkdocs new, i després ens situem dins del directori que s’ha creat.
+Es pot observar que dins del projecte, per defecte ja tenim el directori docs, que dins hi ha un fitxer index.md i el mkdocs.yml.</p>
 <p><img alt="Descripció de la imatge" src="../IMG/GitHubPages/2.jpg" /></p>
-<h5 id="escriu-la-documentacio-del-vostre-projecte-en-format-markdown">Escriu la documentació del vostre projecte en format Markdown.</h5>
-<p><strong>El fitxer que anem a escriure a MarkDown es el que es troba en la següent ubicació.</strong></p>
+<p><strong>Escriu la documentació del vostre projecte en format Markdown.</strong></p>
+<p>El fitxer que anem a escriure a MarkDown es el que es troba en la següent ubicació.</p>
 <p><img alt="Descripció de la imatge" src="../IMG/GitHubPages/3.jpg" /></p>
-<p><strong>Afegim aquest contingut a la pagina.</strong>
-<strong>També cal dir que aquest fitxer ja porta text per defecte.</strong></p>
+<p>Afegim aquest contingut a la pagina.
+També cal dir que aquest fitxer ja porta text per defecte.</p>
 <p><img alt="Descripció de la imatge" src="../IMG/GitHubPages/4.jpg" /></p>
-<h4 id="genera-la-pagina-web-amb-mkdocs">Genera la pàgina web amb MkDocs.</h4>
+<p><strong>Genera la pàgina web amb MkDocs.</strong></p>
 <p><img alt="Descripció de la imatge" src="../IMG/GitHubPages/5.jpg" /></p>
-<p><strong>Per a poder veureu al navegador, fiquem la URL que ix a la ultima línia de la imatge anterior.</strong></p>
+<p>Per a poder veureu al navegador, fiquem la URL que ix a la ultima línia de la imatge anterior.</p>
 <p><img alt="Descripció de la imatge" src="../IMG/GitHubPages/6.jpg" /></p>
-<h4 id="crea-un-repositori-al-github-per-al-teu-projecte">Crea un repositori al GitHub per al teu projecte.</h4>
+<p><strong>Crea un repositori al GitHub per al teu projecte.</strong></p>
 <p><img alt="Descripció de la imatge" src="../IMG/GitHubPages/7.jpg" /></p>
-<p><strong>Ara, dins de la carpeta del projecte que hem creat abans al equip, no al GitHub de la imatge anterior, fem les següents comandes.</strong></p>
+<p>Ara, dins de la carpeta del projecte que hem creat abans al equip, no al GitHub de la imatge anterior, fem les següents comandes.</p>
 <p><img alt="Descripció de la imatge" src="../IMG/GitHubPages/8.jpg" /></p>
-<p><strong>Seguidament, al repositori de GitHub ens apareix ja el que havíem fet amb Mkdocs.</strong></p>
+<p>Seguidament, al repositori de GitHub ens apareix ja el que havíem fet amb Mkdocs.</p>
 <p><img alt="Descripció de la imatge" src="../IMG/GitHubPages/9.jpg" /></p>
-<h4 id="puja-la-pagina-web-a-github-pages">Puja la pàgina web a GitHub Pages.</h4>
-<p><strong>Amb el següent comandament de Mkdocs podem publicar directament a GitHub Pages.</strong></p>
-<p><strong><em>Aquesta comanda s'ha de fer dins del directori arrel del projecte, en aquest cas en projecte-fran.</em></strong></p>
+<p><strong>Puja la pàgina web a GitHub Pages.</strong></p>
+<p>Amb el següent comandament de Mkdocs podem publicar directament a GitHub Pages.</p>
+<blockquote>
+<p><em>Aquesta comanda s'ha de fer dins del directori arrel del projecte, en aquest cas en projecte-fran.</em></p>
+</blockquote>
 <p><img alt="Descripció de la imatge" src="../IMG/GitHubPages/10.jpg" /></p>
-<p><strong>Després ja podem veure una branca nova a GitHub amb el nom anterior.</strong></p>
+<p>Després ja podem veure una branca nova a GitHub amb el nom anterior.</p>
 <p><img alt="Descripció de la imatge" src="../IMG/GitHubPages/11.jpg" /></p>
-<p><strong>Ara mateix ja tenim desplegada la pagina a GitHub Pages.</strong></p>
-<h4 id="comprova-que-la-url-de-la-teua-pagina-web-a-github-pages-funciona-correctament">Comprova que la URL de la teua pàgina web a GitHub Pages funciona correctament.</h4>
-<p><strong>I per a veure el desplegament podem anar a la URL que es veu a la imatge.</strong></p>
+<p>Ara mateix ja tenim desplegada la pagina a GitHub Pages.</p>
+<p><strong>Comprova que la URL de la teua pàgina web a GitHub Pages funciona correctament.</strong></p>
+<p>I per a veure el desplegament podem anar a la URL que es veu a la imatge.</p>
 <p><img alt="Descripció de la imatge" src="../IMG/GitHubPages/12.jpg" /></p>
 <hr />
-<h4 id="com-has-desplegat-la-teua-pagina-web-a-github-pages">Com has desplegat la teua pàgina web a GitHub Pages?</h4>
-<p><strong>L’he desplegat fent un mkdocs gh-deploy.</strong></p>
-<p><strong>Per tant, cada vegada que es faça un canvi al .yml del directori docs, ens situem al directori arrel, en aquest cas projecte-fran, i fem la comanda anterior per a que s’actualitzen els canvis a GitHub Pages.</strong></p>
-<h4 id="la-pagina-web-es-visualitza-correctament-incloure-la-url-a-la-pagina-de-github">La pàgina web es visualitza correctament? Incloure la URL a la pagina de GitHub.</h4>
-<p><strong>La pàgina es veu correctament.</strong></p>
-<p><strong>La URL al repositori de GitHub es: <a href="https://github.com/fransg006/projecte-Fran-IAW">GitHub</a></strong></p>
-<p><strong>La URL a la pagina de GitHub Pages es: <a href="https://fransg006.github.io/projecte-Fran-IAW/">Pages</a></strong></p>
+<p><strong>Com has desplegat la teua pàgina web a GitHub Pages?</strong></p>
+<p>L’he desplegat fent un <strong>mkdocs gh-deploy</strong>.</p>
+<p>Per tant, cada vegada que es faça un canvi al .yml del directori docs, ens situem al directori arrel, en aquest cas projecte-fran, i fem la comanda anterior per a que s’actualitzen els canvis a GitHub Pages.</p>
+<p><strong>La pàgina web es visualitza correctament? Incloure la URL a la pagina de GitHub.</strong></p>
+<p>La pàgina es veu correctament.</p>
+<p>La URL al repositori de GitHub es: <a href="https://github.com/fransg006/projecte-Fran-IAW">GitHub</a></p>
+<p>La URL a la pagina de GitHub Pages es: <a href="https://fransg006.github.io/projecte-Fran-IAW/">Pages</a></p>
 
   <br>
     
