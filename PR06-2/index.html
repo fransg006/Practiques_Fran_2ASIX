@@ -74,24 +74,38 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <hr />
 <p><strong>Funcionalitats a implementar</strong></p>
 <blockquote>
-<p>• Formulari de Registre
-- Validar que els camps d’entrada no estiguen buits.
-- Assegurar-se que la contrasenya i la confirmació coincideixin abans de guardar-les.
-- Guardar el nom d’usuari i la contrasenya (en format hash) a la base de dades.</p>
-<p>• Formulari de Login
-- Validar les dades introduides, que siguen correctes.
-- Verificar que l’usuari i la contrasenya coincideixin amb les dades guardades en la base de
-dades.
-- Si el login és correcte, s’iniciarà una sessió amb el nom de l’usuari.
-- Mostrar un missatge, si el login falla, degut a usuari o password incorrectes.</p>
-<p>• Gestió de Sessions
-- Utilitzar $_SESSION per mantenir l’estat de l’usuari una vegada loguejat.
-- Assegurar-se que la sessió es tanque correctament al fer logout.</p>
-<p>• Seguretat
-- Utilitza password_hash per a guardar les contrasenyes de forma segura.
-- Utilitza password_verify per a comparar les contrasenyes al fer login.
-- Valida totes les dades d’entrada per evitar injeccions SQL o atacs XSS.</p>
+<p>• Formulari de Registre</p>
 </blockquote>
+<ul>
+<li>Validar que els camps d’entrada no estiguen buits.</li>
+<li>Assegurar-se que la contrasenya i la confirmació coincideixin abans de guardar-les.</li>
+<li>Guardar el nom d’usuari i la contrasenya (en format hash) a la base de dades.</li>
+</ul>
+<blockquote>
+<p>• Formulari de Login</p>
+</blockquote>
+<ul>
+<li>Validar les dades introduides, que siguen correctes.</li>
+<li>Verificar que l’usuari i la contrasenya coincideixin amb les dades guardades en la base de
+dades.</li>
+<li>Si el login és correcte, s’iniciarà una sessió amb el nom de l’usuari.</li>
+<li>Mostrar un missatge, si el login falla, degut a usuari o password incorrectes.</li>
+</ul>
+<blockquote>
+<p>• Gestió de Sessions</p>
+</blockquote>
+<ul>
+<li>Utilitzar $_SESSION per mantenir l’estat de l’usuari una vegada loguejat.</li>
+<li>Assegurar-se que la sessió es tanque correctament al fer logout.</li>
+</ul>
+<blockquote>
+<p>• Seguretat</p>
+</blockquote>
+<ul>
+<li>Utilitza password_hash per a guardar les contrasenyes de forma segura.</li>
+<li>Utilitza password_verify per a comparar les contrasenyes al fer login.</li>
+<li>Valida totes les dades d’entrada per evitar injeccions SQL o atacs XSS.</li>
+</ul>
 <hr />
 <p>A MariaDB vaig a crear la base de dades amb les dades requerides.
 Primer crearé la base de dades:</p>
