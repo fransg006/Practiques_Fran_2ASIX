@@ -20,3 +20,6 @@
 * Creació de formularis amb HTML i PHP
 * Crear agendes en phpmyadmin
 * Login i registre d'usuaris
+
+##### Unitat 3
+* Instal·lar WordPress en una maquina virtual
