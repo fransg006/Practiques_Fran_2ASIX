@@ -24,3 +24,4 @@
 ##### Unitat 3
 * Instal·lar WordPress en una maquina virtual
 * Configurar continguts de WordPress
+* Administrar Wordpress
