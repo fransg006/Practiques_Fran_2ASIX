@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>PR03 - Administració de WordPress - IAW_Fran</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Pr\u00e0ctica d\u0027administraci\u00f3 de WordPress", url: "#_top", children: [
+              {title: "Tema", url: "#tema" },
+              {title: "Usuaris", url: "#usuaris" },
+              {title: "Men\u00fas", url: "#menus" },
+              {title: "Plugins", url: "#plugins" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav">
+      <a href="../PR02-3/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../PR02-3/" class="btn btn-xs btn-link">
+        PR02 - Continguts en WordPress
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h2 id="practica-dadministracio-de-wordpress">Pràctica d'administració de WordPress</h2>
+<hr />
+<p><strong>Passos realitzats:</strong></p>
+<hr />
+<h4 id="tema">Tema</h4>
+<pre><code>En Aperiencia-Temas
+</code></pre>
+<ul>
+<li><strong>Busca un tema gratuït de WordPress, instal·la’l i configura’l adequadament.</strong></li>
+</ul>
+<p>El primer que he fet, ha sigut descarregar un tema d'internet, en format zip com es veu en la imatge de baix.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/1.png" /></p>
+<p>Ara a WordPress, on es troben els temes, anem a <em>Pujar tema</em> i sel·leccionem el .zip.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/2.png" /></p>
+<p>En cas d'error a l'hora de pujar el .zip, que es l'error de la seguent imatge, fer el seguent pas.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/3.png" /></p>
+<p>S'ha d'anar al seguent fitxer per tal de augmentar la mida dels fitxers.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/4.png" /></p>
+<p>Una vegada ja s'ha pogut pujar, podem veure com funciona automaticament.
+A la mateixa imatge, podem veure l'opció d'activar-lo també.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/5.png" /></p>
+<p>Per ara es veu d'aquesta manera amb les dades del tema per defecte.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/6.png" /></p>
+<p>He fet aquestos canvis per a que tinga una visió amb les meues dades.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/7.png" /></p>
+<hr />
+<h4 id="usuaris">Usuaris</h4>
+<pre><code>En Usuarios
+</code></pre>
+<ul>
+<li><strong>Crea un usuari per a cadascun dels rols d’usuari que disposa WordPress.</strong></li>
+</ul>
+<p>En la seguent imatge es pot observar un usuari amb cada rol disponible a WordPress, i baix d'ella, que pot fer cadascun dels rols.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/8.png" /></p>
+<blockquote>
+<p><strong>Administrador:</strong> Control total sobre el lloc, pot gestionar-ho tot: contingut, plugins, temes, usuaris, configuracions.</p>
+<p><strong>Editor:</strong> Gestiona tot el contingut (publicar, editar, eliminar) de qualsevol autor, però no plugins ni temes.</p>
+<p><strong>Autor:</strong> Escriu, edita i publica les seves pròpies entrades i pot pujar fitxers multimèdia.</p>
+<p><strong>Col·laborador:</strong> Escriu les pròpies entrades però no les pot publicar; necessita un Editor o Administrador per revisar-les i publicar-les.</p>
+<p><strong>Subscriptor:</strong> Només podeu llegir contingut i gestionar el vostre perfil (no podeu escriure ni editar res).</p>
+</blockquote>
+<ul>
+<li><strong>Inicia sessió amb cada usuari creat i gestiona diferents tipus de continguts comprovant quines operacions poden fer atenent al seu perfil ( crear, modificar, esborrar contingut seu i/o d’altres usuaris, fer altres operacions?)</strong></li>
+</ul>
+<p>+++ <em>Logejat com a Suscriptor</em>: Es pot veure que sols mostra les opcions de perfil i escriptori, i no permet editar res del lloc web.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/9.png" /></p>
+<p>+++ <em>Logejat com a Autor</em>: Es pot veure que mostra més opcions que amb un usuari suscriptor, i que per tant, com s'anomena a les definicions de dalt, es pot afegir entrades noves, pero no editar les ja existents.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/11.png" /></p>
+<p><img alt="Imatge" src="../IMG/WordPress3/10.png" /></p>
+<p>+++ <em>Logejat com a Col·laborador</em>: Es pot veure les opcions que es veuen a la barra lateral esquerra, i que sols permet veure el contingut d'entrades ja creat.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/12.png" /></p>
+<p>A la comprobació de crear una entrada amb dit usuari, es pot veure que s'ha d'enviar a revisió, per a que ho accepte un usuari autoritzar a pujar entrades al lloc web:</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/13.png" /></p>
+<p>Una vegada enviada a revisió es veu, com a pendent, fins que s'accepte.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/14.png" /></p>
+<p>Aleshores, amb aquest usuari es pot afegir contingut nou, pero no editar ni modificar el contingut ja existent d'altres usuaris.</p>
+<p>+++ <em>Logejat com a Editor</em>: Es pot veure que mostra practicament totes les opcions disponibles com a un administrador, pero sense les opcions de plugins i temes, així d'eixa forma, no es poden instalar plugins ni temes nous, ja que sols es te permis d'editar el contingut del lloc.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/15.png" /></p>
+<p>Per a la prova amb aquest usuari, vaig a crear una pagina nova, com es veu a la seguent imatge.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/16.png" /></p>
+<ul>
+<li><strong>Finalitza deixant almenys 3 continguts diferents.</strong></li>
+</ul>
+<p>Ara com usuari administrador, es pot observar l'entrada creada amb l'usuari autor i col·laborador (amb l'acceptació pendent d'aquest) i la pagina nova del usuari editor.</p>
+<p>Per a pujar-la, s'ha d'editar i després publicarla des d'un usuari que tinga permisos per a fer aquesta acció, com es d'administrador.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/17.png" /></p>
+<p><img alt="Imatge" src="../IMG/WordPress3/19.png" /></p>
+<p>Al lloc web es veu el seguent:</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/18.png" /></p>
+<hr />
+<h4 id="menus">Menús</h4>
+<pre><code>En Apariencia-Editor
+</code></pre>
+<ul>
+<li><strong>Editeu la navegació per el lloc web i modifica’l per incorporar un menú amb diferents opcions a les que es té per defecte.</strong></li>
+</ul>
+<p>Si ens situem on diu el principi del apartat, a Capçalera, es pot modificar el menú superior, i en concret, el menú de navegació de la pàgina.
+Es pot veure que ja apareix la pagina de l'usuari editor creada al punt anterior.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/20.png" /></p>
+<p>He afegit un botó nou, el cual envia a la web de Wikipedia, que explica que es una aplicació web.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/21.png" /></p>
+<ul>
+<li><strong>El menú ha d’incorporar almenys 2 dels continguts nous generats en l’apartat anterior i 2 enllaços d’internet.</strong></li>
+</ul>
+<p>Es pot veure que apareix la pagina de l'usuari editor creada al punt anterior, junt a 2 botons, un que ens parla d'aplicacions web, i l'altre ens envia al lloc oficial de WordPress, més les pàgines creades en punts/pràctiques anteriors.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/22.png" /></p>
+<hr />
+<h4 id="plugins">Plugins</h4>
+<pre><code>En Ajustes-Generales
+</code></pre>
+<ul>
+<li>Feu un estudi de quins són els plugins i widgets més utilitzats a WordPress i vore quin d’ells podríeu utilitzar al vostre lloc.</li>
+</ul>
+<p>He ìnstal·lat el seguent plugin, el cual s'ha d'activar com es veu a la seguent imatge.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/23.png" /></p>
+<p>Després, a la barra lateral esquerra, es pot veure el nou apartat d'aquest plugin, on anem a crear un formulari.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/24.png" /></p>
+<p>Des d'aquest menú dins de formularis, es pot crear un formulari.
+En la seguent imatge es pot veure els camps disponibles per a ficar al formulari a la barra lateral esquerra, i a la barra superior es pot veure les diferents configuracions per al formulari.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/25.png" /></p>
+<p>Jo he creat aquest formulari i després li he fet modificacions com estils o altres.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/26.png" /></p>
+<p>Per a incorporar-lo a la pagina principal, es pot fer clicant al botó <em>Incrustar</em>.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/27.png" /></p>
+<p>En aquest cas l'he inscrustat a la pagina creada del mòdul d'IAW.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/28.png" /></p>
+<p>A la pagina d'IAW, després d'incorporar-lo, ja es pot veure d'aquesta manera.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/29.png" /></p>
+<p>Ara he instalat el segon plugin, en aquest cas este, per a crear taules en els llocs.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/30.png" /></p>
+<p>Una vegada activat, ja podem veure'l al menú, i començem a omplir les dades per a crear la taula.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/31.png" /></p>
+<p>He creat aquesta taula amb estes dades.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/32.png" /></p>
+<p>Després per a mostrar-la al lloc web, des de dins de la pagina o entrada on volem inserir-la, fiquem un bloc de TablePress i fiquem la taula.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/33.png" /></p>
+<p>Hem d'escollir un codi abreviat que ix a la taula, com es veu a la seguent imatge per a poder insertar-la.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/34.png" /></p>
+<p>Després ja la podem veure al lloc inserida mitjançant el codi anterior, copiant i pegant dit codi sobre el bloc de TablePress.</p>
+<p><img alt="Imatge" src="../IMG/WordPress3/35.png" /></p>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav">
+      <a href="../PR02-3/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../PR02-3/" class="btn btn-xs btn-link">
+        PR02 - Continguts en WordPress
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

@@ -25,3 +25,4 @@
 * Instal·lar WordPress en una maquina virtual
 * Configurar continguts de WordPress
 * Administrar Wordpress
+* Crear un tema nou des de 0
