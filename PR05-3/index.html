@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>PR05 3 - IAW_Fran</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Pr\u00e0ctica de modificar un tema a existent", url: "#_top", children: [
+              {title: "Part 1 - Modifica el tema existent", url: "#part-1-modifica-el-tema-existent" },
+              {title: "Part 2 - Personalitzar el fitxer theme.json", url: "#part-2-personalitzar-el-fitxer-themejson" },
+              {title: "Part 3 - Crear un tema fill amb Create Block Theme", url: "#part-3-crear-un-tema-fill-amb-create-block-theme" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+
+    <h2 id="practica-de-modificar-un-tema-a-existent">Pràctica de modificar un tema a existent</h2>
+<hr />
+<p><strong>Passos realitzats:</strong></p>
+<hr />
+<h4 id="part-1-modifica-el-tema-existent">Part 1 - Modifica el tema existent</h4>
+<p><strong>Selecciona un tema i activa'l.</strong></p>
+<p>CAPTURA del lloc web amb el tema sense modificar.</p>
+<p><img alt="Imatge" src="IMG/WordPress5/1.png" /></p>
+<ul>
+<li><strong>Modificar el fitxer style.css del tema activat</strong></li>
+</ul>
+<p>Per a que canvie el lloc web, he fet estes modificacions al CSS anomenat.</p>
+<p><img alt="Imatge" src="IMG/WordPress5/2.png" /></p>
+<p>Ara el lloc web, després de fer eixos canvis i haver-lo recarregat, es veu així.</p>
+<p><img alt="Imatge" src="IMG/WordPress5/3.png" /></p>
+<!--Aplicar 3 canvis minim al css-->
+<hr />
+<h4 id="part-2-personalitzar-el-fitxer-themejson">Part 2 - Personalitzar el fitxer theme.json</h4>
+<ul>
+<li><strong>Ubica i edita el fitxer json</strong></li>
+</ul>
+<p><strong>Afegeix una nova paleta de colors personalitzada dins del bloc "settings"</strong></p>
+<p>El fitxer json es troba dins del directori del tema sel·leccionat, a la ruta que es veu a la seguent imatge, amb els canvis que es veuen a continuació.</p>
+<p>CAPTURA de l'ubicació del json i els canvis fets.</p>
+<p>Després de guardar els canvis realitzats, accedim dins de l'editor de WordPress, en Aparença&gt;Editor i es pot veure la nova paleta de colors.</p>
+<!--Afegir 3 colors personalitzats a la paleta de colors-->
+
+<p>CAPTURA de la nova paleta de colors en l'editor</p>
+<hr />
+<h4 id="part-3-crear-un-tema-fill-amb-create-block-theme">Part 3 - Crear un tema fill amb Create Block Theme</h4>
+<ul>
+<li><strong>Instal·lar i activar el plugin Create Block Theme</strong></li>
+</ul>
+<!--
+1. Al panell d’administració del WordPress, anar a Plugins > Afegeix Nou.
+2. Buscar Create Block Theme i instal·la’l.
+3. Activar el plugin.
+-->
+
+<ul>
+<li><strong>Crear un tema fill</strong></li>
+</ul>
+<!--
+1. Anar a Aparença > Create Block Theme.
+2. Seleccionar l’opció “Create Child Theme”.
+3. Triar el tema pare (el que vas modificar anteriorment).
+4. Introduir un nom per al tema fill (ex. “El meu Tema Fill”).
+5. Fer clic a Create Theme.
+-->
+<p>CAPTURA on es veja el tema fill creat a Aparença&gt;Temes i activar-lo
+CAPTURA d'un ls al directori de temes on es veja la carpeta del tema fill creada</p>
+
+  <br>
+    
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

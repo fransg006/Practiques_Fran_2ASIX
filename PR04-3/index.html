@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>PR04 - Crear tema nou - IAW_Fran</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Pr\u00e0ctica de crear un tema a WordPress", url: "#_top", children: [
+              {title: "Crear fitxers i directoris necessaris", url: "#crear-fitxers-i-directoris-necessaris" },
+              {title: "Activaci\u00f3 del tema en WordPress", url: "#activacio-del-tema-en-wordpress" },
+              {title: "Millora del tema", url: "#millora-del-tema" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav">
+      <a href="../PR03-3/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../PR03-3/" class="btn btn-xs btn-link">
+        PR03 - Administració de WordPress
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h2 id="practica-de-crear-un-tema-a-wordpress">Pràctica de crear un tema a WordPress</h2>
+<hr />
+<p><strong>Passos realitzats:</strong></p>
+<hr />
+<h4 id="crear-fitxers-i-directoris-necessaris">Crear fitxers i directoris necessaris</h4>
+<p>Primer s'ha de crear un directori per al tema que vaig a fer amb els fitxers dels seguents punts.
+<img alt="Imatge" src="../IMG/WordPress4/1.png" /></p>
+<ul>
+<li>
+<p><strong>Creació del fitxer style.css</strong>
+<img alt="Imatge" src="../IMG/WordPress4/2.png" /></p>
+</li>
+<li>
+<p><strong>Creació del fitxer index.php</strong>
+<img alt="Imatge" src="../IMG/WordPress4/3.png" /></p>
+</li>
+</ul>
+<p>Ara mateix, com que no he modificat ni he ficat cap imatge, el tema es pot veure així tauler de WordPress.</p>
+<p><img alt="Imatge" src="../IMG/WordPress4/4.png" /></p>
+<p><img alt="Imatge" src="../IMG/WordPress4/5.png" /></p>
+<p>Els canvis es poden apreciar directament al codi del fitxer index.php dels punts superiors, en les seguents imatges.</p>
+<p><img alt="Imatge" src="../IMG/WordPress4/6.png" /></p>
+<p><img alt="Imatge" src="../IMG/WordPress4/7.png" /></p>
+<hr />
+<h4 id="activacio-del-tema-en-wordpress">Activació del tema en WordPress</h4>
+<ul>
+<li>
+<p><strong>Inicia sessió al panell d'administració de WordPress</strong>
+<img alt="Imatge" src="../IMG/WordPress4/8.png" /></p>
+</li>
+<li>
+<p><strong>Anar a Aparença&gt;Temes, busca el tema creat i activa'l</strong>
+<img alt="Imatge" src="../IMG/WordPress4/9.png" /></p>
+</li>
+</ul>
+<hr />
+<h4 id="millora-del-tema">Millora del tema</h4>
+<ul>
+<li><strong>Un fitxer screenshot.png per a la vista prèvia del tema</strong></li>
+</ul>
+<p>He mogut la imatge al directori del tema personalitzat.</p>
+<p><img alt="Imatge" src="../IMG/WordPress4/10.png" /></p>
+<p>Després de que es trobe la imatge al directori del tema, es pot veure ja ficat com a vista prèvia.</p>
+<p><img alt="Imatge" src="../IMG/WordPress4/11.png" /></p>
+<ul>
+<li><strong>Crear un full d'estils addicional per a millorar el disseny (custom.css)</strong></li>
+</ul>
+<p>Primer he creat el fitxer custom.css amb el seguent contingut.</p>
+<p><img alt="Imatge" src="../IMG/WordPress4/13.png" /></p>
+<p>Després, al index.php, he afegit la linea d'enllaç al css.</p>
+<p><img alt="Imatge" src="../IMG/WordPress4/12.png" /></p>
+<p>Ara el tema es veu amb el seguent disseny.</p>
+<p><img alt="Imatge" src="../IMG/WordPress4/14.png" /></p>
+<ul>
+<li><strong>Fitxers a la carpeta parts/ per a la capçalera i el peu de pàgina</strong></li>
+</ul>
+<p>Per a afegir un peu i una capçalera, he creat una carpeta parts dins del directori del tema.</p>
+<p><img alt="Imatge" src="../IMG/WordPress4/15.png" /></p>
+<p>Després, dins he creat 2 fitxer php més, un per al peu, i l'altre per a la capçalera.</p>
+<p><img alt="Imatge" src="../IMG/WordPress4/16.png" />
+<img alt="Imatge" src="../IMG/WordPress4/17.png" /></p>
+<p>Al fitxer index.php he afegit aquestes dues linies al body, per a que mostre la capçalera i el peu.</p>
+<p><img alt="Imatge" src="../IMG/WordPress4/18.png" /></p>
+<p>D'aquesta manera es veu així el tema en aquest moment.</p>
+<p><img alt="Imatge" src="../IMG/WordPress4/19.png" /></p>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav">
+      <a href="../PR03-3/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../PR03-3/" class="btn btn-xs btn-link">
+        PR03 - Administració de WordPress
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>
