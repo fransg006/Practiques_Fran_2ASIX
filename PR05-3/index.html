@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="../favicon.ico">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>PR05 3 - IAW_Fran</title>
+    <title>PR05 - Modificar un tema existent - IAW_Fran</title>
     <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
     <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
     <link href="../css/base.css" rel="stylesheet">
@@ -56,61 +56,110 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav">
+      <a href="../PR04-3/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../PR04-3/" class="btn btn-xs btn-link">
+        PR04 - Crear tema nou
+      </a>
+    </div>
+    
+  </div>
+
+    
 
     <h2 id="practica-de-modificar-un-tema-a-existent">Pràctica de modificar un tema a existent</h2>
 <hr />
 <p><strong>Passos realitzats:</strong></p>
 <hr />
 <h4 id="part-1-modifica-el-tema-existent">Part 1 - Modifica el tema existent</h4>
-<p><strong>Selecciona un tema i activa'l.</strong></p>
-<p>CAPTURA del lloc web amb el tema sense modificar.</p>
-<p><img alt="Imatge" src="IMG/WordPress5/1.png" /></p>
+<ul>
+<li><strong>Selecciona un tema i activa'l.</strong></li>
+</ul>
+<p>El tema que he escollit es el seguent.</p>
+<p><img alt="Imatge" src="../IMG/WordPress5/1.png" /></p>
+<p>I es veu d'aquesta manera aplicat ara mateix.</p>
+<p><img alt="Imatge" src="../IMG/WordPress5/2.png" /></p>
 <ul>
 <li><strong>Modificar el fitxer style.css del tema activat</strong></li>
 </ul>
-<p>Per a que canvie el lloc web, he fet estes modificacions al CSS anomenat.</p>
-<p><img alt="Imatge" src="IMG/WordPress5/2.png" /></p>
-<p>Ara el lloc web, després de fer eixos canvis i haver-lo recarregat, es veu així.</p>
-<p><img alt="Imatge" src="IMG/WordPress5/3.png" /></p>
-<!--Aplicar 3 canvis minim al css-->
+<p>Per a que canvie el lloc web, he fet estes modificacions al CSS anomenat, a <em>Herramientas&gt;Editor de temas</em>.</p>
+<p>En aquest cas he afegit una capçalera amb un text baix al fitxer header.html.</p>
+<p><img alt="Imatge" src="../IMG/WordPress5/3.png" /></p>
+<p>Amb aquesta capçalera, es pot veure així:</p>
+<p><img alt="Imatge" src="../IMG/WordPress5/4.png" /></p>
+<p>El tema per defecte, estaba agafant el fitxer d'estils <strong>style.min.css</strong>, per lo que al fitxer de functions.php he fet el seguent canvi, per tal de que agafe el fitxer <strong>style.css</strong>.</p>
+<p><img alt="Imatge" src="../IMG/WordPress5/17.png" /></p>
+<p><img alt="Imatge" src="../IMG/WordPress5/18.png" /></p>
+<p>Ara, si afegim algo al fitxer <strong>style.css</strong>, com es veu a la seguent imatge, ja es veu reflexat al lloc web amb el tema aplicat.</p>
+<p><img alt="Imatge" src="../IMG/WordPress5/19.png" /></p>
+<p><img alt="Imatge" src="../IMG/WordPress5/20.png" /></p>
 <hr />
 <h4 id="part-2-personalitzar-el-fitxer-themejson">Part 2 - Personalitzar el fitxer theme.json</h4>
 <ul>
 <li><strong>Ubica i edita el fitxer json</strong></li>
 </ul>
 <p><strong>Afegeix una nova paleta de colors personalitzada dins del bloc "settings"</strong></p>
-<p>El fitxer json es troba dins del directori del tema sel·leccionat, a la ruta que es veu a la seguent imatge, amb els canvis que es veuen a continuació.</p>
-<p>CAPTURA de l'ubicació del json i els canvis fets.</p>
-<p>Després de guardar els canvis realitzats, accedim dins de l'editor de WordPress, en Aparença&gt;Editor i es pot veure la nova paleta de colors.</p>
-<!--Afegir 3 colors personalitzats a la paleta de colors-->
-
-<p>CAPTURA de la nova paleta de colors en l'editor</p>
+<p>El fitxer theme.json es troba dins del directori del tema sel·leccionat, a la ruta que es veu a la seguent imatge, amb els canvis que es veuen a continuació.</p>
+<p>L'ubicació del fitxer json demanat es la seguent amb el contingut que es mostra en pantalla.</p>
+<p><img alt="Imatge" src="../IMG/WordPress5/5.png" /></p>
+<p>Ara mateix, les paletes de colors per defecte son les seguents al editor.
+<img alt="Imatge" src="../IMG/WordPress5/6.png" /></p>
+<p>Per a afegir una nova paleta de colors, he creat un fitxer nou amb format json, junt als altres fitxers que conformen 8 de les 9 paletes de la imatge anterior, anomenat <strong>fran.json</strong>, amb el seguent contingut i permisos.</p>
+<p><img alt="Imatge" src="../IMG/WordPress5/7.png" /></p>
+<p><img alt="Imatge" src="../IMG/WordPress5/8.png" /></p>
+<p><img alt="Imatge" src="../IMG/WordPress5/9.png" /></p>
+<p>Ara mateix podem observar al Editor que apareix la nova paleta de colors, i amb eixa hi han 10:</p>
+<p><img alt="Imatge" src="../IMG/WordPress5/10.png" /></p>
 <hr />
 <h4 id="part-3-crear-un-tema-fill-amb-create-block-theme">Part 3 - Crear un tema fill amb Create Block Theme</h4>
 <ul>
 <li><strong>Instal·lar i activar el plugin Create Block Theme</strong></li>
 </ul>
-<!--
-1. Al panell d’administració del WordPress, anar a Plugins > Afegeix Nou.
-2. Buscar Create Block Theme i instal·la’l.
-3. Activar el plugin.
--->
-
+<p>Ara instal·laré el plugin al apartat de plugins com es veu a l'imatge.</p>
+<p><img alt="Imatge" src="../IMG/WordPress5/11.png" /></p>
+<p>Ara mateix, ja es troba instal·lat i activat.</p>
+<p><img alt="Imatge" src="../IMG/WordPress5/12.png" /></p>
 <ul>
 <li><strong>Crear un tema fill</strong></li>
 </ul>
-<!--
-1. Anar a Aparença > Create Block Theme.
-2. Seleccionar l’opció “Create Child Theme”.
-3. Triar el tema pare (el que vas modificar anteriorment).
-4. Introduir un nom per al tema fill (ex. “El meu Tema Fill”).
-5. Fer clic a Create Theme.
--->
-<p>CAPTURA on es veja el tema fill creat a Aparença&gt;Temes i activar-lo
-CAPTURA d'un ls al directori de temes on es veja la carpeta del tema fill creada</p>
+<p>Per a crear ara un tema fill, del que tenim aplicat actualment, en Aparença apareix un nou apartat del plugin que acabem d'instal·lar.</p>
+<p>Aleshores, anirem a l'opció que es troba marcada a la seguent imatge per tal de crear un tema fill.</p>
+<p><img alt="Imatge" src="../IMG/WordPress5/13.png" /></p>
+<p>Ficarem les dades com el nom.</p>
+<p><img alt="Imatge" src="../IMG/WordPress5/14.png" /></p>
+<p>Una vegada creem el tema ens ix el seguent missatge al navegador.</p>
+<p><img alt="Imatge" src="../IMG/WordPress5/15.png" /></p>
+<p>I al apartat temes veiem que ja s'ha aplicat el tema i apareix al llistat.</p>
+<p><img alt="Imatge" src="../IMG/WordPress5/16.png" /></p>
+<p>I persupost, al directori on es desen els temes, apareix el directori del tema fill.</p>
+<p><img alt="Imatge" src="../IMG/WordPress5/21.png" /></p>
 
   <br>
     
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav">
+      <a href="../PR04-3/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../PR04-3/" class="btn btn-xs btn-link">
+        PR04 - Crear tema nou
+      </a>
+    </div>
+    
+  </div>
 
     <br>
 </div>
