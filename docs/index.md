@@ -26,3 +26,4 @@
 * Configurar continguts de WordPress
 * Administrar Wordpress
 * Crear un tema nou des de 0
+* Modificar un tema existent al WordPress
