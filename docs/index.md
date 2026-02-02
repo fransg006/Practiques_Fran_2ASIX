@@ -27,3 +27,6 @@
 * Administrar Wordpress
 * Crear un tema nou des de 0
 * Modificar un tema existent al WordPress
+
+##### Unitat 4
+* Utilitzar NextCloud amb contenidors Docker
