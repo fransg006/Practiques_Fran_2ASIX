@@ -1,4 +1,4 @@
-### Benvingut al MkDocs de Fran on es pujarán les practiques del curs
+### Implantació d'Aplicacions Web - 2ASIX
 
 ---
 

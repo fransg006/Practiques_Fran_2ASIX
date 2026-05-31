@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>PR01 - Nextcloud amb contenidors - IAW_Fran</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Pr\u00e0ctica de Nextcloud en contenidors", url: "#_top", children: [
+              {title: "Part 1 - Instal\u00b7lar", url: "#part-1-installar" },
+              {title: "Part 2 - Configurar", url: "#part-2-configurar" },
+              {title: "Part 3: Utilitzar Nextcloud", url: "#part-3-utilitzar-nextcloud" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav">
+      <a href="../PR05-3/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../PR05-3/" class="btn btn-xs btn-link">
+        PR05 - Modificar un tema existent
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h2 id="practica-de-nextcloud-en-contenidors">Pràctica de Nextcloud en contenidors</h2>
+<hr />
+<p><strong>Passos realitzats:</strong></p>
+<hr />
+<h4 id="part-1-installar">Part 1 - Instal·lar</h4>
+<p><strong>1 - Nextcloud amb SQLite -&gt; docker</strong></p>
+<blockquote>
+<p>Nextcloud pot utilitzar la pròpia base de dades SQLite o utilitzar una base de dades MariaDB/MySQL o PostgreSQL.</p>
+<p>Per a instal·lacions menudes, SQLite és una opció suficient, però a servidors reals es recomana utilitzar un sistema gestor de bases de dades independent.</p>
+</blockquote>
+<p><strong>1. Crear un contenidor de Nextcloud a partir de la imatge nextcloud oficial, que estigui disponible al port 8083.</strong></p>
+<p>Amb el seguent comandament s'ha creat el contenidor Nexcloud.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/1.png" /></p>
+<p><strong>2. Comprovar al navegador de l’ordinador amfitrió que es veu la pàgina d’entrada de Nextcloud, escrivint el nom o l’adreça IP de la màquina que té el contenidor.</strong></p>
+<p>Seguidament, al accedir per IP + port es veu la pantalla de la instalació.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/2.png" /></p>
+<p><strong>3. Fer la instal·lació</strong></p>
+<p>Partint de la pantalla de la imatge del punt anterior, s'ha realitzat la instalació.</p>
+<p><strong>4. Fer una captura de la interfície de nextcloud.</strong></p>
+<p>En aquesta imatge es pot veure l'interficie de nextcloud.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/3.png" /></p>
+<p><strong>2 - Nextcloud amb MariaDB -&gt; docker compose</strong>
+<strong>Utilitzant la documentació oficial de nextcloud realitza la instal·lació de nextcloud, amb MariaDB, utilitzant docker compose.</strong></p>
+<p><strong>• Utilitza el port 8085 per a connectar al nextcloud</strong>
+<strong>• Recorda de completar les dades referents als passwords de les variables d’entorn</strong></p>
+<p>Del lloc oficial he agafat el seguent codi per a fer el docker-compose.yaml.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/4.png" /></p>
+<p>He fet les modificacions pertinents, com el port i les credencials.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/5.png" /></p>
+<p>I d'aquesta manera he llençat el docker compose.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/6.png" /></p>
+<hr />
+<h4 id="part-2-configurar">Part 2 - Configurar</h4>
+<p><strong>Partirem del segon Nextcloud.</strong></p>
+<p><strong>1. Completa la informació del compter d’usuari administrador creat en la instal·lació.</strong></p>
+<p>Una vegada llençat el yaml, es pot veure la seguent pantalla accedint amb la IP + 8085, on fica que l'autoconfiguració ja ve feta.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/7.png" /></p>
+<p>Es pot accedir amb les credencials marcades al docker compose, i també es pot veure la preconfiguració realitzada a la seguent imatge.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/8.png" /></p>
+<p><strong>2. Crea un grup d’usuaris i registra dos usuaris en eixe grup.</strong></p>
+<p>Per a crear grups i usuaris, s'ha d'anar a Compte&gt;Cuentas i una vegada dins, s'ha creat el grup ASIX.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/9.png" /></p>
+<p>I després els usuaris Fran i Dani amb la seguent configuració, on es pot veure que es pot afegir al grup directament.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/10.png" />
+<img alt="Imatge" src="../IMG/NextCloud1/11.png" /></p>
+<p>D'aquesta manera ja es troben els 2 usuaris dins del grup ASIX.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/12.png" /></p>
+<p><strong>3. Indica quines són les aplicacions que incorpora el Nextcloud i quina serà la seua utilitat.</strong></p>
+<p>Com que hi han moltes aplicacions incorporades, he ficat a la seguent imatge algunes d'elles, i avall la definició d'algunes d'elles.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/13.png" /></p>
+<blockquote>
+<p><strong><em>Gestió de Fitxers i Col·laboració</em></strong></p>
+</blockquote>
+<ul>
+<li><strong>Files (Arxius):</strong> És el cor de Nextcloud. Serveix per a emmagatzemar, organitzar i sincronitzar tots els teus documents al núvol.</li>
+<li><strong>File sharing (Compartició de fitxers):</strong> Permet compartir carpetes o arxius amb altres usuaris del servidor.</li>
+<li><strong>Deleted files (Fitxers eliminats):</strong> Actua com una paperera de reciclatge que et permet recuperar documents esborrats per accident.</li>
+<li><strong>Collaborative tags (Etiquetes col·laboratives):</strong> Serveix per a organitzar fitxers mitjançant etiquetes que tot el grup pot veure, facilitant la recerca de documents de projectes comuns.</li>
+</ul>
+<blockquote>
+<p><strong><em>Multimèdia i Comunicació</em></strong></p>
+</blockquote>
+<ul>
+<li><strong>Photos (Fotos):</strong> Una galeria multimèdia per a visualitzar imatges. </li>
+<li><strong>Comments (Comentaris):</strong> Permet escriure notes i debatre directament dins d'un fitxer compartit, facilitant el treball en equip sense eixir de la plataforma.</li>
+</ul>
+<blockquote>
+<p><strong><em>Gestió i Panell de Control</em></strong></p>
+</blockquote>
+<ul>
+<li><strong>Dashboard (Tauler):</strong> És la pantalla principal que es veu al entrar. Proporciona una vista ràpida del calendari, fitxers recents i notificacions importants.</li>
+<li><strong>Activity (Activitat):</strong> Mostra un historial de tot el que passa al servidor: qui ha pujat un fitxer, qui l'ha modificat o quan s'ha compartit un document.</li>
+<li><strong>Monitoring (Monitorització):</strong> Crucial per a l'administrador. Permet veure l'estat del servidor, l'ús de la CPU i la memòria per assegurar que tot funciona correctament.</li>
+</ul>
+<p><strong>4. Comparteix un arxiu i una imatge (cadascú en un dels usuaris).</strong></p>
+<p>Primer m'he logejat com a Fran.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/14.png" /></p>
+<p>He pujat un fitxer</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/15.png" /></p>
+<p>S'ha seleccionat el fitxer que es veu a la seguent imatge per tal de pujar-lo.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/16.png" /></p>
+<p>I d'aquesta manera es veu pujat a Nextcloud.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/17.png" /></p>
+<p>Seguidament he tancat sessió amb Fran i m'he loguejat amb Dani.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/18.png" /></p>
+<p>Fent el mateix procediment que abans, he escollit la seguent imatge.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/19.png" /></p>
+<p>I després de pujar-la, ja es pot veure als fitxers.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/20.png" /></p>
+<p><strong>5. Crea un album de fotos i compartis-lo en el grup d’usuaris creat.</strong></p>
+<p>Com que em trobe al usuari Dani, faré l'álbum compartit des d'ell.
+Anem a Fotos&gt;Albumes i Nuevo álbum.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/21.png" /></p>
+<p>He creat el seguent álbum afegint com a colaborador al grup ASIX.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/22.png" />
+<img alt="Imatge" src="../IMG/NextCloud1/23.png" /></p>
+<p>També he afegit algunes de les imatges que venen predeterminades al nextcloud.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/24.png" /></p>
+<hr />
+<h4 id="part-3-utilitzar-nextcloud">Part 3: Utilitzar Nextcloud</h4>
+<p><strong>Instal·lar client</strong></p>
+<p><strong>1. Des de altre equip fes la instal·lació de l’aplicació client, a partir de la pàgina oficial: desktop-files</strong></p>
+<p>Partint d'una altra maquina ubuntu, he descarregat el fitxer de client de nextcloud.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/25.png" />
+<img alt="Imatge" src="../IMG/NextCloud1/26.png" /></p>
+<p>Una vegada descarregat, com que no es executable, l'he fet que es puga executar.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/27.png" /></p>
+<p>I seguidament l'he executat.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/28.png" /></p>
+<p><strong>2. Connecta al servidor de nextcloud instal·lat i configurat en el punt anterior.</strong></p>
+<p>Com bé s'indica al punt anterior, s'iniciarà sessió amb el servidor ficant la seua adreça.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/29.png" /></p>
+<p>Després, per seguretat, ens apareix la seguent advertència.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/30.png" /></p>
+<p>Iniciem sessió i concedim accés.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/31.png" /></p>
+<p>I d'aquesta manera, després del seguent missatge el client ja es troba connectat.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/32.png" /></p>
+<p><strong>3. Havent iniciat sessió amb un dels usuaris creats, sincronitza els arxius.</strong></p>
+<p>Ara sincronitzarem els fitxers.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/33.png" /></p>
+<p>I una vegada sincronitzat el veiem així.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/34.png" /></p>
+<p><strong>4. Comparteix un arxiu amb algun dels usuaris disponibles.</strong></p>
+<p>Per a compartir un fitxer, anem als 3 punts d'un dels fitxers i seguidament compartim amb l'usuari/grup desitjat (Usuari Dani en aquest cas).</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/35.png" />
+<img alt="Imatge" src="../IMG/NextCloud1/36.png" /></p>
+<p><strong>Personalitzant el servidor</strong>
+<strong>1. Des del servidor de nextcloud, personalitza el dashboard i canvia l’aparença per a l’usuari administrador.</strong></p>
+<p>Ara loguejat com al usuari administrador, anant a Compre&gt;Aparença, he escollit els seguents canvis (Tema i fons d'escriptori).</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/37.png" />
+<img alt="Imatge" src="../IMG/NextCloud1/38.png" /></p>
+<p>I s'observa d'aquesta forma.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/39.png" /></p>
+<p><strong>2. Fes un recorregut per els diferents tipus d’aplicacions que poden incorporar-se al nextcloud.</strong></p>
+<p>He revisat aquestes apps, i he optat per la marcada amb les fletxes rojes, per tal de crear esquemes o mapes conceptuals.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/40.png" /></p>
+<p><strong>3. Descarrega i activa alguna de les aplicacions disponibles.</strong>
+Per a crear una pissarra nova, anant a Fitxers&gt;Nou, es pot veure l'opció de crear una pissarra nova.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/41.png" /></p>
+<p>Aquest es un exemple d'el que es pot fer.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/42.png" /></p>
+<p><strong>Al finalitzar:</strong></p>
+<p><strong>• Elimina completament el primer contenidor de nextcloud creat.</strong></p>
+<p>Primer he aturat el contenidor i seguidament l'he eliminat.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/43.png" /></p>
+<p><strong>• Para el programa client de nextcloud</strong></p>
+<p>Eixint del programa ja s'atura.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/44.png" /></p>
+<p><strong>• Para els contenedors creats amb el docker compose.</strong></p>
+<p>En aquest cas he parat els contenidors un per un, pero també es pot amb <strong><em>docker-compose stop</em></strong>.</p>
+<p><img alt="Imatge" src="../IMG/NextCloud1/45.png" /></p>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav">
+      <a href="../PR05-3/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../PR05-3/" class="btn btn-xs btn-link">
+        PR05 - Modificar un tema existent
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>
